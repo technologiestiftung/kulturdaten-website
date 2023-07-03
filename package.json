@@ -1,0 +1,54 @@
+{
+  "name": "digital-services-typescript-template",
+  "version": "0.0.0",
+  "description": "",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "format": "prettier --write .",
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/technologiestiftung/digital-services-typescript-template.git"
+  },
+  "keywords": [],
+  "author": "Technologiestiftung Berlin",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/technologiestiftung/digital-services-typescript-template/issues"
+  },
+  "homepage": "https://github.com/technologiestiftung/digital-services-typescript-template#readme",
+  "dependencies": {
+    "@emotion/react": "11.11.1",
+    "@emotion/styled": "11.11.0",
+    "next": "13.4.7",
+    "react": "18.2.0",
+    "react-dom": "18.2.0"
+  },
+  "devDependencies": {
+    "@storybook/addon-essentials": "7.0.25",
+    "@storybook/react": "7.0.25",
+    "@types/jest": "29.5.2",
+    "@types/node": "20.3.3",
+    "@types/react": "18.2.14",
+    "@types/react-dom": "18.2.6",
+    "@typescript-eslint/eslint-plugin": "5.60.1",
+    "@typescript-eslint/parser": "5.60.1",
+    "eslint": "8.44.0",
+    "eslint-config-next": "13.4.7",
+    "eslint-config-prettier": "8.8.0",
+    "eslint-plugin-jsx-a11y": "^6.7.1",
+    "eslint-plugin-prettier": "4.2.1",
+    "eslint-plugin-react": "7.32.2",
+    "eslint-plugin-react-hooks": "4.6.0",
+    "jest": "29.5.0",
+    "prettier": "2.8.8",
+    "ts-jest": "29.1.1",
+    "ts-node": "10.9.1",
+    "typescript": "5.1.6"
+  }
+}
