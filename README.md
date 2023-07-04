@@ -1,8 +1,10 @@
 # Digital Services TypeScript Template
 
+A frontend project template using TypeScript, Next.js, Jest and Storybook. (Adjust this readme after using the template.)
+
 ## Installation
 
-1. Install a node version that matches the version defined in `.nvmrc` (if you’re using nvm, run `nvm use` to switch to that version)
+1. Install a node version that matches the version defined in `.nvmrc` (if you’re using nvm, run `nvm use` to switch to that version).
 2. Install dependencies:
 
 ```shell
@@ -36,7 +38,7 @@ npm run lint
 npm run typecheck
 
 # Run all tests with Jest
-npm run test
+npm test
 
 # Run a local Storybook instance
 npm run storybook
