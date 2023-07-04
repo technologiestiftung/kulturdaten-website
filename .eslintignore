@@ -1,0 +1,6 @@
+.next
+node_modules
+out
+next.config.js
+.storybook
+storybook-static
