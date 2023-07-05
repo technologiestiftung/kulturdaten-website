@@ -1,7 +1,7 @@
 {
-  "name": "frontend-template",
+  "name": "kulturdaten-website",
   "version": "0.0.0",
-  "description": "",
+  "description": "Our kulturdaten showcase website",
   "scripts": {
     "postinstall": "next telemetry disable",
     "dev": "next dev",
@@ -16,15 +16,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/technologiestiftung/frontend-template.git"
+    "url": "git+https://github.com/technologiestiftung/kulturdaten-website.git"
   },
   "keywords": [],
   "author": "Technologiestiftung Berlin",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/technologiestiftung/frontend-template/issues"
+    "url": "https://github.com/technologiestiftung/kulturdaten-website/issues"
   },
-  "homepage": "https://github.com/technologiestiftung/frontend-template#readme",
+  "homepage": "https://github.com/technologiestiftung/kulturdaten-website#readme",
   "dependencies": {
     "@emotion/react": "11.11.1",
     "@emotion/styled": "11.11.0",
