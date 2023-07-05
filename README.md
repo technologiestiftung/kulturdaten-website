@@ -9,7 +9,6 @@ A frontend project template using TypeScript, Next.js, Jest and Storybook.
 - [ ] Optional: Add a CSS library like [Emotion](https://emotion.sh/docs/install)
 - [ ] Optional: Set up [Chromatic](https://www.chromatic.com/docs/setup)
 
-
 ## Installation
 
 1. Install a node version that matches the version defined in `.nvmrc` (if you’re using nvm, run `nvm install` and/or `nvm use` to switch to that version).
