@@ -1,11 +1,9 @@
-# Frontend Template
+# Kulturdaten Website
 
-A frontend project template using TypeScript, Next.js, Jest and Storybook.
+Our kulturdaten showcase website, built using TypeScript, Next.js, Jest and Storybook.
 
-## Todos after using this template
+## Todos
 
-- [ ] Change this readme to include the proper project name, description, etc.
-- [ ] Change the details in `package.json` (name, description, repository URLs).
 - [ ] Optional: Add a CSS library like [Emotion](https://emotion.sh/docs/install)
 - [ ] Optional: Set up [Chromatic](https://www.chromatic.com/docs/setup)
 
