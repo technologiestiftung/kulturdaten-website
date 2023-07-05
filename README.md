@@ -1,10 +1,18 @@
-# Digital Services TypeScript Template
+# Frontend Template
 
-A frontend project template using TypeScript, Next.js, Jest and Storybook. (Adjust this readme after using the template.)
+A frontend project template using TypeScript, Next.js, Jest and Storybook.
+
+## Todos after using this template
+
+- [ ] Change this readme to include the proper project name, description, etc.
+- [ ] Change the details in `package.json` (name, description, repository URLs).
+- [ ] Optional: Add a CSS library like [Emotion](https://emotion.sh/docs/install)
+- [ ] Optional: Set up [Chromatic](https://www.chromatic.com/docs/setup)
+
 
 ## Installation
 
-1. Install a node version that matches the version defined in `.nvmrc` (if you’re using nvm, run `nvm use` to switch to that version).
+1. Install a node version that matches the version defined in `.nvmrc` (if you’re using nvm, run `nvm install` and/or `nvm use` to switch to that version).
 2. Install dependencies:
 
 ```shell
@@ -17,7 +25,7 @@ npm install
 npm run dev
 ```
 
-This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
+This command starts a local development server at <http://localhost:3000>. Most changes are reflected live without having to restart the server.
 
 ## Build
 

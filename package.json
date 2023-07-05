@@ -1,5 +1,5 @@
 {
-  "name": "digital-services-typescript-template",
+  "name": "frontend-template",
   "version": "0.0.0",
   "description": "",
   "scripts": {
@@ -16,15 +16,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/technologiestiftung/digital-services-typescript-template.git"
+    "url": "git+https://github.com/technologiestiftung/frontend-template.git"
   },
   "keywords": [],
   "author": "Technologiestiftung Berlin",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/technologiestiftung/digital-services-typescript-template/issues"
+    "url": "https://github.com/technologiestiftung/frontend-template/issues"
   },
-  "homepage": "https://github.com/technologiestiftung/digital-services-typescript-template#readme",
+  "homepage": "https://github.com/technologiestiftung/frontend-template#readme",
   "dependencies": {
     "@emotion/react": "11.11.1",
     "@emotion/styled": "11.11.0",
