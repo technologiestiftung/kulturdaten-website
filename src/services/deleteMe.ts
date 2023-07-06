@@ -1,3 +1,3 @@
 export function someFunction() {
-  return 42;
+	return 42;
 }

@@ -1,5 +1,6 @@
-.next
 node_modules
+package.json
+package-lock.json
+.next
 out
-babel.config.js
 storybook-static
