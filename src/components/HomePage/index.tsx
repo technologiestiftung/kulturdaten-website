@@ -1,4 +1,5 @@
 import Head from "next/head";
+import styled from "@emotion/styled";
 
 function HomePageHead() {
 	return (
@@ -12,11 +13,18 @@ function HomePageHead() {
 	);
 }
 
+const Main = styled.main(() => ({
+	display: "flex",
+	justifyContent: "center",
+	alignItems: "center",
+	minHeight: "200px",
+}));
+
 export default function HomePage() {
 	return (
 		<>
 			<HomePageHead />
-			<main>Kulturdaten.berlin website coming soon!</main>
+			<Main>Kulturdaten.berlin website coming soon!</Main>
 		</>
 	);
 }
