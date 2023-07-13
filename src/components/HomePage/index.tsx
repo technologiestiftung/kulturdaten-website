@@ -1,5 +1,6 @@
-import Head from "next/head";
 import styled from "@emotion/styled";
+import { useTranslations } from "next-intl";
+import Head from "next/head";
 
 function HomePageHead() {
 	return (
@@ -21,10 +22,11 @@ const Main = styled.main(() => ({
 }));
 
 export default function HomePage() {
+	const t = useTranslations("Home");
 	return (
 		<>
 			<HomePageHead />
-			<Main>Kulturdaten.berlin website coming soon!</Main>
+			<Main>{t("title")}</Main>
 		</>
 	);
 }
