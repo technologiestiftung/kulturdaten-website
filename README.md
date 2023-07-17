@@ -8,12 +8,15 @@ Our kulturdaten showcase website, built using TypeScript, Next.js, Emotion, Jest
 
 ## Installation
 
-1. Install a node version that matches the version defined in `.nvmrc` (if you’re using nvm, run `nvm install` and/or `nvm use` to switch to that version).
+1. Install a node version that matches the version defined in `.nvmrc` (if you’re using [nvm](https://github.com/nvm-sh/nvm), run `nvm install` and/or `nvm use` to switch to that version).
 2. Install dependencies:
-
-```shell
-npm install
-```
+   ```shell
+   npm install
+   ```
+3. Generate the OpenAPI client:
+   ```shell
+   npm run generate-api
+   ```
 
 ## Local Development
 
@@ -42,6 +45,9 @@ More information about these commands: <https://nextjs.org/docs/app/api-referenc
 ## More commands
 
 ```shell
+# Re-generate OpenAPI client based on the YML file in src/api/
+npm run generate-api
+
 # Format all code with Prettier
 npm run format
 
