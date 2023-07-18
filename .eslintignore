@@ -4,4 +4,4 @@ out
 next.config.js
 .storybook
 storybook-static
-/src/api/
+/src/api/client

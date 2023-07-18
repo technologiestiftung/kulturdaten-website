@@ -4,7 +4,7 @@
   "description": "Our kulturdaten showcase website",
   "scripts": {
     "postinstall": "next telemetry disable",
-    "generate-api": "openapi --input src/api/kulturdaten.berlin.openapi.generated.yml --output src/api/client",
+    "generate-api": "openapi --input src/api/kulturdaten.berlin.openapi.generated.yml --output src/api/client --name APIClient",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",

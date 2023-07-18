@@ -4,4 +4,4 @@ package-lock.json
 .next
 out
 storybook-static
-/src/api/
+/src/api/client

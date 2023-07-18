@@ -13,7 +13,8 @@ Our kulturdaten showcase website, built using TypeScript, Next.js, Emotion, Jest
    ```shell
    npm install
    ```
-3. Generate the OpenAPI client:
+3. Create a `.env` file and add all values (see `.env.example` for inspiration).
+4. Generate the OpenAPI client:
    ```shell
    npm run generate-api
    ```
