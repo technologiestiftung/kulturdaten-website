@@ -4,7 +4,9 @@
   "description": "Our kulturdaten showcase website",
   "scripts": {
     "postinstall": "next telemetry disable",
+    "generate-api": "openapi --input src/api/kulturdaten.berlin.openapi.generated.yml --output src/api/client --name APIClient",
     "dev": "next dev",
+    "prebuild": "npm run generate-api",
     "build": "next build",
     "start": "next start",
     "format": "prettier --write .",
@@ -54,6 +56,7 @@
     "eslint-plugin-storybook": "0.6.12",
     "jest": "29.5.0",
     "jest-environment-jsdom": "29.5.0",
+    "openapi-typescript-codegen": "^0.25.0",
     "prettier": "2.8.8",
     "storybook": "7.0.25",
     "ts-jest": "29.1.1",

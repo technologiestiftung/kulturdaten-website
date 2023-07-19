@@ -1,6 +1,7 @@
 import styled from "@emotion/styled";
 import { useTranslations } from "next-intl";
 import Head from "next/head";
+import { Location } from "../../api/client/models/Location";
 
 function HomePageHead() {
 	return (
@@ -14,19 +15,28 @@ function HomePageHead() {
 	);
 }
 
-const Main = styled.main(() => ({
-	display: "flex",
-	justifyContent: "center",
-	alignItems: "center",
-	minHeight: "200px",
-}));
+const Main = styled.main(() => ({}));
 
-export default function HomePage() {
+type Props = {
+	locations: Location[];
+};
+
+export default function HomePage({ locations }: Props) {
 	const t = useTranslations("Home");
 	return (
 		<>
 			<HomePageHead />
-			<Main>{t("title")}</Main>
+			<Main>
+				{t("title")}
+				<br />
+				<br />
+				<h2>Locations:</h2>
+				<ul>
+					{locations.map((location) => (
+						<li key={location.identifier}>{location.name?.de}</li>
+					))}
+				</ul>
+			</Main>
 		</>
 	);
 }

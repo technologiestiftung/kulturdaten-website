@@ -11,6 +11,8 @@ jobs:
           node-version: "18"
       - name: Install Dependencies
         run: npm install
+      - name: Generate OpenAPI client
+        run: npm run generate-api
       - name: Run ESLint
         run: npm run lint
       - name: Run TypeScript compiler

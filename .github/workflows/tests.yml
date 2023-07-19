@@ -11,5 +11,7 @@ jobs:
           node-version: "18"
       - name: Install Dependencies
         run: npm install
+      - name: Generate OpenAPI client
+        run: npm run generate-api
       - name: Run the tests
         run: npm test
