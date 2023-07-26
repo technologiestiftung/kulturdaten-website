@@ -11,6 +11,8 @@ jobs:
           node-version: "18"
       - name: Install Dependencies
         run: npm install
+        env:
+          FONTS_URL: ${{ secrets.FONTS_URL }}
       - name: Generate OpenAPI client
         run: npm run generate-api
       - name: Run ESLint
