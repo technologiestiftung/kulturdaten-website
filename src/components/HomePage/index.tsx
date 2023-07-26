@@ -6,6 +6,7 @@ import DummyLocationsList from "./DummyLocationsList";
 import Head from "./Head";
 import RequestCreator from "./RequestCreator";
 import Section from "./Section";
+import ArtistSection from "../ArtistSection";
 
 const PageContainer = styled.div(() => ({
 	width: `min(100%, ${widths.maxContentWidth})`,
@@ -27,6 +28,9 @@ export default function HomePage({ locations }: Props) {
 				<Main>
 					<h1>{t("title")}</h1>
 					<Section backgroundColor={colors.blueLight}>…</Section>
+					<Section backgroundColor={colors.red40}>
+						<ArtistSection />
+					</Section>
 					<Section backgroundColor={colors.lind60}>
 						<RequestCreator />
 						<DummyLocationsList locations={locations} />

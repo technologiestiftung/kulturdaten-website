@@ -1,6 +1,6 @@
 import styled from "@emotion/styled";
 import React, { FC } from "react";
-import { colors } from "../../../common/styleVariables";
+import { colors } from "../../common/styleVariables";
 
 const TitleWrapper = styled.div(() => ({
 	position: "relative",
