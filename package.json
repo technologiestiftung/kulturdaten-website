@@ -5,7 +5,7 @@
   "scripts": {
     "postinstall": "next telemetry disable",
     "generate-api": "openapi --input src/api/kulturdaten.berlin.openapi.generated.yml --output src/api/client --name APIClient",
-    "dev": "next dev",
+    "dev": "next dev -p 8080",
     "prebuild": "npm run generate-api",
     "build": "next build",
     "start": "next start",

@@ -25,7 +25,7 @@ Our kulturdaten showcase website, built using TypeScript, Next.js, Emotion, Jest
 npm run dev
 ```
 
-This command starts a local development server at <http://localhost:3000>. Most changes are reflected live without having to restart the server.
+This command starts a local development server at <http://localhost:8080>. Most changes are reflected live without having to restart the server.
 
 ## (Production) Build
 
