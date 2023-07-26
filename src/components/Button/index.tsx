@@ -1,0 +1,26 @@
+import styled from "@emotion/styled";
+import { ButtonHTMLAttributes } from "react";
+import { colors, fontWeights, lineHeights, timings } from "../../common/styleVariables";
+
+const StyledButton = styled.button({
+	appearance: "none",
+	lineHeight: lineHeights.buttons,
+	padding: `13px 24px 10px 24px`,
+	color: colors.blueDark,
+	background: "transparent",
+	fontWeight: fontWeights.default,
+	border: `3px solid ${colors.blueDark}`,
+	borderRadius: "none",
+	transition: `all ${timings.short} ease-in-out`,
+	"&:hover": {
+		cursor: "pointer",
+		color: colors.white,
+		background: colors.blueDark,
+	},
+});
+
+type Props = ButtonHTMLAttributes<HTMLButtonElement>;
+
+export default function Button({ type = "button", ...otherProps }: Props) {
+	return <StyledButton type={type} {...otherProps} />;
+}

@@ -6,8 +6,15 @@ export const fontSizes = {
 	default: "18px",
 };
 
+export const fontWeights = {
+	default: 400,
+	medium: 600,
+	bold: 800,
+};
+
 export const lineHeights = {
 	default: 1.6,
+	buttons: 1.3,
 };
 
 export const colors = {
@@ -27,4 +34,12 @@ export const spacings = {
 
 export const widths = {
 	maxContentWidth: "1280px",
+};
+
+export const borderRadiuses = {
+	big: 20,
+};
+
+export const timings = {
+	short: "100ms",
 };
