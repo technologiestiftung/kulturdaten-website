@@ -20,22 +20,27 @@ function useRequest() {
 }
 
 type Props = {
-	onShowRequest(request: Request): void;
+	onStartRequestCreation(): void;
+	onRequestCreated(request: Request): void;
 };
 
-export default function RequestCreator({ onShowRequest }: Props) {
+export default function RequestCreator({ onStartRequestCreation, onRequestCreated }: Props) {
 	const { request, randomizeRequest } = useRequest();
 	const t = useTranslations("Home.for-interested");
 	const requestText = request ? t(request.i18nKey) : "";
+	const handleCreateRequest = useCallback(() => {
+		onStartRequestCreation();
+		randomizeRequest();
+	}, [onStartRequestCreation, randomizeRequest]);
 	const handleAnimationFinished = useCallback(() => {
 		if (request) {
-			onShowRequest(request);
+			onRequestCreated(request);
 		}
-	}, [onShowRequest, request]);
+	}, [onRequestCreated, request]);
 	return (
 		<Block>
 			<ButtonContainer>
-				<Button onClick={randomizeRequest}>{t("button-create-request")}</Button>
+				<Button onClick={handleCreateRequest}>{t("button-create-request")}</Button>
 			</ButtonContainer>
 			<Hr />
 			<AnimatedText text={requestText} onAnimationFinished={handleAnimationFinished} />

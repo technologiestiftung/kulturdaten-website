@@ -9,7 +9,8 @@
 			"request-2-text": "Show me cool rock concerts in central Berlin!",
 			"request-3-text": "Post-metal and progressive rock is great. What’s on there soon?",
 			"request-4-text": "I love going to the Deutsche Oper. Are there any good performances next weekend?",
-			"request-5-text": "Standup comedy in Neukölln or Kreuzberg or Friedrichshain - Go!"
+			"request-5-text": "Standup comedy in Neukölln or Kreuzberg or Friedrichshain - Go!",
+			"results-title": "Your results:"
 		},
 		"artist-section": {
 			"title": "You do the culture, we’ll let everyone know",
