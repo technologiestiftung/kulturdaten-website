@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import { spacings } from "../../../common/styleVariables";
+import { spacings } from "../../../../common/styleVariables";
 
 const Text = styled.div({
 	textAlign: "left",
