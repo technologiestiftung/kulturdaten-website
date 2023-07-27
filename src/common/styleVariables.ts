@@ -1,5 +1,5 @@
 export const fontFamilies = {
-	default: "ClanPro, sans-serif",
+	default: "'Inter', sans-serif",
 };
 
 export const fontSizes = {

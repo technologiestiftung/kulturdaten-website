@@ -9,13 +9,12 @@ Our kulturdaten showcase website, built using TypeScript, Next.js, Emotion, Jest
 ## Installation
 
 1. Install a node version that matches the version defined in `.nvmrc` (if you’re using [nvm](https://github.com/nvm-sh/nvm), run `nvm install` and/or `nvm use` to switch to that version).
-2. Run `export FONTS_URL=<secret_url>` with a proper URL to set up the postinstall script.
-3. Install dependencies (and download our font files):
+2. Install dependencies:
    ```shell
    npm install
    ```
-4. Create a `.env` file and add all values (see `.env.example` for inspiration).
-5. Generate the OpenAPI client:
+3. Create a `.env` file and add all values (see `.env.example` for inspiration).
+4. Generate the OpenAPI client:
    ```shell
    npm run generate-api
    ```

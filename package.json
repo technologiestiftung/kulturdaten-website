@@ -3,8 +3,7 @@
   "version": "0.0.0",
   "description": "Our kulturdaten showcase website",
   "scripts": {
-    "get-fonts": "curl --fail $FONTS_URL --output fonts.zip && unzip -j -o fonts.zip -d public/fonts && rm fonts.zip",
-    "postinstall": "npm run get-fonts && next telemetry disable",
+    "postinstall": "next telemetry disable",
     "generate-api": "openapi --input src/api/kulturdaten.berlin.openapi.generated.yml --output src/api/client --name APIClient",
     "dev": "next dev -p 8080",
     "prebuild": "npm run generate-api",
