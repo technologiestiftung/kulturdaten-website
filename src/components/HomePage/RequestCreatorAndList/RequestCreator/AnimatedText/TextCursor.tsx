@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import { colors } from "../../../../common/styleVariables";
+import { colors } from "../../../../../common/styleVariables";
 import { keyframes } from "@emotion/react";
 
 const blink = keyframes({

@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import { borderRadiuses, colors } from "../../../common/styleVariables";
+import { borderRadiuses, colors } from "../../../../common/styleVariables";
 
 const Block = styled.div({
 	maxWidth: "700px",

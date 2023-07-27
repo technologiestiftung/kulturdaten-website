@@ -1,12 +1,12 @@
 import { useTranslations } from "next-intl";
 import { useCallback, useState } from "react";
-import { getRandomIndexWithout } from "../../../services/arrays";
-import Button from "../../Button";
-import Hr from "../../Hr";
+import { getRandomIndexWithout } from "../../../../services/arrays";
+import Button from "../../../Button";
+import Hr from "../../../Hr";
+import { REQUESTS, Request } from "../requests";
 import AnimatedText from "./AnimatedText";
 import Block from "./Block";
 import ButtonContainer from "./ButtonContainer";
-import { REQUESTS, Request } from "./requests";
 
 function useRequest() {
 	const [request, setRequest] = useState<Request | null>(null);
@@ -19,18 +19,26 @@ function useRequest() {
 	return { request, randomizeRequest };
 }
 
-export default function RequestCreator() {
+type Props = {
+	onShowRequest(request: Request): void;
+};
+
+export default function RequestCreator({ onShowRequest }: Props) {
 	const { request, randomizeRequest } = useRequest();
-	const t = useTranslations("Home");
-	// @ts-ignore No TypeScript support for dynamically-created i18n keys.
-	const requestText = request ? t(`for-interested.${request.i18nKey}`) : "";
+	const t = useTranslations("Home.for-interested");
+	const requestText = request ? t(request.i18nKey) : "";
+	const handleAnimationFinished = useCallback(() => {
+		if (request) {
+			onShowRequest(request);
+		}
+	}, [onShowRequest, request]);
 	return (
 		<Block>
 			<ButtonContainer>
-				<Button onClick={randomizeRequest}>{t("for-interested.button-create-request")}</Button>
+				<Button onClick={randomizeRequest}>{t("button-create-request")}</Button>
 			</ButtonContainer>
 			<Hr />
-			<AnimatedText text={requestText} />
+			<AnimatedText text={requestText} onAnimationFinished={handleAnimationFinished} />
 		</Block>
 	);
 }

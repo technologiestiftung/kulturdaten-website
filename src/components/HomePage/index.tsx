@@ -4,7 +4,7 @@ import { Location } from "../../api/client/models/Location";
 import { breakpoints, widths } from "../../common/styleVariables";
 import DummyLocationsList from "./DummyLocationsList";
 import Head from "./Head";
-import RequestCreator from "./RequestCreator";
+import RequestCreatorAndList from "./RequestCreatorAndList";
 import Section from "./Section";
 import ArtistSection from "../ArtistSection";
 
@@ -35,7 +35,7 @@ export default function HomePage({ locations }: Props) {
 						<ArtistSection />
 					</Section>
 					<Section>
-						<RequestCreator />
+						<RequestCreatorAndList />
 						<DummyLocationsList locations={locations} />
 					</Section>
 					<Section>…</Section>
