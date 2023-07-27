@@ -2,7 +2,6 @@ import styled from "@emotion/styled";
 import { useTranslations } from "next-intl";
 import { Location } from "../../api/client/models/Location";
 import { breakpoints, widths } from "../../common/styleVariables";
-import DummyLocationsList from "./DummyLocationsList";
 import Head from "./Head";
 import RequestCreatorAndList from "./RequestCreatorAndList";
 import Section from "./Section";
@@ -22,7 +21,7 @@ type Props = {
 	locations: Location[];
 };
 
-export default function HomePage({ locations }: Props) {
+export default function HomePage({}: Props) {
 	const t = useTranslations("Home");
 	return (
 		<>
@@ -36,7 +35,6 @@ export default function HomePage({ locations }: Props) {
 					</Section>
 					<Section>
 						<RequestCreatorAndList />
-						<DummyLocationsList locations={locations} />
 					</Section>
 					<Section>…</Section>
 					<Section>…</Section>
