@@ -10,11 +10,6 @@
 /.next/
 /out/
 
-# Fonts
-public/fonts/*
-!public/fonts/.gitkeep
-fonts.zip
-
 # production
 /build
 
