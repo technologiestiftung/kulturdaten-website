@@ -21,7 +21,7 @@ const styles: CSSObject = {
 	},
 	h2: {
 		fontSize: "1.6rem",
-		fontWeight: 600,
+		fontWeight: 800,
 	},
 	html: {
 		fontSize: fontSizes.default,

@@ -33,6 +33,7 @@ export const spacings = {
 };
 
 export const breakpoints = [400, 580, 768, 1044, 1280];
+//TODO: MAKE BREAKPOINTS AN OBJECT WITH KEYS
 export const mqMinWidth = breakpoints.map((bp) => `@media (min-width: ${bp}px)`);
 
 export const widths = {

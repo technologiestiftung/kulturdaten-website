@@ -27,16 +27,16 @@ export default function HomePage({ locations }: Props) {
 			<PageContainer>
 				<Main>
 					<h1>{t("title")}</h1>
-					<Section backgroundColor={colors.blueLight}>…</Section>
-					<Section backgroundColor={colors.red40}>
+					<Section>…</Section>
+					<Section>
 						<ArtistSection />
 					</Section>
-					<Section backgroundColor={colors.lind60}>
+					<Section>
 						<RequestCreator />
 						<DummyLocationsList locations={locations} />
 					</Section>
-					<Section backgroundColor={colors.yellow50}>…</Section>
-					<Section backgroundColor={colors.grayLight}>…</Section>
+					<Section>…</Section>
+					<Section>…</Section>
 				</Main>
 			</PageContainer>
 		</>
