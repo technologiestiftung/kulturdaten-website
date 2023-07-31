@@ -23,7 +23,7 @@ export const colors = {
 	blueDark: "#1e3791",
 	red40: "#f5afa5",
 	lind60: "#c3dcb9",
-	yellow50: "#f0f0b4",
+	yellow50: "#f1ff5480",
 	grayLight: "#f9f9f9",
 	white: "#ffffff",
 };
@@ -32,8 +32,11 @@ export const spacings = {
 	get: (factor = 1.0) => factor * 5,
 };
 
+export const breakpoints = [400, 580, 768, 1044, 1280];
+export const mqMinWidth = breakpoints.map((bp) => `@media (min-width: ${bp}px)`);
+
 export const widths = {
-	maxContentWidth: "1280px",
+	maxContentWidth: `${breakpoints[4]}px`,
 };
 
 export const borderRadiuses = {
