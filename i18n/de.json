@@ -9,9 +9,12 @@
 			"request-2-text": "Zeig’ mir coole Rock-Konzerte in Kreuzberg!",
 			"request-3-text": "Post-Metal und Progressive Rock ist super. Was läuft da demnächst?",
 			"request-4-text": "Ich gehe am liebsten in die Deutsche Oper. Gibt’s da gute Aufführungen am nächsten Wochenende?",
-			"request-5-text": "Standup-Comedy in Neukölln oder Kreuzberg oder Friedrichshain – Go!",
+			"request-5-text": "Standup-Comedy in Neukölln oder Kreuzberg oder Friedrichshain – Go!"
+		},
 		"artist-section": {
-			"title": "Ihr macht die Kultur, wir sagen allen Bescheid"
+			"title": "Ihr macht die Kultur, wir sagen allen Bescheid",
+			"subtitle": "kulturdaten.berlin – für Kulturakteur:innen",
+			"description": "Was? Wann? Wer? Wo? Für wen? Wie lange? Um im Web gefunden zu werden, müssen Kulturschaffende ihr Programm an vielen Stellen mühsam händisch einpflegen. Mit der Plattform kulturdaten.berlin wollen wir diesen Prozess radikal vereinfachen! \n\nDeswegen entwickeln wir gemeinsam mit Kulturakteur:innen und -institutionen die erste offene, digitale Infrastruktur für Kulturdaten in Berlin: Gefördert durch die Senatsverwaltung für Kultur und Europa entsteht zurzeit eine zentrale Datendrehscheibe, die ihre Kulturdaten strukturieren, bündeln und mit zahlreichen Portalen zielgerichtet vernetzen kann. \n\nNatürlich können nicht nur Institutionen, sondern insbesondere auch Kollektive und Solokünstler:innen ihre Profile und Angebote über kulturdaten.berlin publizieren."
 		}
 	}
 }

@@ -70,7 +70,7 @@ const SectionImage = styled.div<{ headerImage: string }>(({ headerImage }) => {
 		backgroundRepeat: "no-repeat",
 		backgroundPosition: "center center",
 		border: `4px solid ${colors.blueDark}`,
-		[mqMinWidth[1]]: {
+		[mqMinWidth.s]: {
 			display: "block",
 		},
 	};

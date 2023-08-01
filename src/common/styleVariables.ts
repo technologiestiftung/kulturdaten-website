@@ -3,7 +3,7 @@ export const fontFamilies = {
 };
 
 export const fontSizes = {
-	default: "18px",
+	default: "16px",
 };
 
 export const fontWeights = {
@@ -32,12 +32,24 @@ export const spacings = {
 	get: (factor = 1.0) => factor * 5,
 };
 
-export const breakpoints = [400, 580, 768, 1044, 1280];
+export const breakpoints: { [key: string]: number } = {
+	xs: 400,
+	s: 580,
+	m: 768,
+	l: 1044,
+	xl: 1280,
+};
 //TODO: MAKE BREAKPOINTS AN OBJECT WITH KEYS
-export const mqMinWidth = breakpoints.map((bp) => `@media (min-width: ${bp}px)`);
+export const mqMinWidth = {
+	xs: `@media (min-width: ${breakpoints.xs}px)`,
+	s: `@media (min-width: ${breakpoints.s}px)`,
+	m: `@media (min-width: ${breakpoints.m}px)`,
+	l: `@media (min-width: ${breakpoints.l}px)`,
+	xl: `@media (min-width: ${breakpoints.xl}px)`,
+};
 
 export const widths = {
-	maxContentWidth: `${breakpoints[4]}px`,
+	maxContentWidth: `${breakpoints.xl}px`,
 };
 
 export const borderRadiuses = {

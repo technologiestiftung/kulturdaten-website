@@ -18,10 +18,15 @@ const styles: CSSObject = {
 	},
 	"p, h1, h2, h3, h4, h5, h6": {
 		overflowWrap: "break-word",
+		whiteSpace: "pre-line",
 	},
 	h2: {
 		fontSize: "1.6rem",
 		fontWeight: 800,
+	},
+	h3: {
+		fontSize: "1.2rem",
+		fontWeight: 600,
 	},
 	html: {
 		fontSize: fontSizes.default,
