@@ -3,6 +3,7 @@ export const fontFamilies = {
 };
 
 export const fontSizes = {
+	small: "15px",
 	default: "16px",
 	medium: "1.2rem",
 	large: "1.6rem",
@@ -60,4 +61,5 @@ export const borderRadiuses = {
 
 export const timings = {
 	short: "100ms",
+	medium: "250ms",
 };
