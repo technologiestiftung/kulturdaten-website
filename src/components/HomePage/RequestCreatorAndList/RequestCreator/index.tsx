@@ -1,7 +1,7 @@
 import { useTranslations } from "next-intl";
 import { useCallback, useState } from "react";
 import { getRandomIndexWithout } from "../../../../services/arrays";
-import Button from "../../../Button";
+import ButtonWithIcon from "../../../ButtonWithIcon";
 import Spacer from "../../../Spacer";
 import Block from "../Block";
 import { REQUESTS, Request } from "../requests";
@@ -38,7 +38,9 @@ export default function RequestCreator({ onStartRequestCreation, onRequestCreate
 	}, [onRequestCreated, request]);
 	return (
 		<>
-			<Button onClick={handleCreateRequest}>{t("button-create-request")}</Button>
+			<ButtonWithIcon icon="play" onClick={handleCreateRequest}>
+				{t("button-create-request")}
+			</ButtonWithIcon>
 			<Spacer size={30} />
 			<Block>
 				<AnimatedText text={requestText} onAnimationFinished={handleAnimationFinished} />

@@ -5,7 +5,7 @@ import { borderWidths, colors, fontWeights, lineHeights, timings } from "../../c
 const StyledButton = styled.button({
 	appearance: "none",
 	lineHeight: lineHeights.buttons,
-	padding: `13px 24px 12px 24px`,
+	padding: `13px 18px 12px 18px`,
 	color: colors.blueDark,
 	background: "transparent",
 	fontWeight: fontWeights.default,
