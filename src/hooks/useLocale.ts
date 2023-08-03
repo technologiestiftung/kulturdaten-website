@@ -1,6 +1,6 @@
 import { useRouter } from "next/router";
 
-type Locale = "de" | "en";
+export type Locale = "de" | "en";
 
 export default function useLocale(): Locale {
 	const router = useRouter();
