@@ -2,29 +2,38 @@ import { SearchEventsRequest } from "../../../api/client/models/SearchEventsRequ
 
 export type Request = {
 	i18nKey: keyof IntlMessages["Home"]["for-interested"];
-	apiRequest: SearchEventsRequest;
+	searchFilter: SearchEventsRequest["searchFilter"];
 };
 
 // TODO: Add apiRequest to query API accordingly.
 export const REQUESTS: Request[] = [
 	{
 		i18nKey: "request-1-text",
-		apiRequest: {},
+		searchFilter: {},
 	},
 	{
 		i18nKey: "request-2-text",
-		apiRequest: {},
+		searchFilter: {},
 	},
 	{
 		i18nKey: "request-3-text",
-		apiRequest: {},
+		searchFilter: {},
 	},
 	{
 		i18nKey: "request-4-text",
-		apiRequest: {},
+		searchFilter: {},
 	},
 	{
 		i18nKey: "request-5-text",
-		apiRequest: {},
+		searchFilter: {},
+	},
+	{
+		i18nKey: "request-6-text",
+		searchFilter: {
+			"attractions.referenceLabel.de": {
+				$regex: "exkursion",
+				$options: "i",
+			},
+		},
 	},
 ];

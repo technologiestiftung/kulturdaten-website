@@ -21,7 +21,7 @@ export default function RequestCreatorAndList() {
 	const t = useTranslations("Home.for-interested");
 	const [events, setEvents] = useState<PartialEvent[]>([]);
 	const handleNewRequest = useCallback(async (_request: Request) => {
-		const response = await apiClient.discoverCulturalData.postEventsSearch(_request.apiRequest);
+		const response = await apiClient.discoverCulturalData.postEventsSearch({ searchFilter: _request.searchFilter });
 		const newEvents = (response.data?.events || []) as PartialEvent[];
 		const first5Events = newEvents.slice(0, 5);
 		setEvents(first5Events);
