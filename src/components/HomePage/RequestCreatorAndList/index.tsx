@@ -1,6 +1,6 @@
 import styled from "@emotion/styled";
 import { useTranslations } from "next-intl";
-import { useCallback, useState } from "react";
+import { useCallback, useRef, useState } from "react";
 import apiClient from "../../../api/client";
 import { colors, fontSizes, fontWeights } from "../../../common/styleVariables";
 import { PartialEvent } from "../../../common/types";
@@ -27,13 +27,18 @@ export default function RequestCreatorAndList() {
 		setStatus("creating prompt");
 		setEvents([]);
 	}, []);
+	const timeoutId = useRef(0);
 	const handleRequestCreated = useCallback(async (_request: Request) => {
+		window.clearTimeout(timeoutId.current);
 		setStatus("loading");
 		const response = await apiClient.discoverCulturalData.postEventsSearch({ searchFilter: _request.searchFilter });
 		const newEvents = (response.data?.events || []) as PartialEvent[];
 		const first5Events = newEvents.slice(0, 5);
-		setEvents(first5Events);
-		setStatus("done");
+		const artificalDelayMs = 1_000;
+		timeoutId.current = window.setTimeout(() => {
+			setEvents(first5Events);
+			setStatus("done");
+		}, artificalDelayMs);
 	}, []);
 	return (
 		<>
