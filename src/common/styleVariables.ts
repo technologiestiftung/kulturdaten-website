@@ -23,7 +23,7 @@ export const colors = {
 	blueDark: "#1e3791",
 	red40: "#f5afa5",
 	lind60: "#c3dcb9",
-	yellow50: "#f1ff5480",
+	yellow: "#f1ff54",
 	grayLight: "#f9f9f9",
 	white: "#ffffff",
 };
@@ -33,19 +33,13 @@ export const spacings = {
 };
 
 export const breakpoints: { [key: string]: number } = {
-	xs: 400,
 	s: 580,
 	m: 768,
-	l: 1044,
-	xl: 1280,
 };
-//TODO: MAKE BREAKPOINTS AN OBJECT WITH KEYS
-export const mqMinWidth = {
-	xs: `@media (min-width: ${breakpoints.xs}px)`,
+
+export const mediaQueries = {
 	s: `@media (min-width: ${breakpoints.s}px)`,
 	m: `@media (min-width: ${breakpoints.m}px)`,
-	l: `@media (min-width: ${breakpoints.l}px)`,
-	xl: `@media (min-width: ${breakpoints.xl}px)`,
 };
 
 export const widths = {

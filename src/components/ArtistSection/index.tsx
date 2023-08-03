@@ -9,7 +9,7 @@ const ArtistSection = () => {
 	return (
 		<>
 			<SectionTitle
-				backgroundColor={colors.yellow50}
+				backgroundColor={colors.yellow}
 				label={t("artist-section.title")}
 				headerImage="/images/kulturaktuere-header-image.jpg"
 			/>

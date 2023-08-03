@@ -1,7 +1,6 @@
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import styled from "@emotion/styled";
 import { FC } from "react";
-import { colors, mqMinWidth } from "../../common/styleVariables";
+import { colors, mediaQueries } from "../../common/styleVariables";
 
 type BackgroundColor = string;
 const backgroundImageWidth = "500px";
@@ -14,13 +13,11 @@ const HeaderWrapper = styled.div(() => {
 	};
 });
 
-const BannerBackdrop = styled.div<{ backgroundColor: BackgroundColor }>(({ backgroundColor = "red" }) => {
+const BannerBackdrop = styled.div<{ backgroundColor: BackgroundColor }>(({ backgroundColor }) => {
 	return {
-		backgroundColor,
+		position: "relative",
+		backgroundColor: `${backgroundColor}80`,
 		maxWidth: backgroundImageWidth,
-		display: "flex",
-		justifyContent: "flex-end",
-		alignItems: "flex-end",
 	};
 });
 
@@ -29,6 +26,8 @@ const Fold = styled.div(() => {
 	const foldHeight = "36px";
 	return {
 		position: "absolute",
+		bottom: 0,
+		right: 0,
 		background: colors.white,
 		width: foldWidth,
 		height: foldHeight,
@@ -38,7 +37,7 @@ const Fold = styled.div(() => {
 const TitleWrapper = styled.div(() => {
 	return {
 		display: "flex",
-		zIndex: 1000,
+		position: "relative",
 		justifyContent: "center",
 		alignItems: "center",
 		maxWidth: backgroundImageWidth,
@@ -70,7 +69,7 @@ const SectionImage = styled.div<{ headerImage: string }>(({ headerImage }) => {
 		backgroundRepeat: "no-repeat",
 		backgroundPosition: "center center",
 		border: `4px solid ${colors.blueDark}`,
-		[mqMinWidth.s]: {
+		[mediaQueries.s]: {
 			display: "block",
 		},
 	};
