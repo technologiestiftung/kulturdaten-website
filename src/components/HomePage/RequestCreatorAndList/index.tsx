@@ -19,9 +19,10 @@ export default function RequestCreatorAndList() {
 	const t = useTranslations("Home.for-interested");
 	const [events, setEvents] = useState<Event[]>([]);
 	const handleNewRequest = useCallback(async (_request: Request) => {
-		// TODO: Use request parameter to fetch the properly-filtered events.
-		const response = await apiClient.events.getEvents();
-		setEvents(response.events || []);
+		const response = await apiClient.discoverCulturalData.postEventsSearch(_request.apiRequest);
+		// TODO: There is a slight type hiccup with event.type (enum vs. string representation)!
+		const newEvents = (response.data?.events || []) as Event[];
+		setEvents(newEvents);
 	}, []);
 	return (
 		<>
