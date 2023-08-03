@@ -26,6 +26,7 @@ export const colors = {
 	red40: "#f5afa5",
 	lind60: "#c3dcb9",
 	yellow: "#f1ff54",
+	green: "#cffdba",
 	grayLight: "#f9f9f9",
 	white: "#ffffff",
 };
@@ -46,6 +47,10 @@ export const mediaQueries = {
 
 export const widths = {
 	maxContentWidth: `${breakpoints.xl}px`,
+};
+
+export const borderWidths = {
+	default: 3,
 };
 
 export const borderRadiuses = {
