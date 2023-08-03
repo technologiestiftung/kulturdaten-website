@@ -27,6 +27,7 @@ export const colors = {
 	lind60: "#c3dcb9",
 	yellow: "#f1ff54",
 	green: "#cffdba",
+	turquoise: "#a0faf2",
 	grayLight: "#f9f9f9",
 	white: "#ffffff",
 };

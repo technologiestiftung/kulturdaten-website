@@ -2,10 +2,9 @@ import { useTranslations } from "next-intl";
 import { useCallback, useState } from "react";
 import { getRandomIndexWithout } from "../../../../services/arrays";
 import Button from "../../../Button";
-import Hr from "../../../Hr";
 import { REQUESTS, Request } from "../requests";
 import AnimatedText from "./AnimatedText";
-import Block from "./Block";
+import Block from "../Block";
 import ButtonContainer from "./ButtonContainer";
 
 function useRequest() {
@@ -38,12 +37,13 @@ export default function RequestCreator({ onStartRequestCreation, onRequestCreate
 		}
 	}, [onRequestCreated, request]);
 	return (
-		<Block>
+		<>
 			<ButtonContainer>
 				<Button onClick={handleCreateRequest}>{t("button-create-request")}</Button>
 			</ButtonContainer>
-			<Hr />
-			<AnimatedText text={requestText} onAnimationFinished={handleAnimationFinished} />
-		</Block>
+			<Block>
+				<AnimatedText text={requestText} onAnimationFinished={handleAnimationFinished} />
+			</Block>
+		</>
 	);
 }

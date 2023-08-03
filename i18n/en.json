@@ -10,7 +10,9 @@
 			"request-3-text": "Post-metal and progressive rock is great. What’s on there soon?",
 			"request-4-text": "I love going to the Deutsche Oper. Are there any good performances next weekend?",
 			"request-5-text": "Standup comedy in Neukölln or Kreuzberg or Friedrichshain - Go!",
-			"results-title": "Your results:"
+			"results-title": "Your results:",
+			"results-source-title": "Where do the results come from?",
+			"results-source-tooltip": "We are currently using example data to demonstrate our system."
 		},
 		"artist-section": {
 			"title": "You do the culture, we’ll let everyone know",

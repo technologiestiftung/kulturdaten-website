@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import Text from "./Text";
 import TextCursor from "./TextCursor";
 
 type Props = {
@@ -30,9 +29,9 @@ export default function AnimatedText({ text: incomingText, onAnimationFinished }
 		};
 	}, [incomingText, onAnimationFinished]);
 	return (
-		<Text>
+		<>
 			{text}
-			{text && <TextCursor />}
-		</Text>
+			<TextCursor />
+		</>
 	);
 }
