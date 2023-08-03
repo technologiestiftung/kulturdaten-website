@@ -33,7 +33,8 @@
     "next": "13.4.7",
     "next-intl": "^2.17.5",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "react-tooltip": "^5.19.0"
   },
   "devDependencies": {
     "@storybook/addon-essentials": "7.0.25",
