@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import { Event } from "../../../../api/client/models/Event";
+import { PartialEvent } from "../../../../common/types";
 import useLocale from "../../../../hooks/useLocale";
 
 const List = styled.ul({});
@@ -7,7 +7,7 @@ const List = styled.ul({});
 const Item = styled.li({});
 
 type Props = {
-	events: Event[];
+	events: PartialEvent[];
 };
 
 export default function EventList({ events }: Props) {
@@ -15,7 +15,7 @@ export default function EventList({ events }: Props) {
 	return (
 		<List>
 			{events.map((event) => (
-				<Item key={event.identifier}>{event.title?.[locale]}</Item>
+				<Item key={event.identifier}>{event.attractions?.[0].referenceLabel?.[locale]}</Item>
 			))}
 		</List>
 	);

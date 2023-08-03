@@ -2,8 +2,8 @@ import styled from "@emotion/styled";
 import { useTranslations } from "next-intl";
 import { useCallback, useState } from "react";
 import apiClient from "../../../api/client";
-import { Event } from "../../../api/client/models/Event";
 import { colors, fontSizes, fontWeights } from "../../../common/styleVariables";
+import { PartialEvent } from "../../../common/types";
 import Spacer from "../../Spacer";
 import EventList from "./EventList";
 import RequestCreator from "./RequestCreator";
@@ -17,11 +17,10 @@ const ResultsTitle = styled.h3({
 
 export default function RequestCreatorAndList() {
 	const t = useTranslations("Home.for-interested");
-	const [events, setEvents] = useState<Event[]>([]);
+	const [events, setEvents] = useState<PartialEvent[]>([]);
 	const handleNewRequest = useCallback(async (_request: Request) => {
 		const response = await apiClient.discoverCulturalData.postEventsSearch(_request.apiRequest);
-		// TODO: There is a slight type hiccup with event.type (enum vs. string representation)!
-		const newEvents = (response.data?.events || []) as Event[];
+		const newEvents = (response.data?.events || []) as PartialEvent[];
 		setEvents(newEvents);
 	}, []);
 	return (
