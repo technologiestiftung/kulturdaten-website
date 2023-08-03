@@ -1,6 +1,5 @@
 import styled from "@emotion/styled";
 import { useTranslations } from "next-intl";
-import { Location } from "../../api/client/models/Location";
 import { breakpoints, widths } from "../../common/styleVariables";
 import Head from "./Head";
 import RequestCreatorAndList from "./RequestCreatorAndList";
@@ -17,11 +16,7 @@ const Main = styled.main(() => ({
 	margin: "0 auto",
 }));
 
-type Props = {
-	locations: Location[];
-};
-
-export default function HomePage({}: Props) {
+export default function HomePage() {
 	const t = useTranslations("Home");
 	return (
 		<>
