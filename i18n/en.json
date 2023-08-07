@@ -10,6 +10,11 @@
 			"request-3-text": "Post-metal and progressive rock is great. What’s on there soon?",
 			"request-4-text": "I love going to the Deutsche Oper. Are there any good performances next weekend?",
 			"request-5-text": "Standup comedy in Neukölln or Kreuzberg or Friedrichshain - Go!"
+		},
+		"artist-section": {
+			"title": "You do the culture, we’ll let everyone know",
+			"subtitle": "kulturdaten.berlin - for cultural actors",
+			"description": "What? When? Who? Where? For whom? For how long? In order to be found on the web, cultural professionals have to painstakingly enter their programs manually in many places. With the platform kulturdaten.berlin we want to radically simplify this process! \n\nThat’s why we’re working with cultural actors and institutions to develop the first open, digital infrastructure for cultural data in Berlin. Funded by the Senate Department for Culture and Europe, we’re currently creating a central data hub that can structure and bundle cultural data and network it with numerous portals in a targeted manner. \n\nOf course, not only institutions, but also collectives and solo artists in particular can publish their profiles and offerings via kulturdaten.berlin."
 		}
 	}
 }

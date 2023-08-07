@@ -3,7 +3,9 @@ export const fontFamilies = {
 };
 
 export const fontSizes = {
-	default: "18px",
+	default: "16px",
+	medium: "1.2rem",
+	large: "1.6rem",
 };
 
 export const fontWeights = {
@@ -23,7 +25,7 @@ export const colors = {
 	blueDark: "#1e3791",
 	red40: "#f5afa5",
 	lind60: "#c3dcb9",
-	yellow50: "#f0f0b4",
+	yellow: "#f1ff54",
 	grayLight: "#f9f9f9",
 	white: "#ffffff",
 };
@@ -32,8 +34,18 @@ export const spacings = {
 	get: (factor = 1.0) => factor * 5,
 };
 
+export const breakpoints: { [key: string]: number } = {
+	s: 580,
+	m: 768,
+};
+
+export const mediaQueries = {
+	s: `@media (min-width: ${breakpoints.s}px)`,
+	m: `@media (min-width: ${breakpoints.m}px)`,
+};
+
 export const widths = {
-	maxContentWidth: "1280px",
+	maxContentWidth: `${breakpoints.xl}px`,
 };
 
 export const borderRadiuses = {
