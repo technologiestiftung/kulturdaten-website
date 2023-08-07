@@ -3,7 +3,7 @@ import { FC } from "react";
 import { colors, fontSizes, lineHeights, mediaQueries } from "../../common/styleVariables";
 
 type BackgroundColor = string;
-const backgroundImageWidth = "500px";
+const backgroundImageWidth = "600px";
 
 const HeaderWrapper = styled.div(() => {
 	return {
@@ -22,8 +22,8 @@ const BannerBackdrop = styled.div<{ backgroundColor: BackgroundColor }>(({ backg
 });
 
 const Fold = styled.div(() => {
-	const foldWidth = "30px";
-	const foldHeight = "36px";
+	const foldWidth = "36px";
+	const foldHeight = "46px";
 	return {
 		position: "absolute",
 		bottom: 0,
@@ -40,10 +40,8 @@ const TitleWrapper = styled.div(() => {
 		position: "relative",
 		justifyContent: "center",
 		alignItems: "center",
-		maxWidth: backgroundImageWidth,
 		minHeight: "100%",
-		margin: "0 auto",
-		padding: `20px 36px 20px 20px`,
+		padding: `20px 40px 20px 20px`,
 		backgroundImage: `url("/images/title-frame-blue-corner.svg")`,
 		backgroundSize: backgroundImageWidth,
 		backgroundRepeat: "no-repeat",
