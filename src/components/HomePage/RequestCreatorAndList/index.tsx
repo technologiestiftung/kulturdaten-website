@@ -2,8 +2,8 @@ import styled from "@emotion/styled";
 import { useTranslations } from "next-intl";
 import { useCallback, useRef, useState } from "react";
 import apiClient from "../../../api/client";
+import { Event } from "../../../api/client/models/Event";
 import { colors, fontSizes, fontWeights, lineHeights } from "../../../common/styleVariables";
-import { PartialEvent } from "../../../common/types";
 import SectionSubtitle from "../../SectionSubtitle";
 import Spacer from "../../Spacer";
 import Tooltip from "../../Tooltip";
@@ -23,7 +23,7 @@ const ResultsTitle = styled.h3({
 export default function RequestCreatorAndList() {
 	const t = useTranslations("Home.for-interested");
 	const [status, setStatus] = useState<PromptStatus>("idle");
-	const [events, setEvents] = useState<PartialEvent[]>([]);
+	const [events, setEvents] = useState<Event[]>([]);
 	const handleRequestStarted = useCallback(() => {
 		setStatus("creating prompt");
 		setEvents([]);
@@ -33,7 +33,8 @@ export default function RequestCreatorAndList() {
 		window.clearTimeout(timeoutId.current);
 		setStatus("loading");
 		const response = await apiClient.discoverCulturalData.postEventsSearch({ searchFilter: _request.searchFilter });
-		const newEvents = (response.data?.events || []) as PartialEvent[];
+		// We are manually casting this to Event here, because the type of the nested events inside SearchEventsResponse are incompatible with the type Event.
+		const newEvents = (response.data?.events || []) as Event[];
 		const first5Events = newEvents.slice(0, 5);
 		const artificalDelayMs = 1_000;
 		timeoutId.current = window.setTimeout(() => {

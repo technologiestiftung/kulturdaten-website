@@ -1,7 +1,7 @@
 import styled from "@emotion/styled";
 import { useEffect, useRef, useState } from "react";
+import { Event } from "../../../../api/client/models/Event";
 import { colors, spacings, timings } from "../../../../common/styleVariables";
-import { PartialEvent } from "../../../../common/types";
 import useLocale from "../../../../hooks/useLocale";
 import LoadingIndicator from "../../../LoadingIndicator";
 import Block from "../Block";
@@ -33,7 +33,7 @@ const Item = styled.li({
 
 type Props = {
 	isLoading: boolean;
-	events: PartialEvent[];
+	events: Event[];
 };
 
 export default function EventList({ isLoading, events }: Props) {

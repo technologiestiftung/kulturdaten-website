@@ -1,6 +1,6 @@
 import styled from "@emotion/styled";
+import { Event } from "../../../../api/client/models/Event";
 import { fontSizes, fontWeights, lineHeights } from "../../../../common/styleVariables";
-import { PartialEvent } from "../../../../common/types";
 import { Locale } from "../../../../hooks/useLocale";
 import formatDate from "../../../../services/dates";
 import Spacer from "../../../Spacer";
@@ -18,11 +18,11 @@ const Title = styled.div({
 });
 
 type Props = {
-	event: PartialEvent;
+	event: Event;
 	locale: Locale;
 };
 
-function getStartDateAsISO(event: PartialEvent) {
+function getStartDateAsISO(event: Event) {
 	return `${event.schedule?.startDate}T${event.schedule?.startTime}`;
 }
 
