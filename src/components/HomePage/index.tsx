@@ -1,10 +1,12 @@
 import styled from "@emotion/styled";
 import { useTranslations } from "next-intl";
 import { breakpoints, widths } from "../../common/styleVariables";
+import ArtistSection from "../ArtistSection";
 import Head from "./Head";
+import IntroSection from "./IntroSection";
 import RequestCreatorAndList from "./RequestCreatorAndList";
 import Section from "./Section";
-import ArtistSection from "../ArtistSection";
+import Spacer from "../Spacer";
 
 const PageContainer = styled.div(() => ({
 	width: `min(100%, ${widths.maxContentWidth})`,
@@ -23,16 +25,12 @@ export default function HomePage() {
 			<Head />
 			<PageContainer>
 				<Main>
-					<h1>{t("title")}</h1>
-					<Section>…</Section>
 					<Section>
+						<IntroSection />
+						<RequestCreatorAndList />
+						<Spacer size={100} />
 						<ArtistSection />
 					</Section>
-					<Section>
-						<RequestCreatorAndList />
-					</Section>
-					<Section>…</Section>
-					<Section>…</Section>
 				</Main>
 			</PageContainer>
 		</>
