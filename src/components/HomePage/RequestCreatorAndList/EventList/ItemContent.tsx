@@ -1,7 +1,8 @@
 import styled from "@emotion/styled";
 import { Event } from "../../../../api/client/models/Event";
-import { fontSizes, fontWeights, lineHeights } from "../../../../common/styleVariables";
+import { colors, fontSizes, fontWeights, lineHeights } from "../../../../common/styleVariables";
 import { Locale } from "../../../../hooks/useLocale";
+import { EventWithAttraction } from "../../../../services/apiRequests";
 import formatDate from "../../../../services/dates";
 import Spacer from "../../../Spacer";
 
@@ -11,14 +12,17 @@ const Meta = styled.div({
 });
 
 const Title = styled.div({
-	display: "inline-block",
 	lineHeight: lineHeights.single,
 	fontSize: fontSizes.medium,
 	fontWeight: fontWeights.medium,
 });
 
+const Description = styled.p({
+	color: colors.black,
+});
+
 type Props = {
-	event: Event;
+	eventWithAttraction: EventWithAttraction;
 	locale: Locale;
 };
 
@@ -26,7 +30,8 @@ function getStartDateAsISO(event: Event) {
 	return `${event.schedule?.startDate}T${event.schedule?.startTime}`;
 }
 
-export default function ItemContent({ event, locale }: Props) {
+export default function ItemContent({ eventWithAttraction, locale }: Props) {
+	const { event, attraction } = eventWithAttraction;
 	const isoDate = getStartDateAsISO(event);
 	return (
 		<>
@@ -35,7 +40,9 @@ export default function ItemContent({ event, locale }: Props) {
 				{event.locations?.[0].referenceLabel?.[locale]}
 			</Meta>
 			<Spacer size={5} />
-			<Title>{event.attractions?.[0].referenceLabel?.[locale]}</Title>
+			<Title>{attraction?.title?.[locale]}</Title>
+			<Spacer size={5} />
+			<Description>{attraction?.description?.[locale]}</Description>
 		</>
 	);
 }

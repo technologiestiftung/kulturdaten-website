@@ -1,8 +1,8 @@
 import styled from "@emotion/styled";
 import { useEffect, useRef, useState } from "react";
-import { Event } from "../../../../api/client/models/Event";
 import { colors, spacings, timings } from "../../../../common/styleVariables";
 import useLocale from "../../../../hooks/useLocale";
+import { EventWithAttraction } from "../../../../services/apiRequests";
 import LoadingIndicator from "../../../LoadingIndicator";
 import Block from "../Block";
 import ItemContent from "./ItemContent";
@@ -33,10 +33,10 @@ const Item = styled.li({
 
 type Props = {
 	isLoading: boolean;
-	events: Event[];
+	eventsWithAttractions: EventWithAttraction[];
 };
 
-export default function EventList({ isLoading, events }: Props) {
+export default function EventList({ isLoading, eventsWithAttractions }: Props) {
 	const locale = useLocale();
 	const listRef = useRef<HTMLUListElement>(null);
 	const loadingHeight = "80px";
@@ -64,9 +64,9 @@ export default function EventList({ isLoading, events }: Props) {
 				</LoadingContainer>
 			)}
 			<List ref={listRef} style={{ opacity: isLoading ? 0 : 1 }}>
-				{events.map((event) => (
-					<Item key={event.identifier}>
-						<ItemContent event={event} locale={locale} />
+				{eventsWithAttractions.map((eventWithAttraction) => (
+					<Item key={eventWithAttraction.event.identifier}>
+						<ItemContent eventWithAttraction={eventWithAttraction} locale={locale} />
 					</Item>
 				))}
 			</List>

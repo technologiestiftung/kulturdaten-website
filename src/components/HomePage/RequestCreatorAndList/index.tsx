@@ -1,9 +1,8 @@
 import styled from "@emotion/styled";
 import { useTranslations } from "next-intl";
 import { useCallback, useRef, useState } from "react";
-import apiClient from "../../../api/client";
-import { Event } from "../../../api/client/models/Event";
 import { colors, fontSizes, fontWeights, lineHeights } from "../../../common/styleVariables";
+import { EventWithAttraction, loadEventsWithAttractions } from "../../../services/apiRequests";
 import SectionSubtitle from "../../SectionSubtitle";
 import Spacer from "../../Spacer";
 import Tooltip from "../../Tooltip";
@@ -23,22 +22,19 @@ const ResultsTitle = styled.h3({
 export default function RequestCreatorAndList() {
 	const t = useTranslations("Home.for-interested");
 	const [status, setStatus] = useState<PromptStatus>("idle");
-	const [events, setEvents] = useState<Event[]>([]);
+	const [eventsWithAttractions, setEventsWithAttractions] = useState<EventWithAttraction[]>([]);
 	const handleRequestStarted = useCallback(() => {
 		setStatus("creating prompt");
-		setEvents([]);
+		setEventsWithAttractions([]);
 	}, []);
 	const timeoutId = useRef(0);
-	const handleRequestCreated = useCallback(async (_request: Request) => {
+	const handleRequestCreated = useCallback(async (request: Request) => {
 		window.clearTimeout(timeoutId.current);
 		setStatus("loading");
-		const response = await apiClient.discoverCulturalData.postEventsSearch({ searchFilter: _request.searchFilter });
-		// We are manually casting this to Event here, because the type of the nested events inside SearchEventsResponse are incompatible with the type Event.
-		const newEvents = (response.data?.events || []) as Event[];
-		const first5Events = newEvents.slice(0, 5);
 		const artificalDelayMs = 1_000;
+		const newEventsWithAttractions = await loadEventsWithAttractions(request.searchFilter);
 		timeoutId.current = window.setTimeout(() => {
-			setEvents(first5Events);
+			setEventsWithAttractions(newEventsWithAttractions);
 			setStatus("done");
 		}, artificalDelayMs);
 	}, []);
@@ -55,7 +51,7 @@ export default function RequestCreatorAndList() {
 						{t("results-source-title")}
 					</Tooltip>
 					<Spacer size={10} />
-					<EventList isLoading={status === "loading"} events={events} />
+					<EventList isLoading={status === "loading"} eventsWithAttractions={eventsWithAttractions} />
 				</>
 			)}
 		</>
