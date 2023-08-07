@@ -7,26 +7,27 @@ import LoadingIndicator from "../../../LoadingIndicator";
 import Block from "../Block";
 import ItemContent from "./ItemContent";
 
-const outerPadding = 5;
-const innerPadding = 2;
-
 const LoadingContainer = styled.div({
 	display: "flex",
 	justifyContent: "center",
-	padding: spacings.get(outerPadding),
+	padding: spacings.get(5),
 });
 
 const List = styled.ul({
 	listStyleType: "none",
-	padding: `${spacings.get(innerPadding)}px ${spacings.get(outerPadding)}px`,
+	padding: spacings.get(5),
 	transition: `opacity ${timings.medium} ease-in-out`,
 });
 
 const Item = styled.li({
-	padding: `${spacings.get(outerPadding - innerPadding)}px 0`,
+	padding: `${spacings.get(3)}px 0`,
 	borderBottom: `2px solid ${colors.blueDark}`,
+	"&:first-of-type": {
+		paddingTop: 0,
+	},
 	"&:last-of-type": {
 		borderBottom: "none",
+		paddingBottom: 0,
 	},
 });
 
