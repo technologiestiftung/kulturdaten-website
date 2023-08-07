@@ -10,7 +10,7 @@ import EventList from "./EventList";
 import RequestCreator from "./RequestCreator";
 import { Request } from "./requests";
 
-export type PromptStatus = "idle" | "creating prompt" | "loading" | "done";
+type PromptStatus = "idle" | "creating prompt" | "loading" | "done";
 
 const ResultsTitle = styled.h3({
 	color: colors.blueDark,
