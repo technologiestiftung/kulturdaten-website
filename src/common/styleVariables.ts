@@ -3,7 +3,7 @@ export const fontFamilies = {
 };
 
 export const fontSizes = {
-	small: "15px",
+	small: "0.8rem",
 	default: "16px",
 	medium: "1.2rem",
 	large: "1.6rem",
