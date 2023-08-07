@@ -1,5 +1,6 @@
 import { keyframes } from "@emotion/react";
 import styled from "@emotion/styled";
+import { lineHeights } from "../../../../../common/styleVariables";
 
 const blink = keyframes({
 	"0%": { opacity: 1 },
@@ -10,7 +11,7 @@ const blink = keyframes({
 
 const Container = styled.div({
 	fontSize: "1.1em",
-	lineHeight: 1.0,
+	lineHeight: lineHeights.single,
 	display: "inline-flex",
 	animation: `${blink} 1s linear infinite`,
 	userSelect: "none",

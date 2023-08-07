@@ -18,6 +18,7 @@ export const fontWeights = {
 export const lineHeights = {
 	default: 1.6,
 	buttons: 1.3,
+	single: 1.0,
 };
 
 export const colors = {

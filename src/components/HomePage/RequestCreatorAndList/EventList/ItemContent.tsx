@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import { fontSizes, fontWeights } from "../../../../common/styleVariables";
+import { fontSizes, fontWeights, lineHeights } from "../../../../common/styleVariables";
 import { PartialEvent } from "../../../../common/types";
 import { Locale } from "../../../../hooks/useLocale";
 import formatDate from "../../../../services/dates";
@@ -12,7 +12,7 @@ const Meta = styled.div({
 
 const Title = styled.div({
 	display: "inline-block",
-	lineHeight: 1.0,
+	lineHeight: lineHeights.single,
 	fontSize: fontSizes.medium,
 	fontWeight: fontWeights.medium,
 });

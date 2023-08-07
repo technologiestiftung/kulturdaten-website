@@ -2,7 +2,7 @@ import styled from "@emotion/styled";
 import { useTranslations } from "next-intl";
 import { useCallback, useRef, useState } from "react";
 import apiClient from "../../../api/client";
-import { colors, fontSizes, fontWeights } from "../../../common/styleVariables";
+import { colors, fontSizes, fontWeights, lineHeights } from "../../../common/styleVariables";
 import { PartialEvent } from "../../../common/types";
 import Spacer from "../../Spacer";
 import Tooltip from "../../Tooltip";
@@ -16,7 +16,7 @@ const ResultsTitle = styled.h3({
 	color: colors.blueDark,
 	fontSize: fontSizes.medium,
 	fontWeight: fontWeights.medium,
-	lineHeight: 1.0,
+	lineHeight: lineHeights.single,
 });
 
 export default function RequestCreatorAndList() {
