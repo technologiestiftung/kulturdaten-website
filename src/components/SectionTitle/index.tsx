@@ -1,6 +1,6 @@
 import styled from "@emotion/styled";
 import { FC } from "react";
-import { colors, mediaQueries } from "../../common/styleVariables";
+import { colors, fontSizes, lineHeights, mediaQueries } from "../../common/styleVariables";
 
 type BackgroundColor = string;
 const backgroundImageWidth = "500px";
@@ -9,7 +9,6 @@ const HeaderWrapper = styled.div(() => {
 	return {
 		display: "flex",
 		gap: "1.6rem",
-		justifyContent: "center",
 	};
 });
 
@@ -18,6 +17,7 @@ const BannerBackdrop = styled.div<{ backgroundColor: BackgroundColor }>(({ backg
 		position: "relative",
 		backgroundColor: `${backgroundColor}80`,
 		maxWidth: backgroundImageWidth,
+		minHeight: "100%",
 	};
 });
 
@@ -41,9 +41,9 @@ const TitleWrapper = styled.div(() => {
 		justifyContent: "center",
 		alignItems: "center",
 		maxWidth: backgroundImageWidth,
-		minHeight: "13rem",
+		minHeight: "100%",
 		margin: "0 auto",
-		padding: "30px",
+		padding: `20px 36px 20px 20px`,
 		backgroundImage: `url("/images/title-frame-blue-corner.svg")`,
 		backgroundSize: backgroundImageWidth,
 		backgroundRepeat: "no-repeat",
@@ -54,16 +54,16 @@ const TitleWrapper = styled.div(() => {
 });
 
 const Label = styled.h2(() => ({
+	fontSize: fontSizes.extraLarge,
+	lineHeight: lineHeights.headline,
 	color: colors.blueDark,
-	textAlign: "center",
 }));
 
 const SectionImage = styled.div<{ headerImage: string }>(({ headerImage }) => {
-	const imageWidth = "10rem";
 	return {
 		display: "none",
-		minHeight: "13rem",
-		minWidth: imageWidth,
+		flex: "0 0 50%",
+		aspectRatio: "6 / 8",
 		backgroundImage: `url(${headerImage})`,
 		backgroundSize: "cover",
 		backgroundRepeat: "no-repeat",

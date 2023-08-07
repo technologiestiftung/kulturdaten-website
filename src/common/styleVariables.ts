@@ -7,6 +7,7 @@ export const fontSizes = {
 	default: "16px",
 	medium: "1.2rem",
 	large: "1.6rem",
+	extraLarge: "2.0rem",
 };
 
 export const fontWeights = {
@@ -17,6 +18,7 @@ export const fontWeights = {
 
 export const lineHeights = {
 	default: 1.6,
+	headline: 1.4,
 	buttons: 1.3,
 	single: 1.0,
 };
