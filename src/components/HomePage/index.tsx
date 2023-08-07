@@ -1,7 +1,7 @@
 import styled from "@emotion/styled";
 import { useTranslations } from "next-intl";
 import { Location } from "../../api/client/models/Location";
-import { colors, widths } from "../../common/styleVariables";
+import { breakpoints, widths } from "../../common/styleVariables";
 import DummyLocationsList from "./DummyLocationsList";
 import Head from "./Head";
 import RequestCreator from "./RequestCreator";
@@ -13,7 +13,10 @@ const PageContainer = styled.div(() => ({
 	margin: "0 auto",
 }));
 
-const Main = styled.main(() => ({}));
+const Main = styled.main(() => ({
+	maxWidth: `${breakpoints.m}px`,
+	margin: "0 auto",
+}));
 
 type Props = {
 	locations: Location[];

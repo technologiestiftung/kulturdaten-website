@@ -11,7 +11,7 @@ const ArtistSection = () => {
 			<SectionTitle
 				backgroundColor={colors.yellow}
 				label={t("artist-section.title")}
-				headerImage="/images/kulturaktuere-header-image.jpg"
+				headerImage="/images/kulturakteure-header-image.jpg"
 			/>
 			<SectionSubtitle label={t("artist-section.subtitle")} />
 			<p>{t("artist-section.description")}</p>

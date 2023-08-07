@@ -4,6 +4,8 @@ export const fontFamilies = {
 
 export const fontSizes = {
 	default: "16px",
+	medium: "1.2rem",
+	large: "1.6rem",
 };
 
 export const fontWeights = {

@@ -1,5 +1,5 @@
 import { CSSObject, Global } from "@emotion/react";
-import { colors, fontFamilies, fontSizes, lineHeights } from "../../common/styleVariables";
+import { colors, fontFamilies, fontSizes, fontWeights, lineHeights } from "../../common/styleVariables";
 import FontFaces from "./FontFaces";
 
 const styles: CSSObject = {
@@ -21,12 +21,12 @@ const styles: CSSObject = {
 		whiteSpace: "pre-line",
 	},
 	h2: {
-		fontSize: "1.6rem",
-		fontWeight: 800,
+		fontSize: fontSizes.large,
+		fontWeight: fontWeights.bold,
 	},
 	h3: {
-		fontSize: "1.2rem",
-		fontWeight: 600,
+		fontSize: fontSizes.medium,
+		fontWeight: fontWeights.medium,
 	},
 	html: {
 		fontSize: fontSizes.default,

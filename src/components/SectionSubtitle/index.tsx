@@ -2,19 +2,15 @@ import styled from "@emotion/styled";
 import { colors } from "../../common/styleVariables";
 import { FC } from "react";
 
-const SubtitleWrapper = styled.div(() => {
-	return {
-		borderTop: `4px solid ${colors.blueDark}`,
-		marginTop: "6rem",
-		paddingTop: ".5rem",
-		paddingBottom: "2rem",
-	};
+const SubtitleWrapper = styled.div({
+	borderTop: `4px solid ${colors.blueDark}`,
+	marginTop: "6rem",
+	paddingTop: ".5rem",
+	paddingBottom: "2rem",
 });
 
-const SubtitleLabel = styled.h3(() => {
-	return {
-		color: colors.blueDark,
-	};
+const SubtitleLabel = styled.h3({
+	color: colors.blueDark,
 });
 
 interface Props {
