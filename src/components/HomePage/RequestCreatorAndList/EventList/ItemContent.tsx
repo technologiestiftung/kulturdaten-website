@@ -1,7 +1,9 @@
 import styled from "@emotion/styled";
-import { fontSizes, fontWeights, lineHeights } from "../../../../common/styleVariables";
-import { PartialEvent } from "../../../../common/types";
-import { Locale } from "../../../../hooks/useLocale";
+import { useCallback } from "react";
+import { Event } from "../../../../api/client/models/Event";
+import { colors, fontSizes, fontWeights, lineHeights } from "../../../../common/styleVariables";
+import { Locale, fallbackLocale } from "../../../../hooks/useLocale";
+import { EventWithAttraction } from "../../../../services/apiRequests";
 import formatDate from "../../../../services/dates";
 import Spacer from "../../../Spacer";
 
@@ -11,31 +13,66 @@ const Meta = styled.div({
 });
 
 const Title = styled.div({
-	display: "inline-block",
-	lineHeight: lineHeights.single,
+	lineHeight: lineHeights.headline,
 	fontSize: fontSizes.medium,
 	fontWeight: fontWeights.medium,
 });
 
+const Description = styled.div({
+	position: "relative",
+	maxHeight: "5rem",
+	overflow: "hidden",
+	color: colors.black,
+});
+
+const DescriptionFade = styled.div({
+	position: "absolute",
+	bottom: 0,
+	left: 0,
+	width: "100%",
+	height: "70%",
+	background: `linear-gradient(0deg, ${colors.turquoise} 0%, rgba(160, 250, 242, 0) 100%)`,
+	pointerEvents: "none",
+});
+
 type Props = {
-	event: PartialEvent;
+	eventWithAttraction: EventWithAttraction;
 	locale: Locale;
 };
 
-function getStartDateAsISO(event: PartialEvent) {
+function getStartDateAsISO(event: Event) {
 	return `${event.schedule?.startDate}T${event.schedule?.startTime}`;
 }
 
-export default function ItemContent({ event, locale }: Props) {
+function sanitizeDescription(description: string) {
+	return description.replace(/(\n)*$/gm, "");
+}
+
+export default function ItemContent({ eventWithAttraction, locale }: Props) {
+	const { event, attraction } = eventWithAttraction;
 	const isoDate = getStartDateAsISO(event);
+	const getLocalizedContent = useCallback(
+		(labels: Record<string, string> | undefined) => {
+			if (!labels) {
+				return "";
+			}
+			return labels[locale] || labels[fallbackLocale];
+		},
+		[locale]
+	);
 	return (
 		<>
 			<Meta>
 				<time dateTime={isoDate}>{formatDate(isoDate, locale, { dateStyle: "full", timeStyle: "short" })}</time>,{" "}
-				{event.locations?.[0].referenceLabel?.[locale]}
+				{getLocalizedContent(event.locations?.[0].referenceLabel)}
 			</Meta>
-			<Spacer size={5} />
-			<Title>{event.attractions?.[0].referenceLabel?.[locale]}</Title>
+			<Spacer size={10} />
+			<Title>{getLocalizedContent(attraction?.title)}</Title>
+			<Spacer size={10} />
+			<Description>
+				<p>{sanitizeDescription(getLocalizedContent(attraction?.description))}</p>
+				<DescriptionFade role="none" />
+			</Description>
 		</>
 	);
 }
