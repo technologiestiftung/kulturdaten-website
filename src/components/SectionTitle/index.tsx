@@ -15,7 +15,7 @@ const HeaderWrapper = styled.div(() => {
 const BannerBackdrop = styled.div<{ backgroundColor: BackgroundColor }>(({ backgroundColor }) => {
 	return {
 		position: "relative",
-		backgroundColor: `${backgroundColor}80`,
+		backgroundColor,
 		maxWidth: backgroundImageWidth,
 		minHeight: "100%",
 	};
