@@ -9,6 +9,10 @@
 			"subtitle": "Berlins Kulturdaten – zentral, auffindbar, vernetzt",
 			"description": "Was? Wann? Wer? Wo? Für wen? Wie lange? Um im Web gefunden zu werden, müssen Kulturschaffende ihr Programm an vielen Stellen mühsam händisch einpflegen. Mit der Plattform kulturdaten.berlin wollen wir diesen Prozess radikal vereinfachen!\n\nGleichzeitig bietet das Internet für Kulturinteressierte zwar viele Möglichkeiten, sich über Kulturangebote in Berlin zu informieren, aber es gibt keine zentrale Übersicht über alle kulturellen Einrichtungen und Veranstaltungen in der Stadt. \n\nDeswegen entwickeln wir gemeinsam mit Kulturakteur:innen und -institutionen die erste offene, digitale Infrastruktur für Kulturdaten in Berlin: Gefördert durch die Senatsverwaltung für Kultur und Europa entsteht zurzeit eine zentrale Datendrehscheibe, die Kulturdaten strukturiert, bündelt und mit zahlreichen Portalen zielgerichtet vernetzen kann."
 		},
+		"newsletter-section": {
+			"title": "Interesse geweckt, oder noch Fragen oder Wünsche?",
+			"button": "Kontaktiere uns"
+		},
 		"for-interested": {
 			"subtitle": "Interessiert?\nDann probier kulturdaten.berlin einfach aus:",
 			"button-create-request": "Zufällige Anfrage erzeugen",

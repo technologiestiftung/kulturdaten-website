@@ -4,6 +4,7 @@ import ArtistSection from "../ArtistSection";
 import Spacer from "../Spacer";
 import Head from "./Head";
 import IntroSection from "./IntroSection";
+import NewsletterSection from "./NewsletterSection";
 import RequestCreatorAndList from "./RequestCreatorAndList";
 import Section from "./Section";
 
@@ -26,7 +27,9 @@ export default function HomePage() {
 					<Section>
 						<IntroSection />
 						<RequestCreatorAndList />
-						<Spacer size={100} />
+						<Spacer size={50} />
+						<NewsletterSection />
+						<Spacer size={50} />
 						<ArtistSection />
 					</Section>
 				</Main>

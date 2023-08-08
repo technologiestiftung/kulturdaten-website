@@ -9,6 +9,10 @@
 			"subtitle": "Berlin’s cultural data - central, findable, networked",
 			"description": "What? When? Who? Where? For whom? For how long? In order to be found on the web, cultural professionals have to painstakingly enter their programs manually in many places. With the platform kulturdaten.berlin we want to radically simplify this process!\n\nAt the same time, although the Internet offers many ways for those interested in culture to find out about cultural offerings in Berlin, there is no central overview of all cultural institutions and events in the city. \n\nThat’s why we’re working with cultural actors and institutions to develop the first open, digital infrastructure for cultural data in Berlin. Funded by the Senate Department for Culture and Europe, we’re currently creating a central data hub that will structure and bundle cultural data and link it to numerous portals in a targeted manner."
 		},
+		"newsletter-section": {
+			"title": "Are you interested, or still have questions or wishes?",
+			"button": "Contact us"
+		},
 		"for-interested": {
 			"subtitle": "Interested?\nThen just try out kulturdaten.berlin:",
 			"button-create-request": "Create random request",
