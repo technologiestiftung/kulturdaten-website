@@ -4,6 +4,7 @@ import { useCallback, useRef, useState } from "react";
 import apiClient from "../../../api/client";
 import { colors, fontSizes, fontWeights, lineHeights } from "../../../common/styleVariables";
 import { PartialEvent } from "../../../common/types";
+import SectionSubtitle from "../../SectionSubtitle";
 import Spacer from "../../Spacer";
 import Tooltip from "../../Tooltip";
 import EventList from "./EventList";
@@ -42,6 +43,7 @@ export default function RequestCreatorAndList() {
 	}, []);
 	return (
 		<>
+			<SectionSubtitle label={t("subtitle")} />
 			<RequestCreator onStartRequestCreation={handleRequestStarted} onRequestCreated={handleRequestCreated} />
 			{(status === "loading" || status === "done") && (
 				<>

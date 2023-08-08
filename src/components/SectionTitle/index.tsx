@@ -1,29 +1,28 @@
 import styled from "@emotion/styled";
 import { FC } from "react";
-import { colors, mediaQueries } from "../../common/styleVariables";
+import { colors, fontSizes, lineHeights, mediaQueries } from "../../common/styleVariables";
 
 type BackgroundColor = string;
-const backgroundImageWidth = "500px";
+const backgroundImageWidth = "600px";
 
 const HeaderWrapper = styled.div(() => {
 	return {
 		display: "flex",
 		gap: "1.6rem",
-		justifyContent: "center",
 	};
 });
 
 const BannerBackdrop = styled.div<{ backgroundColor: BackgroundColor }>(({ backgroundColor }) => {
 	return {
 		position: "relative",
-		backgroundColor: `${backgroundColor}80`,
+		backgroundColor,
 		maxWidth: backgroundImageWidth,
 	};
 });
 
 const Fold = styled.div(() => {
-	const foldWidth = "30px";
-	const foldHeight = "36px";
+	const foldWidth = "36px";
+	const foldHeight = "46px";
 	return {
 		position: "absolute",
 		bottom: 0,
@@ -40,10 +39,8 @@ const TitleWrapper = styled.div(() => {
 		position: "relative",
 		justifyContent: "center",
 		alignItems: "center",
-		maxWidth: backgroundImageWidth,
-		minHeight: "13rem",
-		margin: "0 auto",
-		padding: "30px",
+		minHeight: "100%",
+		padding: `20px 40px 20px 20px`,
 		backgroundImage: `url("/images/title-frame-blue-corner.svg")`,
 		backgroundSize: backgroundImageWidth,
 		backgroundRepeat: "no-repeat",
@@ -54,16 +51,16 @@ const TitleWrapper = styled.div(() => {
 });
 
 const Label = styled.h2(() => ({
+	fontSize: fontSizes.extraLarge,
+	lineHeight: lineHeights.headline,
 	color: colors.blueDark,
-	textAlign: "center",
 }));
 
 const SectionImage = styled.div<{ headerImage: string }>(({ headerImage }) => {
-	const imageWidth = "10rem";
 	return {
 		display: "none",
-		minHeight: "13rem",
-		minWidth: imageWidth,
+		flex: "0 0 50%",
+		aspectRatio: "6 / 8",
 		backgroundImage: `url(${headerImage})`,
 		backgroundSize: "cover",
 		backgroundRepeat: "no-repeat",

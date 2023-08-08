@@ -3,7 +3,14 @@
 		"meta-title": "Kulturdaten.berlin website",
 		"meta-description": "Beschreibung hier",
 		"title": "Die kulturdaten.berlin-Website kommt bald!",
+		"intro-section": {
+			"hero-title": "Die digitale Basis für Kultur in Berlin",
+			"hero-subtitle": "Kostenlos. Offen. Für alle.",
+			"subtitle": "Berlins Kulturdaten – zentral, auffindbar, vernetzt",
+			"description": "Was? Wann? Wer? Wo? Für wen? Wie lange? Um im Web gefunden zu werden, müssen Kulturschaffende ihr Programm an vielen Stellen mühsam händisch einpflegen. Mit der Plattform kulturdaten.berlin wollen wir diesen Prozess radikal vereinfachen!\n\nGleichzeitig bietet das Internet für Kulturinteressierte zwar viele Möglichkeiten, sich über Kulturangebote in Berlin zu informieren, aber es gibt keine zentrale Übersicht über alle kulturellen Einrichtungen und Veranstaltungen in der Stadt. \n\nDeswegen entwickeln wir gemeinsam mit Kulturakteur:innen und -institutionen die erste offene, digitale Infrastruktur für Kulturdaten in Berlin: Gefördert durch die Senatsverwaltung für Kultur und Europa entsteht zurzeit eine zentrale Datendrehscheibe, die Kulturdaten strukturiert, bündelt und mit zahlreichen Portalen zielgerichtet vernetzen kann."
+		},
 		"for-interested": {
+			"subtitle": "Interessiert?\nDann probier kulturdaten.berlin einfach aus:",
 			"button-create-request": "Zufällige Anfrage erzeugen",
 			"request-1-text": "Ich mag Theaterstücke wie Der zerbrochene Krug und Nathan. Was läuft in den nächsten 2 Wochen?",
 			"request-2-text": "Zeig’ mir coole Rock-Konzerte in Kreuzberg!",

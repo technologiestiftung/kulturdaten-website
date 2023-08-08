@@ -3,7 +3,14 @@
 		"meta-title": "Kulturdaten.berlin website",
 		"meta-description": "Some description",
 		"title": "kulturdaten.berlin-Website coming soon!",
+		"intro-section": {
+			"hero-title": "The digital basis for culture in Berlin",
+			"hero-subtitle": "Free of charge. Open. For all.",
+			"subtitle": "Berlin’s cultural data - central, findable, networked",
+			"description": "What? When? Who? Where? For whom? For how long? In order to be found on the web, cultural professionals have to painstakingly enter their programs manually in many places. With the platform kulturdaten.berlin we want to radically simplify this process!\n\nAt the same time, although the Internet offers many ways for those interested in culture to find out about cultural offerings in Berlin, there is no central overview of all cultural institutions and events in the city. \n\nThat’s why we’re working with cultural actors and institutions to develop the first open, digital infrastructure for cultural data in Berlin. Funded by the Senate Department for Culture and Europe, we’re currently creating a central data hub that will structure and bundle cultural data and link it to numerous portals in a targeted manner."
+		},
 		"for-interested": {
+			"subtitle": "Interested?\nThen just try out kulturdaten.berlin:",
 			"button-create-request": "Create random request",
 			"request-1-text": "I like plays like The Broken Pitcher and Nathan. What’s on in the next 2 weeks?",
 			"request-2-text": "Show me cool rock concerts in central Berlin!",

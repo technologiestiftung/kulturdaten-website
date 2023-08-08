@@ -7,6 +7,7 @@ export const fontSizes = {
 	default: "16px",
 	medium: "1.2rem",
 	large: "1.6rem",
+	extraLarge: "2.0rem",
 };
 
 export const fontWeights = {
@@ -17,18 +18,16 @@ export const fontWeights = {
 
 export const lineHeights = {
 	default: 1.6,
+	headline: 1.4,
 	buttons: 1.3,
 	single: 1.0,
 };
 
 export const colors = {
 	black: "#3b3b3a",
-	blueLight: "#a8daf4",
 	blueDark: "#1e3791",
-	red40: "#f5afa5",
-	lind60: "#c3dcb9",
 	yellow: "#f1ff54",
-	green: "#cffdba",
+	green: "#beffa9",
 	turquoise: "#a0faf2",
 	grayLight: "#f9f9f9",
 	white: "#ffffff",
