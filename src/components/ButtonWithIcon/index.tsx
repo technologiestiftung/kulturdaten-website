@@ -10,6 +10,10 @@ const StyledButton = styled(Button)({
 	gap: spacings.get(2),
 });
 
+const StyledIcon = styled(Icon)({
+	flex: "0 0 auto",
+});
+
 type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
 	as?: "button" | undefined;
 	icon: IconProps["name"];
@@ -29,7 +33,7 @@ export default function ButtonWithIcon(props: Props) {
 	const { icon, children, ...otherProps } = props;
 	return (
 		<StyledButton {...otherProps}>
-			<Icon name={icon} />
+			<StyledIcon name={icon} />
 			{children}
 		</StyledButton>
 	);
