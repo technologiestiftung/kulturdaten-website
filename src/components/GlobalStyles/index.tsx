@@ -20,6 +20,13 @@ const styles: CSSObject = {
 		overflowWrap: "break-word",
 		whiteSpace: "pre-line",
 	},
+	a: {
+		color: colors.blueDark,
+		textDecoration: "underline",
+		"&:hover": {
+			textDecoration: "none",
+		},
+	},
 	h2: {
 		fontSize: fontSizes.large,
 		fontWeight: fontWeights.bold,
