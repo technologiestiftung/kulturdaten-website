@@ -18,8 +18,21 @@ const Title = styled.div({
 	fontWeight: fontWeights.medium,
 });
 
-const Description = styled.p({
+const Description = styled.div({
+	position: "relative",
+	maxHeight: "5rem",
+	overflow: "hidden",
 	color: colors.black,
+});
+
+const DescriptionFade = styled.div({
+	position: "absolute",
+	bottom: 0,
+	left: 0,
+	width: "100%",
+	height: "70%",
+	background: `linear-gradient(0deg, ${colors.turquoise} 0%, rgba(160, 250, 242, 0) 100%)`,
+	pointerEvents: "none",
 });
 
 type Props = {
@@ -56,7 +69,10 @@ export default function ItemContent({ eventWithAttraction, locale }: Props) {
 			<Spacer size={10} />
 			<Title>{getLocalizedContent(attraction?.title)}</Title>
 			<Spacer size={10} />
-			<Description>{sanitizeDescription(getLocalizedContent(attraction?.description))}</Description>
+			<Description>
+				<p>{sanitizeDescription(getLocalizedContent(attraction?.description))}</p>
+				<DescriptionFade role="none" />
+			</Description>
 		</>
 	);
 }
