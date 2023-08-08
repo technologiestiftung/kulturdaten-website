@@ -29,7 +29,7 @@ export const colors = {
 	yellow: "#f1ff54",
 	green: "#beffa9",
 	turquoise: "#a0faf2",
-	grayLight: "#f9f9f9",
+	grayLight: "#fafafa",
 	white: "#ffffff",
 };
 
