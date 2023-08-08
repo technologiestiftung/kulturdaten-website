@@ -1,7 +1,8 @@
 import styled from "@emotion/styled";
+import { useCallback } from "react";
 import { Event } from "../../../../api/client/models/Event";
 import { colors, fontSizes, fontWeights, lineHeights } from "../../../../common/styleVariables";
-import { Locale } from "../../../../hooks/useLocale";
+import { Locale, fallbackLocale } from "../../../../hooks/useLocale";
 import { EventWithAttraction } from "../../../../services/apiRequests";
 import formatDate from "../../../../services/dates";
 import Spacer from "../../../Spacer";
@@ -37,16 +38,25 @@ function sanitizeDescription(description: string) {
 export default function ItemContent({ eventWithAttraction, locale }: Props) {
 	const { event, attraction } = eventWithAttraction;
 	const isoDate = getStartDateAsISO(event);
+	const getLabel = useCallback(
+		(labels: Record<string, string> | undefined) => {
+			if (!labels) {
+				return "";
+			}
+			return labels[locale] || labels[fallbackLocale];
+		},
+		[locale]
+	);
 	return (
 		<>
 			<Meta>
 				<time dateTime={isoDate}>{formatDate(isoDate, locale, { dateStyle: "full", timeStyle: "short" })}</time>,{" "}
-				{event.locations?.[0].referenceLabel?.[locale]}
+				{getLabel(event.locations?.[0].referenceLabel)}
 			</Meta>
 			<Spacer size={10} />
-			<Title>{attraction?.title?.[locale]}</Title>
+			<Title>{getLabel(attraction?.title)}</Title>
 			<Spacer size={10} />
-			<Description>{sanitizeDescription(attraction?.description?.[locale] || "")}</Description>
+			<Description>{sanitizeDescription(getLabel(attraction?.description))}</Description>
 		</>
 	);
 }
