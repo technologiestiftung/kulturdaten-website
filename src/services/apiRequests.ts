@@ -17,8 +17,7 @@ export async function loadEventsWithAttractions(
 	searchFilter: SearchEventsRequest["searchFilter"]
 ): Promise<EventWithAttraction[]> {
 	const eventsResponse = await apiClient.discoverCulturalData.postEventsSearch({ searchFilter });
-	// We are manually casting this to Event here, because the type of the nested events inside SearchEventsResponse are incompatible with the type Event.
-	const events = (eventsResponse.data?.events || []) as Event[];
+	const events = eventsResponse.data?.events || [];
 	const first5Events = events.slice(0, 5);
 	const attractionIds = first5Events.map(getAttractionId).filter(Boolean);
 	const attractionsResponse = await apiClient.discoverCulturalData.postAttractionsSearch({
@@ -29,7 +28,7 @@ export async function loadEventsWithAttractions(
 			},
 		},
 	});
-	const attractions = (attractionsResponse.data?.attractions || []) as Attraction[];
+	const attractions = attractionsResponse.data?.attractions || [];
 	const eventsWithAttractions = first5Events.map((event) => {
 		const attractionId = getAttractionId(event);
 		const matchingAttraction = attractionId
