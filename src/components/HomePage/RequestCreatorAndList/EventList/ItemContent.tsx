@@ -38,7 +38,7 @@ function sanitizeDescription(description: string) {
 export default function ItemContent({ eventWithAttraction, locale }: Props) {
 	const { event, attraction } = eventWithAttraction;
 	const isoDate = getStartDateAsISO(event);
-	const getLabel = useCallback(
+	const getLocalizedContent = useCallback(
 		(labels: Record<string, string> | undefined) => {
 			if (!labels) {
 				return "";
@@ -51,12 +51,12 @@ export default function ItemContent({ eventWithAttraction, locale }: Props) {
 		<>
 			<Meta>
 				<time dateTime={isoDate}>{formatDate(isoDate, locale, { dateStyle: "full", timeStyle: "short" })}</time>,{" "}
-				{getLabel(event.locations?.[0].referenceLabel)}
+				{getLocalizedContent(event.locations?.[0].referenceLabel)}
 			</Meta>
 			<Spacer size={10} />
-			<Title>{getLabel(attraction?.title)}</Title>
+			<Title>{getLocalizedContent(attraction?.title)}</Title>
 			<Spacer size={10} />
-			<Description>{sanitizeDescription(getLabel(attraction?.description))}</Description>
+			<Description>{sanitizeDescription(getLocalizedContent(attraction?.description))}</Description>
 		</>
 	);
 }
