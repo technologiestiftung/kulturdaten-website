@@ -10,7 +10,7 @@ const Block = styled.div<Props>(({ padding = spacings.get(5) }) => ({
 	color: colors.blueDark,
 	backgroundColor: colors.turquoise,
 	border: `${borderWidths.default}px solid ${colors.blueDark}`,
-	borderRadius: borderRadiuses.big,
+	borderRadius: borderRadiuses.medium,
 }));
 
 export default Block;

@@ -1,7 +1,7 @@
 import styled from "@emotion/styled";
 import { ReactNode } from "react";
 import { Tooltip as ReactTooltip } from "react-tooltip";
-import { colors } from "../../common/styleVariables";
+import { borderRadiuses, colors } from "../../common/styleVariables";
 
 const Element = styled.a({
 	color: colors.blueDark,
@@ -28,7 +28,7 @@ export default function Tooltip({ element = "span", children, tooltip, id }: Pro
 			<Element as={element} data-tooltip-id={id} aria-describedby={id}>
 				{children}
 			</Element>
-			<StyledTooltip id={id} offset={5} opacity={1.0}>
+			<StyledTooltip id={id} offset={5} opacity={1.0} style={{ borderRadius: borderRadiuses.medium }}>
 				{tooltip}
 			</StyledTooltip>
 		</>
