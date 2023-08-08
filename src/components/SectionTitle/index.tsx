@@ -17,7 +17,6 @@ const BannerBackdrop = styled.div<{ backgroundColor: BackgroundColor }>(({ backg
 		position: "relative",
 		backgroundColor,
 		maxWidth: backgroundImageWidth,
-		minHeight: "100%",
 	};
 });
 
