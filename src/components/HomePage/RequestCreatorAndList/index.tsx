@@ -47,7 +47,13 @@ export default function RequestCreatorAndList() {
 					<Spacer size={40} />
 					<ResultsTitle>{t("results-title")}</ResultsTitle>
 					<Spacer size={5} />
-					<Tooltip id="results-source-tooltip" tooltip={t("results-source-tooltip")}>
+					<Tooltip
+						id="results-source-tooltip"
+						tooltip={t.raw("results-source-tooltip")}
+						tooltipAsHTML={true}
+						clickable={true}
+						place="top-start"
+					>
 						{t("results-source-title")}
 					</Tooltip>
 					<Spacer size={10} />
