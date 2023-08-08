@@ -20,7 +20,7 @@
 			"request-6-text": "I love excursions! 💗💗 Which ones are available in Berlin?",
 			"results-title": "Your results:",
 			"results-source-title": "Where do the results come from?",
-			"results-source-tooltip": "We are currently using example data to demonstrate our system."
+			"results-source-tooltip": "The results come from the calendars of Berlin’s districts, which are managed by BerlinOnline Stadtportal GmbH & Co. KG and can also be viewed on <a href=\"https://www.berlin.de/land/veranstaltungen/bezirke/\" target=\"_blank\" rel=\"noreferrer\">berlin.de</a>."
 		},
 		"artist-section": {
 			"title": "You do the culture, we’ll let everyone know",
