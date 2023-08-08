@@ -2,6 +2,11 @@
 	"Home": {
 		"meta-title": "Kulturdaten.berlin website",
 		"meta-description": "Some description",
+		"header": {
+			"link-interested": "For the interested",
+			"link-artists": "For cultural actors",
+			"link-data": "For data users"
+		},
 		"title": "kulturdaten.berlin-Website coming soon!",
 		"intro-section": {
 			"hero-title": "The digital basis for culture in Berlin",
