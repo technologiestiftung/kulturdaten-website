@@ -13,7 +13,7 @@ const Meta = styled.div({
 });
 
 const Title = styled.div({
-	lineHeight: lineHeights.single,
+	lineHeight: lineHeights.headline,
 	fontSize: fontSizes.medium,
 	fontWeight: fontWeights.medium,
 });
