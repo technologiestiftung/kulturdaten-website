@@ -30,6 +30,10 @@ function getStartDateAsISO(event: Event) {
 	return `${event.schedule?.startDate}T${event.schedule?.startTime}`;
 }
 
+function sanitizeDescription(description: string) {
+	return description.replace(/(\n)*$/gm, "");
+}
+
 export default function ItemContent({ eventWithAttraction, locale }: Props) {
 	const { event, attraction } = eventWithAttraction;
 	const isoDate = getStartDateAsISO(event);
@@ -39,10 +43,10 @@ export default function ItemContent({ eventWithAttraction, locale }: Props) {
 				<time dateTime={isoDate}>{formatDate(isoDate, locale, { dateStyle: "full", timeStyle: "short" })}</time>,{" "}
 				{event.locations?.[0].referenceLabel?.[locale]}
 			</Meta>
-			<Spacer size={5} />
+			<Spacer size={10} />
 			<Title>{attraction?.title?.[locale]}</Title>
-			<Spacer size={5} />
-			<Description>{attraction?.description?.[locale]}</Description>
+			<Spacer size={10} />
+			<Description>{sanitizeDescription(attraction?.description?.[locale] || "")}</Description>
 		</>
 	);
 }
