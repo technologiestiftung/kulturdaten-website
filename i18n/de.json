@@ -4,12 +4,16 @@
 		"meta-description": "Beschreibung hier",
 		"title": "Die kulturdaten.berlin-Website kommt bald!",
 		"for-interested": {
-			"button-create-request": "Zufällige Anfrage erstellen",
+			"button-create-request": "Zufällige Anfrage erzeugen",
 			"request-1-text": "Ich mag Theaterstücke wie Der zerbrochene Krug und Nathan. Was läuft in den nächsten 2 Wochen?",
 			"request-2-text": "Zeig’ mir coole Rock-Konzerte in Kreuzberg!",
 			"request-3-text": "Post-Metal und Progressive Rock ist super. Was läuft da demnächst?",
 			"request-4-text": "Ich gehe am liebsten in die Deutsche Oper. Gibt’s da gute Aufführungen am nächsten Wochenende?",
-			"request-5-text": "Standup-Comedy in Neukölln oder Kreuzberg oder Friedrichshain – Go!"
+			"request-5-text": "Standup-Comedy in Neukölln oder Kreuzberg oder Friedrichshain – Go!",
+			"request-6-text": "Ich liebe Exkursionen! 💗💗 Welche werden da in Berlin angeboten?",
+			"results-title": "Deine Ergebnisse:",
+			"results-source-title": "Woher kommen die Ergebnisse?",
+			"results-source-tooltip": "Momentan verwenden wir Beispiel-Daten, um unser System zu demonstrieren."
 		},
 		"artist-section": {
 			"title": "Ihr macht die Kultur, wir sagen allen Bescheid",

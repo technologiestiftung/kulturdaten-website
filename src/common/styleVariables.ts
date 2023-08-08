@@ -3,6 +3,7 @@ export const fontFamilies = {
 };
 
 export const fontSizes = {
+	small: "0.8rem",
 	default: "16px",
 	medium: "1.2rem",
 	large: "1.6rem",
@@ -17,6 +18,7 @@ export const fontWeights = {
 export const lineHeights = {
 	default: 1.6,
 	buttons: 1.3,
+	single: 1.0,
 };
 
 export const colors = {
@@ -26,6 +28,8 @@ export const colors = {
 	red40: "#f5afa5",
 	lind60: "#c3dcb9",
 	yellow: "#f1ff54",
+	green: "#cffdba",
+	turquoise: "#a0faf2",
 	grayLight: "#f9f9f9",
 	white: "#ffffff",
 };
@@ -48,10 +52,15 @@ export const widths = {
 	maxContentWidth: `${breakpoints.xl}px`,
 };
 
+export const borderWidths = {
+	default: 3,
+};
+
 export const borderRadiuses = {
 	big: 20,
 };
 
 export const timings = {
 	short: "100ms",
+	medium: "250ms",
 };
