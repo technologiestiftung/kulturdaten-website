@@ -37,9 +37,9 @@ export const spacings = {
 	get: (factor = 1.0) => factor * 5,
 };
 
-export const breakpoints: { [key: string]: number } = {
+export const breakpoints = {
 	s: 580,
-	m: 768,
+	m: 900,
 };
 
 export const mediaQueries = {
@@ -48,7 +48,7 @@ export const mediaQueries = {
 };
 
 export const widths = {
-	maxContentWidth: `${breakpoints.xl}px`,
+	maxContentWidth: `${breakpoints.m}px`,
 };
 
 export const borderWidths = {
