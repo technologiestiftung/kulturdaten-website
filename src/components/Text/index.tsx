@@ -26,7 +26,9 @@ const textStyles: Record<TextType, CSSObject> = {
 	},
 };
 
-const StyledDiv = styled.div<Props>(({ type, color }) => ({
+const StyledDiv = styled("div", {
+	shouldForwardProp: (prop) => !["as", "color", "type"].includes(prop),
+})<Props>(({ type, color }) => ({
 	...textStyles[type],
 	color: color ? colors[color] : undefined,
 }));
