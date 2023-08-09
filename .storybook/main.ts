@@ -5,8 +5,12 @@ const config: StorybookConfig = {
 	staticDirs: ["../public"],
 	addons: [
 		"@storybook/addon-links",
-		"@storybook/addon-essentials",
-		"@storybook/addon-interactions",
+		{
+			name: "@storybook/addon-essentials",
+			options: {
+				actions: false,
+			},
+		},
 		"@storybook/addon-styling",
 	],
 	framework: {
