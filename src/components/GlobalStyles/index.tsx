@@ -1,5 +1,5 @@
 import { CSSObject, Global } from "@emotion/react";
-import { colors, fontFamilies, fontSizes, fontWeights, lineHeights } from "../../common/styleVariables";
+import { colors, fontFamilies, fontSizes, lineHeights } from "../../common/styleVariables";
 import FontFaces from "./FontFaces";
 
 const styles: CSSObject = {
@@ -16,7 +16,7 @@ const styles: CSSObject = {
 	"input, button, textarea, select": {
 		font: "inherit",
 	},
-	"p, h1, h2, h3, h4, h5, h6": {
+	p: {
 		overflowWrap: "break-word",
 		whiteSpace: "pre-line",
 	},
@@ -26,14 +26,6 @@ const styles: CSSObject = {
 		"&:hover": {
 			textDecoration: "none",
 		},
-	},
-	h2: {
-		fontSize: fontSizes.large,
-		fontWeight: fontWeights.bold,
-	},
-	h3: {
-		fontSize: fontSizes.medium,
-		fontWeight: fontWeights.medium,
 	},
 	html: {
 		fontSize: fontSizes.default,
