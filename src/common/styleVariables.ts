@@ -56,7 +56,7 @@ export const borderWidths = {
 };
 
 export const borderRadiuses = {
-	big: 20,
+	medium: 10,
 };
 
 export const timings = {

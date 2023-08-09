@@ -1,6 +1,6 @@
 import styled from "@emotion/styled";
 import { ButtonHTMLAttributes } from "react";
-import { borderWidths, colors, fontWeights, lineHeights, timings } from "../../common/styleVariables";
+import { borderRadiuses, borderWidths, colors, fontWeights, lineHeights, timings } from "../../common/styleVariables";
 
 const StyledButton = styled.button({
 	appearance: "none",
@@ -10,7 +10,7 @@ const StyledButton = styled.button({
 	background: "transparent",
 	fontWeight: fontWeights.default,
 	border: `${borderWidths.default}px solid ${colors.blueDark}`,
-	borderRadius: "none",
+	borderRadius: borderRadiuses.medium,
 	transition: `all ${timings.short} ease-in-out`,
 	"&:hover": {
 		cursor: "pointer",
