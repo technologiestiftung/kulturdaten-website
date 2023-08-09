@@ -18,7 +18,7 @@ export const Default: Story = {
 
 export const ButtonLink: Story = {
 	args: {
-		children: "I am a a link that looks like a button",
+		children: "I am a link that looks like a button",
 		href: "https://www.berlin.de/",
 		target: "_blank",
 	},
