@@ -16,3 +16,13 @@ export const Default: Story = {
 		id: "test-id",
 	},
 };
+
+export const TooltipWithHTMLContent: Story = {
+	args: {
+		children: "Trigger me!",
+		tooltip: 'Here’s a tooltip with HTML content: <a href="https://www.berlin.de/" target="_blank">berlin.de</a>',
+		tooltipAsHTML: true,
+		clickable: true,
+		id: "test-id",
+	},
+};
