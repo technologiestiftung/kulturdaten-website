@@ -1,11 +1,20 @@
-import { ReactNode } from "react";
+import styled from "@emotion/styled";
+import { AnchorHTMLAttributes, ReactNode } from "react";
+import { colors } from "../../common/styleVariables";
 
-type Props = {
+const A = styled.a({
+	color: colors.blueDark,
+	textDecoration: "underline",
+	"&:hover": {
+		textDecoration: "none",
+	},
+});
+
+type Props = AnchorHTMLAttributes<HTMLAnchorElement> & {
 	href: string;
 	children: ReactNode;
 };
 
 export default function Link(props: Props) {
-	const { href, children } = props;
-	return <a href={href}>{children}</a>;
+	return <A {...props} />;
 }
