@@ -1,6 +1,7 @@
 import styled from "@emotion/styled";
 import { FC } from "react";
-import { colors, fontSizes, lineHeights, mediaQueries } from "../../common/styleVariables";
+import { colors, mediaQueries } from "../../common/styleVariables";
+import Text from "../Text";
 
 type BackgroundColor = string;
 const backgroundImageWidth = "600px";
@@ -51,12 +52,6 @@ const TitleWrapper = styled.div(() => {
 	};
 });
 
-const Label = styled.h2(() => ({
-	fontSize: fontSizes.extraLarge,
-	lineHeight: lineHeights.headline,
-	color: colors.blueDark,
-}));
-
 const SectionImage = styled.div<{ headerImage: string }>(({ headerImage }) => {
 	return {
 		display: "none",
@@ -84,7 +79,9 @@ const SectionTitle: FC<SectionTitleProps> = ({ label, backgroundColor, headerIma
 			<BannerBackdrop backgroundColor={backgroundColor}>
 				<Fold />
 				<TitleWrapper>
-					<Label>{label}</Label>
+					<Text type="h1" color="blueDark">
+						{label}
+					</Text>
 				</TitleWrapper>
 			</BannerBackdrop>
 			<SectionImage headerImage={headerImage} />

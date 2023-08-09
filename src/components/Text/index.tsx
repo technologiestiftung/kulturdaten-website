@@ -31,6 +31,8 @@ const StyledDiv = styled("div", {
 })<Props>(({ type, color }) => ({
 	...textStyles[type],
 	color: color ? colors[color] : undefined,
+	overflowWrap: "break-word",
+	whiteSpace: "pre-line",
 }));
 
 type Props = HTMLAttributes<HTMLDivElement> & {

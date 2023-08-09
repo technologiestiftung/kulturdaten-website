@@ -1,16 +1,13 @@
 import styled from "@emotion/styled";
-import { colors } from "../../common/styleVariables";
 import { FC } from "react";
+import { colors } from "../../common/styleVariables";
+import Text from "../Text";
 
 const SubtitleWrapper = styled.div({
 	borderTop: `4px solid ${colors.blueDark}`,
 	marginTop: "6rem",
 	paddingTop: ".5rem",
 	paddingBottom: "2rem",
-});
-
-const SubtitleLabel = styled.h3({
-	color: colors.blueDark,
 });
 
 interface Props {
@@ -20,7 +17,9 @@ interface Props {
 const SectionSubtitle: FC<Props> = ({ label }) => {
 	return (
 		<SubtitleWrapper>
-			<SubtitleLabel>{label}</SubtitleLabel>
+			<Text type="h3" color="blueDark">
+				{label}
+			</Text>
 		</SubtitleWrapper>
 	);
 };
