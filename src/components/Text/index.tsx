@@ -37,6 +37,6 @@ type Props = HTMLAttributes<HTMLDivElement> & {
 	color?: keyof typeof colors;
 };
 
-export default function Text({ as, ...props }: Props) {
-	return <StyledDiv as={as} {...props} />;
+export default function Text({ type, as = type, ...props }: Props) {
+	return <StyledDiv type={type} as={as} {...props} />;
 }
