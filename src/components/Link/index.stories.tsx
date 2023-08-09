@@ -9,7 +9,7 @@ export default meta;
 
 type Story = StoryObj<typeof Link>;
 
-export const FirstStory: Story = {
+export const Default: Story = {
 	args: {
 		href: "https://www.technologiestiftung-berlin.de/",
 		children: "I am a link",
