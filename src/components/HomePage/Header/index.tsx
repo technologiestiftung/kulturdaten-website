@@ -74,13 +74,13 @@ const AnchorLinkWrapper = styled.div({
 
 const AnchorLink = styled.a<{ active: boolean }>((props) => ({
 	color: colors.blueDark,
-	textDecoration: props.active ? "underline" : "none",
-	fontWeight: props.active ? fontWeights.medium : fontWeights.light,
+	fontWeight: fontWeights.medium,
+	textDecoration: "none",
+	borderBottom: props.active ? `2px solid ${colors.blueDark}` : "none",
 	fontSize: fontSizes.small,
 	transition: `all ${timings.short} ease-in-out`,
 	"&:hover": {
-		textDecoration: "underline",
-		fontWeight: fontWeights.medium,
+		borderBottom: `2px solid ${colors.blueDark}`,
 	},
 }));
 
