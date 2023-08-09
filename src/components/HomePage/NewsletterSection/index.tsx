@@ -8,7 +8,6 @@ import Section from "../Section";
 
 const PageContainer = styled.div({
 	display: "flex",
-	alignItems: "center",
 });
 
 const ImageContainer = styled.div({
