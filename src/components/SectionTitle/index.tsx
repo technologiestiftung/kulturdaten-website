@@ -14,6 +14,7 @@ const HeaderWrapper = styled.div(() => {
 
 const BannerBackdrop = styled.div<{ backgroundColor: BackgroundColor }>(({ backgroundColor }) => {
 	return {
+		flex: "1 1 50%",
 		position: "relative",
 		backgroundColor,
 		maxWidth: backgroundImageWidth,
@@ -59,7 +60,7 @@ const Label = styled.h2(() => ({
 const SectionImage = styled.div<{ headerImage: string }>(({ headerImage }) => {
 	return {
 		display: "none",
-		flex: "0 0 50%",
+		flex: "0 1 50%",
 		aspectRatio: "6 / 8",
 		backgroundImage: `url(${headerImage})`,
 		backgroundSize: "cover",
