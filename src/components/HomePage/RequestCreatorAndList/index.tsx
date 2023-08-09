@@ -53,6 +53,7 @@ export default function RequestCreatorAndList() {
 						tooltipAsHTML={true}
 						clickable={true}
 						place="top-start"
+						style={{ maxWidth: "min(85vw, 35em)" }}
 					>
 						{t("results-source-title")}
 					</Tooltip>
