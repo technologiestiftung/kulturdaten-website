@@ -64,10 +64,14 @@ export const borderWidths = {
 
 export const borderRadiuses = {
 	medium: 10,
-	round: 50,
+	round: "50%",
 };
 
 export const timings = {
 	short: "100ms",
 	medium: "250ms",
+};
+
+export const zIndexes = {
+	header: 100,
 };

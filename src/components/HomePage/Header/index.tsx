@@ -1,27 +1,29 @@
 import styled from "@emotion/styled";
 import {
 	borderRadiuses,
+	borderWidths,
 	breakpoints,
 	colors,
 	fontSizes,
 	fontWeights,
 	mediaQueries,
 	timings,
+	zIndexes,
 } from "../../../common/styleVariables";
 import { AnchorLinks } from "..";
 import { useTranslations } from "next-intl";
 
-const HeaderContainer = styled.div({
+const HeaderContainer = styled.header({
 	position: "fixed",
 	left: 0,
 	width: "100vw",
-	zIndex: 100,
+	zIndex: zIndexes.header,
 	color: colors.blueDark,
-	borderBottom: `3px solid ${colors.blueDark}`,
+	borderBottom: `${borderWidths.default}px solid ${colors.blueDark}`,
 	backgroundColor: colors.white,
 });
 
-const ContentWrapper = styled.div({
+const Navigation = styled.nav({
 	maxWidth: breakpoints.l,
 	margin: "0 auto",
 	display: "flex",
@@ -58,7 +60,7 @@ const LightTitle = styled.span({
 	fontWeight: fontWeights.light,
 });
 
-const AnchorLinkWrapper = styled.div({
+const AnchorLinkWrapper = styled.ul({
 	display: "flex",
 	flexDirection: "column",
 	flexWrap: "wrap",
@@ -70,6 +72,10 @@ const AnchorLinkWrapper = styled.div({
 	[mediaQueries.s]: {
 		flexDirection: "row",
 	},
+});
+
+const AnchorLinkItem = styled.li({
+	listStyle: "none",
 });
 
 const AnchorLink = styled.a<{ active: boolean }>((props) => ({
@@ -92,7 +98,7 @@ const Header = ({ activeAnchorLink }: Props) => {
 	const t = useTranslations("Home.header");
 	return (
 		<HeaderContainer>
-			<ContentWrapper>
+			<Navigation>
 				<LogoWrapper>
 					<Logo />
 					<Title>
@@ -101,20 +107,26 @@ const Header = ({ activeAnchorLink }: Props) => {
 					</Title>
 				</LogoWrapper>
 				<AnchorLinkWrapper>
-					<AnchorLink
-						active={activeAnchorLink === AnchorLinks.INTERESTEDSECTION}
-						href={`#${AnchorLinks.INTERESTEDSECTION}`}
-					>
-						{t("link-interested")}
-					</AnchorLink>
-					<AnchorLink active={activeAnchorLink === AnchorLinks.ARTISTSECTION} href={`#${AnchorLinks.ARTISTSECTION}`}>
-						{t("link-artists")}
-					</AnchorLink>
-					<AnchorLink active={activeAnchorLink === AnchorLinks.DATASECTION} href={`#${AnchorLinks.DATASECTION}`}>
-						{t("link-data")}
-					</AnchorLink>
+					<AnchorLinkItem>
+						<AnchorLink
+							active={activeAnchorLink === AnchorLinks.INTERESTEDSECTION}
+							href={`#${AnchorLinks.INTERESTEDSECTION}`}
+						>
+							{t("link-interested")}
+						</AnchorLink>
+					</AnchorLinkItem>
+					<AnchorLinkItem>
+						<AnchorLink active={activeAnchorLink === AnchorLinks.ARTISTSECTION} href={`#${AnchorLinks.ARTISTSECTION}`}>
+							{t("link-artists")}
+						</AnchorLink>
+					</AnchorLinkItem>
+					<AnchorLinkItem>
+						<AnchorLink active={activeAnchorLink === AnchorLinks.DATASECTION} href={`#${AnchorLinks.DATASECTION}`}>
+							{t("link-data")}
+						</AnchorLink>
+					</AnchorLinkItem>
 				</AnchorLinkWrapper>
-			</ContentWrapper>
+			</Navigation>
 		</HeaderContainer>
 	);
 };

@@ -16,7 +16,7 @@ const Main = styled.main(() => ({
 	margin: "0 auto",
 }));
 
-export interface InView {
+interface InView {
 	interestedSectionInView: boolean;
 	artistSectionInView: boolean;
 	dataSectionInView: boolean;
@@ -37,11 +37,7 @@ export default function HomePage() {
 		const inViewKeys = Object.keys(inView) as Array<keyof InView>;
 		const trueInViewKeys = inViewKeys.filter((key) => inView[key]);
 
-		return trueInViewKeys.length === 0
-			? null
-			: trueInViewKeys.length === 1
-			? trueInViewKeys[0]
-			: trueInViewKeys[trueInViewKeys.length - 1];
+		return trueInViewKeys[trueInViewKeys.length - 1] || null;
 	};
 
 	const { ref: interestedSectionRef, inView: interestedSectionInView } = useInView(inViewOptions);
@@ -50,15 +46,14 @@ export default function HomePage() {
 
 	useEffect(() => {
 		const latestInView = getLatestInView({ interestedSectionInView, artistSectionInView, dataSectionInView });
-		setActiveAnchorLink(
-			latestInView === "interestedSectionInView"
-				? AnchorLinks.INTERESTEDSECTION
-				: latestInView === "artistSectionInView"
-				? AnchorLinks.ARTISTSECTION
-				: latestInView === "dataSectionInView"
-				? AnchorLinks.DATASECTION
-				: null
-		);
+
+		const linkMap: Record<keyof InView, AnchorLinks> = {
+			interestedSectionInView: AnchorLinks.INTERESTEDSECTION,
+			artistSectionInView: AnchorLinks.ARTISTSECTION,
+			dataSectionInView: AnchorLinks.DATASECTION,
+		};
+		const newAnchorLink = latestInView ? linkMap[latestInView] : null;
+		setActiveAnchorLink(newAnchorLink);
 	}, [artistSectionInView, interestedSectionInView, dataSectionInView]);
 
 	return (
