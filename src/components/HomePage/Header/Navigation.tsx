@@ -4,19 +4,25 @@ import { mediaQueries, colors, fontWeights, fontSizes, timings } from "../../../
 import { useTranslations } from "next-intl";
 
 const NavigationWrapper = styled.nav({
+	position: "absolute",
 	width: "100%",
 	maxWidth: "500px",
+	right: "2rem",
+	top: "2rem",
+	[mediaQueries.m]: {
+		position: "static",
+	},
 });
 
 const AnchorLinkList = styled.ul({
 	display: "flex",
 	flexDirection: "column",
-	flexWrap: "wrap",
 	justifyContent: "space-between",
 	alignItems: "flex-end",
 	width: "100%",
 	gap: "1.6rem",
-	[mediaQueries.s]: {
+	[mediaQueries.m]: {
+		width: "100%",
 		flexDirection: "row",
 	},
 });
@@ -37,14 +43,16 @@ const AnchorLink = styled.a<{ active: boolean }>((props) => ({
 	},
 }));
 interface Props {
-	activeAnchorLink: AnchorLinks | null;
+	activeAnchorLink?: AnchorLinks | null;
+	closeBurger?: () => void;
 }
-export default function Navigation({ activeAnchorLink }: Props) {
+
+export default function Navigation({ activeAnchorLink, closeBurger }: Props) {
 	const t = useTranslations("Home.header");
 	return (
 		<NavigationWrapper>
 			<AnchorLinkList>
-				<AnchorLinkItem>
+				<AnchorLinkItem onClick={closeBurger}>
 					<AnchorLink
 						active={activeAnchorLink === AnchorLinks.INTERESTEDSECTION}
 						href={`#${AnchorLinks.INTERESTEDSECTION}`}
@@ -52,12 +60,12 @@ export default function Navigation({ activeAnchorLink }: Props) {
 						{t("link-interested")}
 					</AnchorLink>
 				</AnchorLinkItem>
-				<AnchorLinkItem>
+				<AnchorLinkItem onClick={closeBurger}>
 					<AnchorLink active={activeAnchorLink === AnchorLinks.ARTISTSECTION} href={`#${AnchorLinks.ARTISTSECTION}`}>
 						{t("link-artists")}
 					</AnchorLink>
 				</AnchorLinkItem>
-				<AnchorLinkItem>
+				<AnchorLinkItem onClick={closeBurger}>
 					<AnchorLink active={activeAnchorLink === AnchorLinks.DATASECTION} href={`#${AnchorLinks.DATASECTION}`}>
 						{t("link-data")}
 					</AnchorLink>

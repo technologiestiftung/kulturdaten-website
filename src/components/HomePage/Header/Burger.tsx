@@ -1,5 +1,4 @@
 import styled from "@emotion/styled";
-import { useState } from "react";
 import { colors } from "../../../common/styleVariables";
 
 const BurgerPack = styled.div({
@@ -31,9 +30,12 @@ const Bar = styled.div<{ open: boolean }>(({ open }) => ({
 	},
 }));
 
-export default function Burger() {
-	const [open, setOpen] = useState(false);
+interface Props {
+	open: boolean;
+	setOpen: (open: boolean) => void;
+}
 
+export default function Burger({ open, setOpen }: Props) {
 	return (
 		<BurgerPack onClick={() => setOpen(!open)}>
 			<Bar open={open} />

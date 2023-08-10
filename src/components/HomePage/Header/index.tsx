@@ -12,11 +12,16 @@ import {
 import { AnchorLinks } from "..";
 import Navigation from "./Navigation";
 import Burger from "./Burger";
+import NavigationOverlay from "./NavigationOverlay";
+import { useState } from "react";
+
+export const headerHeight = "4.3rem";
 
 const HeaderContainer = styled.header({
 	position: "fixed",
 	left: 0,
 	width: "100vw",
+	height: headerHeight,
 	zIndex: zIndexes.header,
 	color: colors.blueDark,
 	borderBottom: `${borderWidths.default}px solid ${colors.blueDark}`,
@@ -77,7 +82,8 @@ const Desktop = styled.div({
 	},
 });
 
-const Header = ({ activeAnchorLink }: Props) => {
+export default function Header({ activeAnchorLink }: Props) {
+	const [navigationOpen, setNavigationOpen] = useState(false);
 	return (
 		<HeaderContainer>
 			<ContentWrapper>
@@ -92,11 +98,10 @@ const Header = ({ activeAnchorLink }: Props) => {
 					<Navigation activeAnchorLink={activeAnchorLink} />
 				</Desktop>
 				<Mobile>
-					<Burger />
+					<Burger open={navigationOpen} setOpen={setNavigationOpen} />
 				</Mobile>
+				{navigationOpen && <NavigationOverlay closeBurger={() => setNavigationOpen(false)} />}
 			</ContentWrapper>
 		</HeaderContainer>
 	);
-};
-
-export default Header;
+}
