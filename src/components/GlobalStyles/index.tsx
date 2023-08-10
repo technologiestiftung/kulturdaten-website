@@ -1,5 +1,5 @@
 import { CSSObject, Global } from "@emotion/react";
-import { colors, fontFamilies, fontSizes, lineHeights } from "../../common/styleVariables";
+import { colors, fontFamilies, fontSizes, fontWeights, lineHeights } from "../../common/styleVariables";
 import FontFaces from "./FontFaces";
 
 const styles: CSSObject = {
@@ -19,6 +19,9 @@ const styles: CSSObject = {
 	p: {
 		overflowWrap: "break-word",
 		whiteSpace: "pre-line",
+	},
+	"strong, b": {
+		fontWeight: fontWeights.medium,
 	},
 	a: {
 		color: colors.blueDark,

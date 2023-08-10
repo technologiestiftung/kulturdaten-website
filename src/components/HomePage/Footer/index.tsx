@@ -1,6 +1,6 @@
 import styled from "@emotion/styled";
 import { useTranslations } from "next-intl";
-import { colors, fontWeights, spacings, widths } from "../../../common/styleVariables";
+import { colors, spacings, widths } from "../../../common/styleVariables";
 import Link, { LinkInternal } from "../../Link";
 import Spacer from "../../Spacer";
 
@@ -24,9 +24,7 @@ const Address = styled.address({
 	fontStyle: "normal",
 });
 
-const Title = styled.strong({
-	fontWeight: fontWeights.medium,
-});
+const Title = styled.strong();
 
 const Content = styled.div({
 	whiteSpace: "pre-line",
