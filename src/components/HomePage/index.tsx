@@ -10,6 +10,7 @@ import Section from "./Section";
 import Header from "./Header";
 import { useInView } from "react-intersection-observer";
 import { useEffect, useState } from "react";
+import { AnchorLinks } from "../../common/types";
 
 const Main = styled.main(() => ({
 	width: `min(100%, ${widths.maxContentWidth})`,
@@ -22,20 +23,18 @@ interface InView {
 	dataSectionInView: boolean;
 }
 
-export enum AnchorLinks {
-	INTERESTEDSECTION = "interestedSection",
-	ARTISTSECTION = "artistSection",
-	DATASECTION = "dataSection",
-}
-
 const inViewOptions = {
 	threshold: 0.5,
 };
 export default function HomePage() {
 	const [activeAnchorLink, setActiveAnchorLink] = useState<AnchorLinks | null>(null);
 	const getLatestInView = (inView: InView) => {
-		const inViewKeys = Object.keys(inView) as Array<keyof InView>;
-		const trueInViewKeys = inViewKeys.filter((key) => inView[key]);
+		const orderedSections: Array<keyof InView> = [
+			"interestedSectionInView",
+			"artistSectionInView",
+			"dataSectionInView",
+		];
+		const trueInViewKeys = orderedSections.filter((key) => inView[key]);
 
 		return trueInViewKeys[trueInViewKeys.length - 1] || null;
 	};

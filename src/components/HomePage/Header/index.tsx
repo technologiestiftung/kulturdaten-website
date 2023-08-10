@@ -10,11 +10,12 @@ import {
 	mediaQueries,
 	zIndexes,
 } from "../../../common/styleVariables";
-import { AnchorLinks } from "..";
+
 import Navigation from "./Navigation";
 import Burger from "./Burger";
 import NavigationOverlay from "./NavigationOverlay";
 import { useState } from "react";
+import { AnchorLinks } from "../../../common/types";
 
 const HeaderContainer = styled.header({
 	position: "fixed",
