@@ -1,23 +1,15 @@
-import styled from "@emotion/styled";
 import { useTranslations } from "next-intl";
 import { useCallback, useRef, useState } from "react";
-import { colors, fontSizes, fontWeights, lineHeights } from "../../../common/styleVariables";
 import { EventWithAttraction, loadEventsWithAttractions } from "../../../services/apiRequests";
 import SectionSubtitle from "../../SectionSubtitle";
 import Spacer from "../../Spacer";
+import Text from "../../Text";
 import Tooltip from "../../Tooltip";
 import EventList from "./EventList";
 import RequestCreator from "./RequestCreator";
 import { Request } from "./requests";
 
 type PromptStatus = "idle" | "creating prompt" | "loading" | "done";
-
-const ResultsTitle = styled.h3({
-	color: colors.blueDark,
-	fontSize: fontSizes.medium,
-	fontWeight: fontWeights.medium,
-	lineHeight: lineHeights.single,
-});
 
 export default function RequestCreatorAndList() {
 	const t = useTranslations("Home.for-interested");
@@ -44,9 +36,11 @@ export default function RequestCreatorAndList() {
 			<RequestCreator onStartRequestCreation={handleRequestStarted} onRequestCreated={handleRequestCreated} />
 			{(status === "loading" || status === "done") && (
 				<>
-					<Spacer size={40} />
-					<ResultsTitle>{t("results-title")}</ResultsTitle>
-					<Spacer size={5} />
+					<Spacer size={32} />
+					<Text type="h3" color="blueDark">
+						{t("results-title")}
+					</Text>
+					<Spacer size={4} />
 					<Tooltip
 						id="results-source-tooltip"
 						tooltip={t.raw("results-source-tooltip")}

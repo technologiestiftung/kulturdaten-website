@@ -1,8 +1,8 @@
 import styled from "@emotion/styled";
-import { ButtonHTMLAttributes } from "react";
+import { AnchorHTMLAttributes, ButtonHTMLAttributes } from "react";
+import { spacings } from "../../common/styleVariables";
 import Button from "../Button";
 import Icon, { IconProps } from "../Icon";
-import { spacings } from "../../common/styleVariables";
 
 const StyledButton = styled(Button)({
 	display: "inline-flex",
@@ -10,14 +10,30 @@ const StyledButton = styled(Button)({
 	gap: spacings.get(2),
 });
 
-type Props = ButtonHTMLAttributes<HTMLButtonElement> & {
+const StyledIcon = styled(Icon)({
+	flex: "0 0 auto",
+});
+
+type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
+	as?: "button" | undefined;
 	icon: IconProps["name"];
 };
 
-export default function ButtonWithIcon({ icon, children, ...otherProps }: Props) {
+type LinkProps = AnchorHTMLAttributes<HTMLAnchorElement> & {
+	as: "a";
+	icon: IconProps["name"];
+	href: string;
+	rel?: string;
+	target?: string;
+};
+
+type Props = ButtonProps | LinkProps;
+
+export default function ButtonWithIcon(props: Props) {
+	const { icon, children, ...otherProps } = props;
 	return (
 		<StyledButton {...otherProps}>
-			<Icon name={icon} />
+			<StyledIcon name={icon} />
 			{children}
 		</StyledButton>
 	);

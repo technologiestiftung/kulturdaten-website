@@ -15,3 +15,11 @@ export const Default: Story = {
 		onClick: () => window.alert("You clicked the button!"),
 	},
 };
+
+export const ButtonLink: Story = {
+	args: {
+		children: "I am a link that looks like a button",
+		href: "https://www.berlin.de/",
+		target: "_blank",
+	},
+};

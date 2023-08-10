@@ -29,17 +29,20 @@ export const colors = {
 	yellow: "#f1ff54",
 	green: "#beffa9",
 	turquoise: "#a0faf2",
-	grayLight: "#f9f9f9",
+	grayLight: "#fafafa",
 	white: "#ffffff",
 };
 
+const spacingUnit = 5;
+
 export const spacings = {
-	get: (factor = 1.0) => factor * 5,
+	get: (factor: number) => factor * spacingUnit,
+	horizontalPagePadding: `clamp(${2 * spacingUnit}px, 5vw, ${10 * spacingUnit}px)`,
 };
 
-export const breakpoints: { [key: string]: number } = {
+export const breakpoints = {
 	s: 580,
-	m: 768,
+	m: 900,
 };
 
 export const mediaQueries = {
@@ -48,7 +51,7 @@ export const mediaQueries = {
 };
 
 export const widths = {
-	maxContentWidth: `${breakpoints.xl}px`,
+	maxContentWidth: `${breakpoints.m}px`,
 };
 
 export const borderWidths = {
