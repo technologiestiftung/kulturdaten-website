@@ -33,8 +33,11 @@ export const colors = {
 	white: "#ffffff",
 };
 
+const spacingUnit = 5;
+
 export const spacings = {
-	get: (factor = 1.0) => factor * 5,
+	get: (factor: number) => factor * spacingUnit,
+	horizontalPagePadding: `clamp(${2 * spacingUnit}px, 5vw, ${10 * spacingUnit}px)`,
 };
 
 export const breakpoints = {

@@ -1,13 +1,16 @@
 import styled from "@emotion/styled";
 import { useTranslations } from "next-intl";
-import { borderWidths, colors } from "../../../common/styleVariables";
+import { borderWidths, colors, spacings } from "../../../common/styleVariables";
 import ButtonWithIcon from "../../ButtonWithIcon";
 import Spacer from "../../Spacer";
 import Text from "../../Text";
-import Section from "../Section";
 
-const PageContainer = styled.div({
+const Container = styled.div({
 	display: "flex",
+	padding: `${spacings.get(8)}px ${spacings.horizontalPagePadding}`,
+	backgroundColor: colors.white,
+	borderTop: `${borderWidths.default}px solid ${colors.blueDark}`,
+	borderBottom: `${borderWidths.default}px solid ${colors.blueDark}`,
 });
 
 const ImageContainer = styled.div({
@@ -21,28 +24,20 @@ const TextContainer = styled.div({
 export default function NewsletterSection() {
 	const t = useTranslations("Home.newsletter-section");
 	return (
-		<Section
-			backgroundColor="white"
-			style={{
-				borderTop: `${borderWidths.default}px solid ${colors.blueDark}`,
-				borderBottom: `${borderWidths.default}px solid ${colors.blueDark}`,
-			}}
-		>
-			<PageContainer>
-				<ImageContainer>
-					<img src="/images/newsletter-icon.svg" alt="" />
-				</ImageContainer>
-				<Spacer size={24} />
-				<TextContainer>
-					<Text type="h3" as="h2" color="blueDark">
-						{t("title")}
-					</Text>
-					<Spacer size={16} />
-					<ButtonWithIcon as="a" icon="mail" href="mailto:kontakt@kulturdaten.berlin">
-						{t("button")}
-					</ButtonWithIcon>
-				</TextContainer>
-			</PageContainer>
-		</Section>
+		<Container>
+			<ImageContainer>
+				<img src="/images/newsletter-icon.svg" alt="" />
+			</ImageContainer>
+			<Spacer size={24} />
+			<TextContainer>
+				<Text type="h3" as="h2" color="blueDark">
+					{t("title")}
+				</Text>
+				<Spacer size={16} />
+				<ButtonWithIcon as="a" icon="mail" href="mailto:kontakt@kulturdaten.berlin">
+					{t("button")}
+				</ButtonWithIcon>
+			</TextContainer>
+		</Container>
 	);
 }
