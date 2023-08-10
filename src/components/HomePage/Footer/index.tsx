@@ -12,7 +12,7 @@ const StyledFooter = styled.footer({
 	color: colors.blueDark,
 });
 
-const InnerContainer = styled.div({
+const Row = styled.div({
 	display: "flex",
 	flexWrap: "wrap",
 	gap: spacings.get(5),
@@ -46,7 +46,7 @@ export default function Footer() {
 	const t = useTranslations("Home.footer");
 	return (
 		<StyledFooter>
-			<InnerContainer>
+			<Row>
 				<Address>
 					<Title>{t("address-title")}</Title>
 					<Content>{t("address-content")}</Content>
@@ -61,9 +61,9 @@ export default function Footer() {
 					<Spacer size={4} />
 					<LinkInternal href="/imprint">{t("link-imprint")}</LinkInternal>
 				</PageLinks>
-			</InnerContainer>
+			</Row>
 			<Spacer size={50} />
-			<InnerContainer>
+			<Row>
 				<div>
 					<LogoTitle>{t("project-by")}</LogoTitle>
 					<a href="https://www.technologiestiftung-berlin.de/" target="_blank">
@@ -76,7 +76,7 @@ export default function Footer() {
 						<img src="/images/sen-kugz-logo.svg" width={400} alt={t("sen-kugz-logo-alt")} />
 					</a>
 				</div>
-			</InnerContainer>
+			</Row>
 		</StyledFooter>
 	);
 }
