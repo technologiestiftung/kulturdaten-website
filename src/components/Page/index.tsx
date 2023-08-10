@@ -9,14 +9,20 @@ const Main = styled.main(() => ({
 	margin: "0 auto",
 }));
 
-type Props = {
-	children: ReactNode;
+export type Metadata = {
+	title: string;
+	description?: string;
 };
 
-export default function Page({ children }: Props) {
+type Props = {
+	children: ReactNode;
+	metadata: Metadata;
+};
+
+export default function Page({ children, metadata }: Props) {
 	return (
 		<>
-			<Head />
+			<Head metadata={metadata} />
 			<Main>{children}</Main>
 			<Footer />
 		</>

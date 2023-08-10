@@ -1,3 +1,4 @@
+import { useTranslations } from "next-intl";
 import ArtistSection from "../ArtistSection";
 import CultureInterestedSection from "./CultureInterestedSection";
 import DataUsersSection from "./DataUsersSection";
@@ -21,6 +22,7 @@ const inViewOptions = {
 	threshold: 0.5,
 };
 export default function HomePage() {
+	const t = useTranslations("Home");
 	const [activeAnchorLink, setActiveAnchorLink] = useState<AnchorLinks | null>(null);
 	const getLatestInView = (inView: InView) => {
 		const orderedSections: Array<keyof InView> = [
@@ -50,7 +52,13 @@ export default function HomePage() {
 	}, [artistSectionInView, interestedSectionInView, dataSectionInView]);
 
 	return (
-		<Page>
+		<Page
+			// TODO: Update/add more metadata before release.
+			metadata={{
+				title: t("meta-title"),
+				description: t("meta-description"),
+			}}
+		>
 			<Header activeAnchorLink={activeAnchorLink} />
 			<Section>
 				<IntroSection />

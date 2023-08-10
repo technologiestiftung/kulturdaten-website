@@ -1,13 +1,17 @@
-import { useTranslations } from "next-intl";
 import NextHead from "next/head";
+import { Metadata } from ".";
 
-export default function Head() {
-	const t = useTranslations("Home");
+type Props = {
+	metadata: Metadata;
+};
+
+export default function Head({ metadata }: Props) {
+	const { title, description } = metadata;
 	return (
 		<NextHead>
-			{/* TODO: Update/add metadata before release. */}
-			<title>{t("meta-title")}</title>
-			<meta name="description" content={t("meta-description")} />
+			<title>{title}</title>
+			<meta charSet="UTF-8" />
+			<meta name="description" content={description} />
 			<meta name="viewport" content="width=device-width, initial-scale=1" />
 			<link rel="icon" href="/favicon.ico" />
 		</NextHead>
