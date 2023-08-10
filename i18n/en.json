@@ -30,6 +30,18 @@
 			"title": "You do the culture, we’ll let everyone know",
 			"subtitle": "kulturdaten.berlin - for cultural actors",
 			"description": "What? When? Who? Where? For whom? For how long? In order to be found on the web, cultural professionals have to painstakingly enter their programs manually in many places. With the platform kulturdaten.berlin we want to radically simplify this process! \n\nThat’s why we’re working with cultural actors and institutions to develop the first open, digital infrastructure for cultural data in Berlin. Funded by the Senate Department for Culture and Europe, we’re currently creating a central data hub that can structure and bundle cultural data and network it with numerous portals in a targeted manner. \n\nOf course, not only institutions, but also collectives and solo artists in particular can publish their profiles and offerings via kulturdaten.berlin."
+		},
+		"footer": {
+			"address-title": "Address",
+			"address-content": "Technologiestiftung Berlin\nGrunewaldstr. 61-62\n10825 Berlin",
+			"email-title": "E-mail",
+			"email-content": "kontakt@kulturdaten.berlin",
+			"link-privacy-policy": "Privacy policy",
+			"link-imprint": "Imprint",
+			"project-by": "A project by",
+			"supported-by": "supported by",
+			"tsb-logo-alt": "Technologiestiftung Berlin",
+			"sen-kugz-logo-alt": "Senatsverwaltung für Kultur und Gesellschaftlichen Zusammenhalt Berlin"
 		}
 	}
 }
