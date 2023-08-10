@@ -16,6 +16,7 @@ import Burger from "./Burger";
 import NavigationOverlay from "./NavigationOverlay";
 import { useState } from "react";
 import { AnchorLinks } from "../../../common/types";
+import Link from "next/link";
 
 const HeaderContainer = styled.header({
 	position: "fixed",
@@ -43,10 +44,12 @@ const ContentWrapper = styled.div({
 	},
 });
 
-const LogoWrapper = styled.div({
+const LogoWrapper = styled(Link)({
 	display: "flex",
 	alignItems: "center",
 	gap: ".8rem",
+	color: colors.blueDark,
+	textDecoration: "none",
 });
 
 const Logo = styled.div({
@@ -87,7 +90,7 @@ export default function Header({ activeAnchorLink }: Props) {
 	return (
 		<HeaderContainer>
 			<ContentWrapper>
-				<LogoWrapper>
+				<LogoWrapper href="/">
 					<Logo />
 					<Title>
 						KULTURDATEN
