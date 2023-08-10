@@ -1,5 +1,5 @@
 import NextHead from "next/head";
-import { Metadata } from ".";
+import { Metadata } from "..";
 
 type Props = {
 	metadata: Metadata;
