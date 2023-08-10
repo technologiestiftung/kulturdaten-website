@@ -17,7 +17,7 @@ interface Props {
 const SectionSubtitle: FC<Props> = ({ label }) => {
 	return (
 		<SubtitleWrapper>
-			<Text type="h3" color="blueDark">
+			<Text type="h3" as="h2" color="blueDark">
 				{label}
 			</Text>
 		</SubtitleWrapper>

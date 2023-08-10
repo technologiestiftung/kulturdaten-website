@@ -70,16 +70,18 @@ const SectionImage = styled.div<{ headerImage: string }>(({ headerImage }) => {
 
 interface SectionTitleProps {
 	label: string;
+	headingLevel: "h1" | "h2";
 	backgroundColor: BackgroundColor;
 	headerImage: string;
 }
-const SectionTitle: FC<SectionTitleProps> = ({ label, backgroundColor, headerImage }) => {
+
+const SectionTitle: FC<SectionTitleProps> = ({ label, headingLevel, backgroundColor, headerImage }) => {
 	return (
 		<HeaderWrapper>
 			<BannerBackdrop backgroundColor={backgroundColor}>
 				<Fold />
 				<TitleWrapper>
-					<Text type="h1" color="blueDark">
+					<Text type="h1" as={headingLevel} color="blueDark">
 						{label}
 					</Text>
 				</TitleWrapper>
