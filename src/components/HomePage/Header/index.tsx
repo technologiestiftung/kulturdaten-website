@@ -6,6 +6,7 @@ import {
 	colors,
 	fontSizes,
 	fontWeights,
+	headerHeight,
 	mediaQueries,
 	zIndexes,
 } from "../../../common/styleVariables";
@@ -14,8 +15,6 @@ import Navigation from "./Navigation";
 import Burger from "./Burger";
 import NavigationOverlay from "./NavigationOverlay";
 import { useState } from "react";
-
-export const headerHeight = "4.3rem";
 
 const HeaderContainer = styled.header({
 	position: "fixed",
