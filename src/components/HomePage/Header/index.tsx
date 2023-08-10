@@ -11,6 +11,7 @@ import {
 } from "../../../common/styleVariables";
 import { AnchorLinks } from "..";
 import Navigation from "./Navigation";
+import Burger from "./Burger";
 
 const HeaderContainer = styled.header({
 	position: "fixed",
@@ -63,6 +64,19 @@ interface Props {
 	activeAnchorLink: AnchorLinks | null;
 }
 
+const Mobile = styled.div({
+	[mediaQueries.m]: {
+		display: "none",
+	},
+});
+
+const Desktop = styled.div({
+	display: "none",
+	[mediaQueries.m]: {
+		display: "block",
+	},
+});
+
 const Header = ({ activeAnchorLink }: Props) => {
 	return (
 		<HeaderContainer>
@@ -74,7 +88,12 @@ const Header = ({ activeAnchorLink }: Props) => {
 						<LightTitle>BERLIN</LightTitle>
 					</Title>
 				</LogoWrapper>
-				<Navigation activeAnchorLink={activeAnchorLink} />
+				<Desktop>
+					<Navigation activeAnchorLink={activeAnchorLink} />
+				</Desktop>
+				<Mobile>
+					<Burger />
+				</Mobile>
 			</ContentWrapper>
 		</HeaderContainer>
 	);
