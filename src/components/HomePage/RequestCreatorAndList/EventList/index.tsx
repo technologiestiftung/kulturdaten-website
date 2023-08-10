@@ -1,7 +1,9 @@
 import styled from "@emotion/styled";
 import { useEffect, useRef, useState } from "react";
+import { useDebouncedCallback } from "use-debounce";
 import { colors, spacings, timings } from "../../../../common/styleVariables";
 import useLocale from "../../../../hooks/useLocale";
+import useOnResize from "../../../../hooks/useOnResize";
 import { EventWithAttraction } from "../../../../services/apiRequests";
 import LoadingIndicator from "../../../LoadingIndicator";
 import Block from "../Block";
@@ -41,14 +43,19 @@ export default function EventList({ isLoading, eventsWithAttractions }: Props) {
 	const listRef = useRef<HTMLUListElement>(null);
 	const loadingHeight = "80px";
 	const [listHeight, setListHeight] = useState<number | undefined>(undefined);
+	const updateListHeight = () => {
+		const element = listRef.current!;
+		const { height } = element.getBoundingClientRect();
+		setListHeight(height);
+	};
 	useEffect(() => {
 		if (isLoading) {
 			return;
 		}
-		const element = listRef.current!;
-		const rect = element.getBoundingClientRect();
-		setListHeight(rect.height);
+		updateListHeight();
 	}, [isLoading]);
+	const handleResize = useDebouncedCallback(() => updateListHeight(), 300);
+	useOnResize(listRef, handleResize);
 	return (
 		<Block
 			padding={0}
