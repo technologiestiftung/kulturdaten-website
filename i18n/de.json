@@ -70,5 +70,11 @@
 			"tsb-logo-alt": "Technologiestiftung Berlin",
 			"sen-kugz-logo-alt": "Senatsverwaltung für Kultur und Gesellschaftlichen Zusammenhalt Berlin"
 		}
+	},
+	"Imprint": {
+		"meta-title": "Impressum"
+	},
+	"Privacy-Policy": {
+		"meta-title": "Datenschutzrichtlinie"
 	}
 }
