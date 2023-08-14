@@ -1,16 +1,17 @@
 import { useTranslations } from "next-intl";
+import { useEffect, useState } from "react";
+import { useInView } from "react-intersection-observer";
+import { AnchorLinks } from "../../common/types";
 import ArtistSection from "../ArtistSection";
+import Page from "../Page";
+import Spacer from "../Spacer";
 import CultureInterestedSection from "./CultureInterestedSection";
 import DataUsersSection from "./DataUsersSection";
-import Page from "../Page";
+import Header from "./Header";
 import IntroSection from "./IntroSection";
 import NewsletterSection from "./NewsletterSection";
 import RequestCreatorAndList from "./RequestCreatorAndList";
 import Section from "./Section";
-import Header from "./Header";
-import { useInView } from "react-intersection-observer";
-import { useEffect, useState } from "react";
-import { AnchorLinks } from "../../common/types";
 
 interface InView {
 	interestedSectionInView: boolean;
@@ -21,6 +22,7 @@ interface InView {
 const inViewOptions = {
 	threshold: 0.5,
 };
+
 export default function HomePage() {
 	const t = useTranslations("Home");
 	const [activeAnchorLink, setActiveAnchorLink] = useState<AnchorLinks | null>(null);
@@ -60,6 +62,7 @@ export default function HomePage() {
 			}}
 		>
 			<Header activeAnchorLink={activeAnchorLink} />
+			<Spacer size={32} />
 			<Section>
 				<IntroSection />
 			</Section>
