@@ -2,6 +2,7 @@ import styled from "@emotion/styled";
 import { widths } from "../../common/styleVariables";
 import ArtistSection from "../ArtistSection";
 import CultureInterestedSection from "./CultureInterestedSection";
+import DataUsersSection from "./DataUsersSection";
 import Footer from "./Footer";
 import Head from "./Head";
 import IntroSection from "./IntroSection";
@@ -78,7 +79,9 @@ export default function HomePage() {
 					<CultureInterestedSection />
 				</Section>
 				<NewsletterSection />
-				<Section>…</Section>
+				<Section>
+					<DataUsersSection />
+				</Section>
 				<NewsletterSection />
 			</Main>
 			<Footer />

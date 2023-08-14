@@ -42,6 +42,22 @@
 			"subtitle": "kulturdaten.berlin – for culture enthusiasts",
 			"description": "It’s not so long ago that most of us used to get our information about cultural offerings primarily from print magazines like Zitty and 030. Today, that’s almost inconceivable; the Internet and smartphones have taken over. Although the Internet offers many ways to find out about Berlin’s diverse cultural scene, there is still no central overview of all the city’s cultural institutions and events.\n\nWith kulturdaten.berlin, we are creating the basis for making it easier to discover the diversity of Berlin’s culture - from nice, small events in the neighborhood to major cultural productions."
 		},
+		"data-users-section": {
+			"title": "We provide the data, you provide the ideas",
+			"subtitle": "kulturdaten.berlin – for data consumers",
+			"description": "kulturdaten.berlin will be the central data hub for everyone who wants to utilize data related to Berlin’s cultural offerings. Via our API, existing and future event portals will be able to obtain exactly the data they need for their respective sector focus in no time at all.\n\nkulturdaten.berlin follows an open data approach and is based on open source technology. Whether it’s an app specifically for barrier-free cultural experiences or the expansion of a neighborhood website with concert tips in the neighborhood: we open up Berlin’s cultural data for subsequent use by anyone with fresh ideas.",
+			"use-case-calendar-title": "Use Case: Cultural Calendar",
+			"use-case-calendar-description": "Does your calendar provide a broad overview, cater specifically to children, or curate the most exciting events for literature enthusiasts?\n\nExport or filter data – For example, by target audience or cultural genre.",
+			"use-case-calendar-image-alt": "A digital calendar displaying the month view of April 2023.",
+			"use-case-map-title": "Use Case: Neighborhood Map",
+			"use-case-map-description": "Want to showcase the offerings in your neighborhood or district? Utilize our data for an overview map of all cultural venues and events in your community.\n\nFind structured data here regarding addresses, themes, and opening hours.",
+			"use-case-map-image-alt": "Photo of a hand placing a pushpin on a geographical map.",
+			"use-case-analytics-title": "Use Case: Analytics Tool for the Public Sector",
+			"use-case-analytics-description": "Create dashboard applications for cultural infrastructure analysis, management, and planning.\n\nUse the consistent, reliable dataset from kulturdaten.berlin.",
+			"use-case-analytics-image-alt": "A map of Berlin showing the number of cultural events in each district with red circles of varying sizes.",
+			"project-future-subtitle": "What’s Next?",
+			"project-future-description": "kulturdaten.berlin is still under development – you’ll soon find the code and complete API documentation on <a href=\"https://github.com/technologiestiftung/\" target=\"_blank\">GitHub</a>.<br /><br />Feel free to contact us so we can inform you when the API becomes available."
+		},
 		"footer": {
 			"address-title": "Address",
 			"address-content": "Technologiestiftung Berlin\nGrunewaldstr. 61-62\n10825 Berlin",
