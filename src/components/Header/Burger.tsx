@@ -1,6 +1,6 @@
 import styled from "@emotion/styled";
-import { colors, spacings } from "../../../common/styleVariables";
-import Button from "../../Button";
+import { colors, spacings } from "../../common/styleVariables";
+import Button from "../Button";
 import { useTranslations } from "next-intl";
 
 const BurgerPack = styled(Button)({

@@ -1,7 +1,7 @@
 import styled from "@emotion/styled";
-import { mediaQueries, colors, fontWeights, fontSizes, timings, spacings } from "../../../common/styleVariables";
+import { mediaQueries, colors, fontWeights, fontSizes, timings, spacings } from "../../common/styleVariables";
 import { useTranslations } from "next-intl";
-import { AnchorLinks } from "../../../common/types";
+import { AnchorLinks } from "../../common/types";
 
 const NavigationWrapper = styled.nav({
 	position: "absolute",

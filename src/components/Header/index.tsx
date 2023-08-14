@@ -10,14 +10,13 @@ import {
 	mediaQueries,
 	spacings,
 	zIndexes,
-} from "../../../common/styleVariables";
-
-import Navigation from "./Navigation";
-import Burger from "./Burger";
-import NavigationOverlay from "./NavigationOverlay";
-import { useState } from "react";
-import { AnchorLinks } from "../../../common/types";
+} from "../../common/styleVariables";
 import Link from "next/link";
+import { useState } from "react";
+import { AnchorLinks } from "../../common/types";
+import Burger from "./Burger";
+import Navigation from "./Navigation";
+import NavigationOverlay from "./NavigationOverlay";
 
 const HeaderContainer = styled.header({
 	position: "fixed",
