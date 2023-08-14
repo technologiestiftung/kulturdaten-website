@@ -68,18 +68,18 @@ export default function HomePage() {
 					<IntroSection />
 				</Section>
 				<NewsletterSection />
-				<Section ref={interestedSectionRef} id={AnchorLinks.INTERESTEDSECTION}>
+				<Section>
 					<RequestCreatorAndList />
 				</Section>
 				<Section ref={artistSectionRef} id={AnchorLinks.ARTISTSECTION}>
 					<ArtistSection />
 				</Section>
 				<NewsletterSection />
-				<Section>
+				<Section ref={interestedSectionRef} id={AnchorLinks.INTERESTEDSECTION}>
 					<CultureInterestedSection />
 				</Section>
 				<NewsletterSection />
-				<Section>
+				<Section ref={dataSectionRef} id={AnchorLinks.DATASECTION}>
 					<DataUsersSection />
 				</Section>
 				<NewsletterSection />
