@@ -45,12 +45,12 @@ interface Props {
 
 const navigationItems = [
 	{
-		id: AnchorLinks.INTERESTEDSECTION,
-		label: "link-interested" as const,
-	},
-	{
 		id: AnchorLinks.ARTISTSECTION,
 		label: "link-artists" as const,
+	},
+	{
+		id: AnchorLinks.INTERESTEDSECTION,
+		label: "link-interested" as const,
 	},
 	{
 		id: AnchorLinks.DATASECTION,

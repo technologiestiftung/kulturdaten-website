@@ -1,6 +1,8 @@
 import styled from "@emotion/styled";
 import { widths } from "../../common/styleVariables";
 import ArtistSection from "../ArtistSection";
+import CultureInterestedSection from "./CultureInterestedSection";
+import DataUsersSection from "./DataUsersSection";
 import Footer from "./Footer";
 import Head from "./Head";
 import IntroSection from "./IntroSection";
@@ -66,16 +68,20 @@ export default function HomePage() {
 					<IntroSection />
 				</Section>
 				<NewsletterSection />
-				<Section ref={interestedSectionRef} id={AnchorLinks.INTERESTEDSECTION}>
+				<Section>
 					<RequestCreatorAndList />
 				</Section>
 				<Section ref={artistSectionRef} id={AnchorLinks.ARTISTSECTION}>
 					<ArtistSection />
 				</Section>
 				<NewsletterSection />
-				<Section>…</Section>
+				<Section ref={interestedSectionRef} id={AnchorLinks.INTERESTEDSECTION}>
+					<CultureInterestedSection />
+				</Section>
 				<NewsletterSection />
-				<Section>…</Section>
+				<Section ref={dataSectionRef} id={AnchorLinks.DATASECTION}>
+					<DataUsersSection />
+				</Section>
 				<NewsletterSection />
 			</Main>
 			<Footer />
