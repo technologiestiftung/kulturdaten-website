@@ -37,6 +37,11 @@
 			"subtitle": "kulturdaten.berlin – für Kulturakteur:innen",
 			"description": "Was? Wann? Wer? Wo? Für wen? Wie lange? Um im Web gefunden zu werden, müssen Kulturschaffende ihr Programm an vielen Stellen mühsam händisch einpflegen. Mit der Plattform kulturdaten.berlin wollen wir diesen Prozess radikal vereinfachen! \n\nDeswegen entwickeln wir gemeinsam mit Kulturakteur:innen und -institutionen die erste offene, digitale Infrastruktur für Kulturdaten in Berlin: Gefördert durch die Senatsverwaltung für Kultur und Europa entsteht zurzeit eine zentrale Datendrehscheibe, die ihre Kulturdaten strukturieren, bündeln und mit zahlreichen Portalen zielgerichtet vernetzen kann. \n\nNatürlich können nicht nur Institutionen, sondern insbesondere auch Kollektive und Solokünstler:innen ihre Profile und Angebote über kulturdaten.berlin publizieren."
 		},
+		"culture-interested-section": {
+			"title": "Von Berliner:innen, für Berliner:innen",
+			"subtitle": "kulturdaten.berlin – für Kulturinteressierte",
+			"description": "Es ist gar nicht so lange her, da haben sich die meisten von uns vor allem über Print-Magazine wie Zitty und 030 zu Kulturangeboten informiert. Heute ist das kaum noch vorstellbar, das Internet bzw. das Smartphone haben übernommen. Das Internet bietet zwar viele Möglichkeiten, sich über Berlins vielfältige Kulturszene zu informieren, aber nach wie vor fehlt es an einem zentralen Überblick über alle kulturellen Einrichtungen und Veranstaltungen der Stadt.\n\nMit kulturdaten.berlin schaffen wir die Grundlage dafür, die Vielfalt der Berliner Kultur einfacher entdecken zu können – von schönen, kleinen Veranstaltungen im Kiez bis zu großen Kulturproduktionen."
+		},
 		"footer": {
 			"address-title": "Adresse",
 			"address-content": "Technologiestiftung Berlin\nGrunewaldstr. 61-62\n10825 Berlin",
