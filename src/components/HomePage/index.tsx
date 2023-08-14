@@ -60,8 +60,8 @@ export default function HomePage() {
 				title: t("meta-title"),
 				description: t("meta-description"),
 			}}
+			header={<Header activeAnchorLink={activeAnchorLink} />}
 		>
-			<Header activeAnchorLink={activeAnchorLink} />
 			<Spacer size={32} />
 			<Section>
 				<IntroSection />

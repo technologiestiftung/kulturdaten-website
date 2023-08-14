@@ -17,12 +17,14 @@ export type Metadata = {
 type Props = {
 	children: ReactNode;
 	metadata: Metadata;
+	header?: ReactNode;
 };
 
-export default function Page({ children, metadata }: Props) {
+export default function Page({ children, metadata, header }: Props) {
 	return (
 		<>
 			<Head metadata={metadata} />
+			{header}
 			<Main>{children}</Main>
 			<Footer />
 		</>
