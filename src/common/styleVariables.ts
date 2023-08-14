@@ -11,6 +11,7 @@ export const fontSizes = {
 };
 
 export const fontWeights = {
+	light: 300,
 	default: 400,
 	medium: 600,
 	bold: 800,
@@ -43,6 +44,7 @@ export const spacings = {
 export const breakpoints = {
 	s: 580,
 	m: 900,
+	l: 1024,
 };
 
 export const mediaQueries = {
@@ -54,15 +56,22 @@ export const widths = {
 	maxContentWidth: `${breakpoints.m}px`,
 };
 
+export const headerHeight = "4rem";
+
 export const borderWidths = {
 	default: 3,
 };
 
 export const borderRadiuses = {
 	medium: 10,
+	round: "50%",
 };
 
 export const timings = {
 	short: "100ms",
 	medium: "250ms",
+};
+
+export const zIndexes = {
+	header: 100,
 };

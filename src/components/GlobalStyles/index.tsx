@@ -31,6 +31,7 @@ const styles: CSSObject = {
 		},
 	},
 	html: {
+		scrollBehavior: "smooth",
 		fontSize: fontSizes.default,
 		fontFamily: fontFamilies.default,
 		lineHeight: lineHeights.default,

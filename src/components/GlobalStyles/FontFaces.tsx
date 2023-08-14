@@ -4,6 +4,15 @@ const fontFaces: CSSObject[] = [
 	{
 		"@font-face": {
 			fontFamily: "Inter",
+			src: "url('/fonts/inter-v12-latin-light.woff2') format('woff2')",
+			fontStyle: "light",
+			fontWeight: 300,
+			fontDisplay: "swap",
+		},
+	},
+	{
+		"@font-face": {
+			fontFamily: "Inter",
 			src: "url('/fonts/inter-v12-latin-regular.woff2') format('woff2')",
 			fontStyle: "normal",
 			fontWeight: 400,
