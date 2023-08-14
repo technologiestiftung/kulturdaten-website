@@ -1,6 +1,6 @@
 import styled from "@emotion/styled";
 import { FC } from "react";
-import { colors, mediaQueries } from "../../common/styleVariables";
+import { colors, mediaQueries, spacings } from "../../common/styleVariables";
 import Text from "../Text";
 
 type BackgroundColor = string;
@@ -9,7 +9,7 @@ const backgroundImageWidth = "600px";
 const HeaderWrapper = styled.div(() => {
 	return {
 		display: "flex",
-		gap: "1.6rem",
+		gap: spacings.get(5),
 	};
 });
 
@@ -42,7 +42,8 @@ const TitleWrapper = styled.div(() => {
 		justifyContent: "center",
 		alignItems: "center",
 		minHeight: "100%",
-		padding: `20px 40px 20px 20px`,
+		padding: spacings.get(4),
+		paddingTop: spacings.get(8),
 		backgroundImage: `url("/images/title-frame-blue-corner.svg")`,
 		backgroundSize: backgroundImageWidth,
 		backgroundRepeat: "no-repeat",
