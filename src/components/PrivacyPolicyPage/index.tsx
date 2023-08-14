@@ -1,4 +1,5 @@
 import { useTranslations } from "next-intl";
+import { HeaderSimple } from "../Header";
 import Link, { LinkInternal } from "../Link";
 import Page from "../Page";
 import Reader from "../Reader";
@@ -13,6 +14,7 @@ export default function PrivacyPolicyPage() {
 			metadata={{
 				title: t("meta-title"),
 			}}
+			header={<HeaderSimple />}
 		>
 			<Reader>
 				<Spacer size={20} />

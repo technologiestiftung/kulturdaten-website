@@ -75,3 +75,13 @@ export default function Header({ activeAnchorLink }: Props) {
 		</HeaderContainer>
 	);
 }
+
+export function HeaderSimple() {
+	return (
+		<HeaderContainer>
+			<ContentWrapper>
+				<Logo />
+			</ContentWrapper>
+		</HeaderContainer>
+	);
+}
