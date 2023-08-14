@@ -5,7 +5,8 @@
 		"header": {
 			"link-interested": "Für Kulturinteressierte",
 			"link-artists": "Für Kulturakteur:innen",
-			"link-data": "Für Datennutzer:innen"
+			"link-data": "Für Datennutzer:innen",
+			"burger-aria-label": "Menü öffnen"
 		},
 		"title": "Die kulturdaten.berlin-Website kommt bald!",
 		"intro-section": {

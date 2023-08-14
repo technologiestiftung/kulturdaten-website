@@ -1,14 +1,12 @@
 import styled from "@emotion/styled";
-import { mediaQueries, colors, fontWeights, fontSizes, timings } from "../../../common/styleVariables";
+import { mediaQueries, colors, fontWeights, fontSizes, timings, spacings } from "../../../common/styleVariables";
 import { useTranslations } from "next-intl";
 import { AnchorLinks } from "../../../common/types";
 
 const NavigationWrapper = styled.nav({
 	position: "absolute",
-	width: "100%",
-	maxWidth: "520px",
-	right: "2rem",
-	top: "2rem",
+	right: `${spacings.get(6)}px`,
+	top: `${spacings.get(6)}px`,
 	[mediaQueries.m]: {
 		position: "static",
 	},
@@ -17,17 +15,16 @@ const NavigationWrapper = styled.nav({
 const AnchorLinkList = styled.ul({
 	display: "flex",
 	flexDirection: "column",
-	justifyContent: "space-between",
 	alignItems: "flex-end",
-	gap: "1.6rem",
+	gap: spacings.get(5),
+	paddingLeft: 0,
+	listStyle: "none",
 	[mediaQueries.m]: {
 		flexDirection: "row",
 	},
 });
 
-const AnchorLinkItem = styled.li({
-	listStyle: "none",
-});
+const AnchorLinkItem = styled.li({});
 
 const AnchorLink = styled.a<{ active: boolean }>((props) => ({
 	color: colors.blueDark,
@@ -43,7 +40,7 @@ const AnchorLink = styled.a<{ active: boolean }>((props) => ({
 
 interface Props {
 	activeAnchorLink?: AnchorLinks | null;
-	closeBurger?: () => void;
+	onLinkClick?: () => void;
 }
 
 const navigationItems = [
@@ -61,13 +58,13 @@ const navigationItems = [
 	},
 ];
 
-export default function Navigation({ activeAnchorLink, closeBurger }: Props) {
+export default function Navigation({ activeAnchorLink, onLinkClick }: Props) {
 	const t = useTranslations("Home.header");
 	return (
 		<NavigationWrapper>
 			<AnchorLinkList>
 				{navigationItems.map((item) => (
-					<AnchorLinkItem key={item.id} onClick={closeBurger}>
+					<AnchorLinkItem key={item.id} onClick={onLinkClick}>
 						<AnchorLink active={activeAnchorLink === item.id} href={`#${item.id}`}>
 							{t(item.label)}
 						</AnchorLink>

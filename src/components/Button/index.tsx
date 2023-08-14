@@ -2,6 +2,11 @@ import styled from "@emotion/styled";
 import { AnchorHTMLAttributes, ButtonHTMLAttributes } from "react";
 import { borderRadiuses, borderWidths, colors, fontWeights, lineHeights, timings } from "../../common/styleVariables";
 
+const UnstyledButton = styled.button({
+	border: "none",
+	background: "none",
+});
+
 const StyledButton = styled.button({
 	appearance: "none",
 	display: "inline-block",
@@ -25,6 +30,7 @@ const StyledButtonAsLink = StyledButton.withComponent("a");
 
 type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
 	as?: "button" | undefined;
+	unstyled?: boolean;
 };
 
 type LinkProps = AnchorHTMLAttributes<HTMLAnchorElement> & {
@@ -43,5 +49,9 @@ export default function Button(props: Props) {
 		return <StyledButtonAsLink {...props} />;
 	}
 	const { type = "button", ...otherProps } = props;
-	return <StyledButton type={type} {...otherProps} />;
+	if (props.unstyled) {
+		return <UnstyledButton type={type} {...otherProps} />;
+	} else {
+		return <StyledButton type={type} {...otherProps} />;
+	}
 }

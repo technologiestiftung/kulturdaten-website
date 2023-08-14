@@ -1,5 +1,5 @@
 export enum AnchorLinks {
-	INTERESTEDSECTION = "interestedSection",
-	ARTISTSECTION = "artistSection",
-	DATASECTION = "dataSection",
+	INTERESTEDSECTION = "culture-enthusiasts",
+	ARTISTSECTION = "artists",
+	DATASECTION = "data-users",
 }

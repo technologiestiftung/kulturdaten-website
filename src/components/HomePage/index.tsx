@@ -11,6 +11,7 @@ import Header from "./Header";
 import { useInView } from "react-intersection-observer";
 import { useEffect, useState } from "react";
 import { AnchorLinks } from "../../common/types";
+import Spacer from "../Spacer";
 
 const Main = styled.main(() => ({
 	width: `min(100%, ${widths.maxContentWidth})`,
@@ -58,8 +59,9 @@ export default function HomePage() {
 	return (
 		<>
 			<Head />
+			<Header activeAnchorLink={activeAnchorLink} />
 			<Main>
-				<Header activeAnchorLink={activeAnchorLink} />
+				<Spacer size={32} />
 				<Section>
 					<IntroSection />
 				</Section>

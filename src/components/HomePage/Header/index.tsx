@@ -8,6 +8,7 @@ import {
 	fontWeights,
 	headerHeight,
 	mediaQueries,
+	spacings,
 	zIndexes,
 } from "../../../common/styleVariables";
 
@@ -33,10 +34,9 @@ const ContentWrapper = styled.div({
 	maxWidth: breakpoints.l,
 	margin: "0 auto",
 	display: "flex",
-	gap: "0.8rem",
 	alignItems: "center",
 	justifyContent: "space-between",
-	padding: "0 1.4rem",
+	padding: `0 ${spacings.horizontalPagePadding}`,
 	height: "100%",
 	[mediaQueries.s]: {
 		flexWrap: "wrap",
@@ -44,10 +44,10 @@ const ContentWrapper = styled.div({
 	},
 });
 
-const LogoWrapper = styled(Link)({
+const LogoLink = styled(Link)({
 	display: "flex",
 	alignItems: "center",
-	gap: ".8rem",
+	gap: `0 ${spacings.get(3)}px`,
 	color: colors.blueDark,
 	textDecoration: "none",
 });
@@ -87,23 +87,24 @@ const Desktop = styled.div({
 
 export default function Header({ activeAnchorLink }: Props) {
 	const [navigationOpen, setNavigationOpen] = useState(false);
+	const toggleOpen = () => setNavigationOpen(!navigationOpen);
 	return (
 		<HeaderContainer>
 			<ContentWrapper>
-				<LogoWrapper href="/">
+				<LogoLink href="/">
 					<Logo />
-					<Title>
+					<Title aria-label="Kulturdaten Berlin">
 						KULTURDATEN
 						<LightTitle>BERLIN</LightTitle>
 					</Title>
-				</LogoWrapper>
+				</LogoLink>
 				<Desktop>
 					<Navigation activeAnchorLink={activeAnchorLink} />
 				</Desktop>
 				<Mobile>
-					<Burger open={navigationOpen} setOpen={setNavigationOpen} />
+					<Burger open={navigationOpen} onToggle={toggleOpen} />
+					{navigationOpen && <NavigationOverlay onLinkClick={() => setNavigationOpen(false)} />}
 				</Mobile>
-				{navigationOpen && <NavigationOverlay closeBurger={() => setNavigationOpen(false)} />}
 			</ContentWrapper>
 		</HeaderContainer>
 	);

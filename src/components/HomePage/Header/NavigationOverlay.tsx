@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import { colors, headerHeight, mediaQueries } from "../../../common/styleVariables";
+import { colors, headerHeight } from "../../../common/styleVariables";
 import Navigation from "./Navigation";
 
 const Backdrop = styled.div({
@@ -9,18 +9,15 @@ const Backdrop = styled.div({
 	width: "100vw",
 	height: `calc(100vh - ${headerHeight})`,
 	backgroundColor: colors.white,
-	[mediaQueries.m]: {
-		display: "none",
-	},
 });
 
 interface Props {
-	closeBurger: () => void;
+	onLinkClick: () => void;
 }
-export default function NavigationOverlay({ closeBurger }: Props) {
+export default function NavigationOverlay({ onLinkClick }: Props) {
 	return (
 		<Backdrop>
-			<Navigation closeBurger={closeBurger} />
+			<Navigation onLinkClick={onLinkClick} />
 		</Backdrop>
 	);
 }
