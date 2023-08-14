@@ -1,7 +1,7 @@
 import styled from "@emotion/styled";
 import { ReactNode } from "react";
-import { borderRadiuses, colors } from "../../common/styleVariables";
 import { ITooltip, Tooltip as ReactTooltip } from "react-tooltip";
+import { borderRadiuses, colors } from "../../common/styleVariables";
 
 const Element = styled.span({
 	color: colors.blueDark,
@@ -40,7 +40,7 @@ export default function Tooltip({
 }: Props) {
 	return (
 		<>
-			<Element as={element} data-tooltip-id={id} aria-describedby={id}>
+			<Element as={element} data-tooltip-id={id} aria-describedby={id} tabIndex={0}>
 				{children}
 			</Element>
 			<StyledTooltip
