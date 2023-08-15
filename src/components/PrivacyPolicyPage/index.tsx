@@ -1,4 +1,5 @@
 import { useTranslations } from "next-intl";
+import { headerHeight, spacings } from "../../common/styleVariables";
 import { HeaderSimple } from "../Header";
 import Link, { LinkInternal } from "../Link";
 import Page from "../Page";
@@ -17,7 +18,7 @@ export default function PrivacyPolicyPage() {
 			header={<HeaderSimple />}
 		>
 			<Reader>
-				<Spacer size={20} />
+				<Spacer size={`calc(${headerHeight} + ${spacings.get(3)}px)`} />
 				<Text type="h1">Datenschutzerklärung</Text>
 				<Text type="h2">Wer wir sind</Text>
 				<p>

@@ -1,4 +1,5 @@
 import { useTranslations } from "next-intl";
+import { headerHeight, spacings } from "../../common/styleVariables";
 import { HeaderSimple } from "../Header";
 import { LinkInternal } from "../Link";
 import Page from "../Page";
@@ -17,7 +18,7 @@ export default function ImprintPage() {
 			header={<HeaderSimple />}
 		>
 			<Reader>
-				<Spacer size={20} />
+				<Spacer size={`calc(${headerHeight} + ${spacings.get(3)}px)`} />
 				<Text type="h1">Impressum</Text>
 				<Text type="h2">Angaben zur Technologiestiftung Berlin</Text>
 				<p>
