@@ -4,7 +4,7 @@ import { colors, fontSizes, fontWeights, lineHeights } from "../../common/styleV
 
 type TextType = "p" | "h1" | "h2" | "h3";
 
-const textStyles: Record<TextType, CSSObject> = {
+export const textStyles: Record<TextType, CSSObject> = {
 	p: {
 		fontSize: fontSizes.default,
 		lineHeight: lineHeights.default,

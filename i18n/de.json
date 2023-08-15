@@ -63,12 +63,18 @@
 			"address-content": "Technologiestiftung Berlin\nGrunewaldstr. 61-62\n10825 Berlin",
 			"email-title": "E-Mail",
 			"email-content": "kontakt@kulturdaten.berlin",
-			"link-privacy-policy": "Datenschutzrichtlinie",
+			"link-privacy-policy": "Datenschutzerklärung",
 			"link-imprint": "Impressum",
 			"project-by": "Ein Projekt der",
 			"supported-by": "gefördert von",
 			"tsb-logo-alt": "Technologiestiftung Berlin",
 			"sen-kugz-logo-alt": "Senatsverwaltung für Kultur und Gesellschaftlichen Zusammenhalt Berlin"
 		}
+	},
+	"Imprint": {
+		"meta-title": "Impressum"
+	},
+	"Privacy-Policy": {
+		"meta-title": "Datenschutzerklärung"
 	}
 }

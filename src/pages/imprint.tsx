@@ -1,5 +1,5 @@
 import type { GetStaticProps } from "next";
-import HomePage from "../components/HomePage";
+import ImprintPage from "../components/ImprintPage";
 import { loadMessages } from "../services/i18n";
 
 export const getStaticProps: GetStaticProps = async (context) => ({
@@ -7,7 +7,6 @@ export const getStaticProps: GetStaticProps = async (context) => ({
 		messages: await loadMessages(context.locale!),
 	},
 });
-
-export default function Home() {
-	return <HomePage />;
+export default function Imprint() {
+	return <ImprintPage />;
 }

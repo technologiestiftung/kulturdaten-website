@@ -1,24 +1,17 @@
-import styled from "@emotion/styled";
-import { widths } from "../../common/styleVariables";
+import { useTranslations } from "next-intl";
+import { useEffect, useState } from "react";
+import { useInView } from "react-intersection-observer";
+import { AnchorLinks } from "../../common/types";
 import ArtistSection from "../ArtistSection";
+import Header from "../Header";
+import Page from "../Page";
+import Spacer from "../Spacer";
 import CultureInterestedSection from "./CultureInterestedSection";
 import DataUsersSection from "./DataUsersSection";
-import Footer from "./Footer";
-import Head from "./Head";
 import IntroSection from "./IntroSection";
 import NewsletterSection from "./NewsletterSection";
 import RequestCreatorAndList from "./RequestCreatorAndList";
 import Section from "./Section";
-import Header from "./Header";
-import { useInView } from "react-intersection-observer";
-import { useEffect, useState } from "react";
-import { AnchorLinks } from "../../common/types";
-import Spacer from "../Spacer";
-
-const Main = styled.main(() => ({
-	width: `min(100%, ${widths.maxContentWidth})`,
-	margin: "0 auto",
-}));
 
 interface InView {
 	interestedSectionInView: boolean;
@@ -29,7 +22,9 @@ interface InView {
 const inViewOptions = {
 	threshold: 0.5,
 };
+
 export default function HomePage() {
+	const t = useTranslations("Home");
 	const [activeAnchorLink, setActiveAnchorLink] = useState<AnchorLinks | null>(null);
 	const getLatestInView = (inView: InView) => {
 		const orderedSections: Array<keyof InView> = [
@@ -59,32 +54,34 @@ export default function HomePage() {
 	}, [artistSectionInView, interestedSectionInView, dataSectionInView]);
 
 	return (
-		<>
-			<Head />
-			<Header activeAnchorLink={activeAnchorLink} />
-			<Main>
-				<Spacer size={32} />
-				<Section>
-					<IntroSection />
-				</Section>
-				<NewsletterSection />
-				<Section>
-					<RequestCreatorAndList />
-				</Section>
-				<Section ref={artistSectionRef} id={AnchorLinks.ARTISTSECTION}>
-					<ArtistSection />
-				</Section>
-				<NewsletterSection />
-				<Section ref={interestedSectionRef} id={AnchorLinks.INTERESTEDSECTION}>
-					<CultureInterestedSection />
-				</Section>
-				<NewsletterSection />
-				<Section ref={dataSectionRef} id={AnchorLinks.DATASECTION}>
-					<DataUsersSection />
-				</Section>
-				<NewsletterSection />
-			</Main>
-			<Footer />
-		</>
+		<Page
+			// TODO: Update/add more metadata before release.
+			metadata={{
+				title: t("meta-title"),
+				description: t("meta-description"),
+			}}
+			header={<Header activeAnchorLink={activeAnchorLink} />}
+		>
+			<Spacer size={32} />
+			<Section>
+				<IntroSection />
+			</Section>
+			<NewsletterSection />
+			<Section>
+				<RequestCreatorAndList />
+			</Section>
+			<Section ref={artistSectionRef} id={AnchorLinks.ARTISTSECTION}>
+				<ArtistSection />
+			</Section>
+			<NewsletterSection />
+			<Section ref={interestedSectionRef} id={AnchorLinks.INTERESTEDSECTION}>
+				<CultureInterestedSection />
+			</Section>
+			<NewsletterSection />
+			<Section ref={dataSectionRef} id={AnchorLinks.DATASECTION}>
+				<DataUsersSection />
+			</Section>
+			<NewsletterSection />
+		</Page>
 	);
 }

@@ -1,5 +1,5 @@
 import type { GetStaticProps } from "next";
-import HomePage from "../components/HomePage";
+import PrivacyPolicyPage from "../components/PrivacyPolicyPage";
 import { loadMessages } from "../services/i18n";
 
 export const getStaticProps: GetStaticProps = async (context) => ({
@@ -8,6 +8,6 @@ export const getStaticProps: GetStaticProps = async (context) => ({
 	},
 });
 
-export default function Home() {
-	return <HomePage />;
+export default function PrivacyPolicy() {
+	return <PrivacyPolicyPage />;
 }

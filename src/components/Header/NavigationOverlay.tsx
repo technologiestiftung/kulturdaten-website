@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import { colors, headerHeight } from "../../../common/styleVariables";
+import { colors, headerHeight } from "../../common/styleVariables";
 import Navigation from "./Navigation";
 
 const Backdrop = styled.div({
