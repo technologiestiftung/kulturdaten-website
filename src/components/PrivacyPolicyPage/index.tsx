@@ -27,7 +27,7 @@ export default function PrivacyPolicyPage() {
 					<LinkInternal href="/imprint">Impressum</LinkInternal> dieser Website entnehmen.
 				</p>
 				<p>
-					Ausführliche Informationen zum Datenschutz auf Angeboten der Technologiestiftung Berlin finden Sie hier:{" "}
+					Ausführliche Informationen zum Datenschutz auf Angeboten der Technologiestiftung Berlin findest du hier:{" "}
 					<Link rel="noreferrer noopener" href="https://www.technologiestiftung-berlin.de/datenschutz" target="_blank">
 						https://www.technologiestiftung-berlin.de/datenschutz
 					</Link>
