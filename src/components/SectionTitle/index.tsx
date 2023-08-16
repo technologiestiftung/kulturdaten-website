@@ -28,7 +28,7 @@ const Fold = styled.div(() => {
 		position: "absolute",
 		bottom: 0,
 		right: 0,
-		background: colors.white,
+		background: colors.grayLight,
 		width: foldWidth,
 		height: foldHeight,
 	};
