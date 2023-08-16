@@ -20,7 +20,7 @@ export const REQUESTS: Request[] = [
 	{
 		i18nKey: "request-2-text",
 		loadData: async () => {
-			const locationsResponse = await apiClient.discoverCulturalData.postLocationsSearch({
+			const locationsResponse = await apiClient.discoverCulturalData.postLocationsSearch(1, 500, {
 				searchFilter: {
 					accessibility: {
 						$in: ["Rollstuhlgerecht"],
@@ -28,7 +28,7 @@ export const REQUESTS: Request[] = [
 				},
 			});
 			const locations = locationsResponse.data?.locations || [];
-			const attractionsResponse = await apiClient.discoverCulturalData.postAttractionsSearch({
+			const attractionsResponse = await apiClient.discoverCulturalData.postAttractionsSearch(1, 500, {
 				searchFilter: {
 					tags: {
 						$in: ["attraction.category.Exhibitions"],
@@ -49,7 +49,7 @@ export const REQUESTS: Request[] = [
 	{
 		i18nKey: "request-3-text",
 		loadData: async () => {
-			const attractionsResponse = await apiClient.discoverCulturalData.postAttractionsSearch({
+			const attractionsResponse = await apiClient.discoverCulturalData.postAttractionsSearch(1, 500, {
 				searchFilter: {
 					tags: {
 						$in: ["attraction.category.Children"],

@@ -16,11 +16,11 @@ export type EventWithAttraction = {
 export async function loadEventsWithAttractions(
 	searchFilter: SearchEventsRequest["searchFilter"]
 ): Promise<EventWithAttraction[]> {
-	const eventsResponse = await apiClient.discoverCulturalData.postEventsSearch({ searchFilter });
+	const eventsResponse = await apiClient.discoverCulturalData.postEventsSearch(1, 500, { searchFilter });
 	const events = eventsResponse.data?.events || [];
 	const first5Events = events.slice(0, 5);
 	const attractionIds = first5Events.map(getAttractionId).filter(Boolean);
-	const attractionsResponse = await apiClient.discoverCulturalData.postAttractionsSearch({
+	const attractionsResponse = await apiClient.discoverCulturalData.postAttractionsSearch(1, 500, {
 		searchFilter: {
 			identifier: {
 				$regex: attractionIds.join("|"),
