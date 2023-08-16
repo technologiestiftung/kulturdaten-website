@@ -65,11 +65,9 @@ export default function HomePage() {
 			<Spacer size={32} />
 			<Section>
 				<IntroSection />
-			</Section>
-			<NewsletterSection />
-			<Section>
 				<RequestCreatorAndList />
 			</Section>
+			<NewsletterSection />
 			<Section ref={artistSectionRef} id={AnchorLinks.ARTISTSECTION}>
 				<ArtistSection />
 			</Section>
