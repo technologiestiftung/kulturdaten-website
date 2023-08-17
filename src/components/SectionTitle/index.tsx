@@ -1,7 +1,6 @@
 import styled from "@emotion/styled";
 import { FC } from "react";
-import { colors, mediaQueries, spacings } from "../../common/styleVariables";
-import Text from "../Text";
+import { colors, fontWeights, lineHeights, mediaQueries, spacings } from "../../common/styleVariables";
 
 type BackgroundColor = string;
 const backgroundImageWidth = "600px";
@@ -29,27 +28,30 @@ const Fold = styled.div(() => {
 		position: "absolute",
 		bottom: 0,
 		right: 0,
-		background: colors.white,
+		background: colors.grayLight,
 		width: foldWidth,
 		height: foldHeight,
 	};
 });
 
-const TitleWrapper = styled.div(() => {
+const Title = styled.div(() => {
 	return {
 		display: "flex",
 		position: "relative",
 		justifyContent: "center",
 		alignItems: "center",
 		minHeight: "100%",
-		padding: spacings.get(4),
-		paddingTop: spacings.get(8),
+		padding: `${spacings.get(10)}px ${spacings.get(5)}px`,
 		backgroundImage: `url("/images/title-frame-blue-corner.svg")`,
 		backgroundSize: backgroundImageWidth,
 		backgroundRepeat: "no-repeat",
 		backgroundPosition: "bottom right",
 		borderTop: `4px solid ${colors.blueDark}`,
 		borderLeft: `4px solid ${colors.blueDark}`,
+		color: colors.blueDark,
+		fontSize: `clamp(2.0rem, 8vw, 3.5rem)`,
+		fontWeight: fontWeights.medium,
+		lineHeight: lineHeights.headline,
 	};
 });
 
@@ -81,11 +83,7 @@ const SectionTitle: FC<SectionTitleProps> = ({ label, headingLevel, backgroundCo
 		<HeaderWrapper>
 			<BannerBackdrop backgroundColor={backgroundColor}>
 				<Fold />
-				<TitleWrapper>
-					<Text type="h1" as={headingLevel} color="blueDark">
-						{label}
-					</Text>
-				</TitleWrapper>
+				<Title as={headingLevel}>{label}</Title>
 			</BannerBackdrop>
 			<SectionImage headerImage={headerImage} />
 		</HeaderWrapper>
