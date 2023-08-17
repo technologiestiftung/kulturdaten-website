@@ -22,13 +22,14 @@ const Title = styled.div({
 type Props = {
 	eventWithAttraction: EventWithAttraction;
 	locale: Locale;
+	onExpandedDescription(): void;
 };
 
 function getStartDateAsISO(event: Event) {
 	return `${event.schedule?.startDate}T${event.schedule?.startTime}`;
 }
 
-export default function ItemContent({ eventWithAttraction, locale }: Props) {
+export default function ItemContent({ eventWithAttraction, locale, onExpandedDescription }: Props) {
 	const { event, attraction } = eventWithAttraction;
 	const isoDate = getStartDateAsISO(event);
 	const getLocalizedContent = useCallback(
@@ -49,7 +50,7 @@ export default function ItemContent({ eventWithAttraction, locale }: Props) {
 			<Spacer size={10} />
 			<Title>{getLocalizedContent(attraction?.title)}</Title>
 			<Spacer size={10} />
-			<Description description={getLocalizedContent(attraction?.description)} />
+			<Description description={getLocalizedContent(attraction?.description)} onExpanded={onExpandedDescription} />
 		</>
 	);
 }

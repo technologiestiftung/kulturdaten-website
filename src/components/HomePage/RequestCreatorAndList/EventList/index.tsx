@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import { useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { useDebouncedCallback } from "use-debounce";
 import { colors, spacings, timings } from "../../../../common/styleVariables";
 import useLocale from "../../../../hooks/useLocale";
@@ -56,6 +56,7 @@ export default function EventList({ isLoading, eventsWithAttractions }: Props) {
 	}, [isLoading]);
 	const handleResize = useDebouncedCallback(() => updateListHeight(), 200);
 	useOnResize(listRef, handleResize);
+	const handleExpandedDescription = useCallback(() => updateListHeight(), []);
 	return (
 		<Block
 			padding={0}
@@ -73,7 +74,11 @@ export default function EventList({ isLoading, eventsWithAttractions }: Props) {
 			<List ref={listRef} style={{ opacity: isLoading ? 0 : 1 }}>
 				{eventsWithAttractions.map((eventWithAttraction) => (
 					<Item key={eventWithAttraction.event.identifier}>
-						<ItemContent eventWithAttraction={eventWithAttraction} locale={locale} />
+						<ItemContent
+							eventWithAttraction={eventWithAttraction}
+							locale={locale}
+							onExpandedDescription={handleExpandedDescription}
+						/>
 					</Item>
 				))}
 			</List>
