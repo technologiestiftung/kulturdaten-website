@@ -73,7 +73,7 @@ export default function Description({ description, attractionId, onExpanded }: P
 	const textRef = useRef<HTMLParagraphElement>(null);
 	// We want to show ~3 lines of text in the collapsed state.
 	const collapsedHeight = 80;
-	const [expanded, setExpanded] = useState(true);
+	const [expanded, setExpanded] = useState(false);
 	const [isInteractive, setIsInteractive] = useState(false);
 
 	const initialize = useCallback(() => {
@@ -82,7 +82,8 @@ export default function Description({ description, attractionId, onExpanded }: P
 		const isExpandable = height > collapsedHeight;
 		if (isExpandable) {
 			setIsInteractive(true);
-			setExpanded(false);
+		} else {
+			setExpanded(true);
 		}
 	}, []);
 
