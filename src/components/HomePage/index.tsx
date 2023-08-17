@@ -20,7 +20,7 @@ interface InView {
 }
 
 const inViewOptions = {
-	threshold: 0.5,
+	threshold: 0.3,
 };
 
 export default function HomePage() {
