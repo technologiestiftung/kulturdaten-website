@@ -58,7 +58,7 @@ const ReadMoreButton = styled(Button)({
 });
 
 function sanitizeDescription(description: string) {
-	return description.replace(/(\n)$/gm, "");
+	return description.replace(/&shy;/g, "").replace(/(\n)$/gm, "");
 }
 
 type Props = {
