@@ -1,4 +1,5 @@
 import styled from "@emotion/styled";
+import { useTranslations } from "next-intl";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { borderRadiuses, colors, fontSizes, spacings, timings } from "../../../../../common/styleVariables";
 import Button from "../../../../Button";
@@ -67,6 +68,7 @@ type Props = {
 };
 
 export default function Description({ description, attractionId, onExpanded }: Props) {
+	const t = useTranslations("Home.for-interested");
 	const textId = `description-${attractionId}`;
 	const textRef = useRef<HTMLParagraphElement>(null);
 	// We want to show ~3 lines of text in the collapsed state.
@@ -108,7 +110,7 @@ export default function Description({ description, attractionId, onExpanded }: P
 			{!expanded && (
 				<ReadMoreContainer>
 					<ReadMoreButton unstyled={true} onClick={expand} className={readMoreButtonClass} {...a11yButtonProps}>
-						<Icon name="chevron-down" size={18} /> Weiterlesen
+						<Icon name="chevron-down" size={18} /> {t("description-read-more")}
 					</ReadMoreButton>
 				</ReadMoreContainer>
 			)}

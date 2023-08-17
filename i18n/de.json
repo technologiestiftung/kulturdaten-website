@@ -30,7 +30,8 @@
 			"request-6-text": "Ich liebe Exkursionen! 💗💗 Welche werden da in Berlin angeboten?",
 			"results-title": "Deine Ergebnisse:",
 			"results-source-title": "Woher kommen die Ergebnisse?",
-			"results-source-tooltip": "Die Ergebnisse kommen von den Kalendern der Berliner Bezirke, die von der BerlinOnline Stadtportal GmbH & Co. KG verwaltet werden und auch auf <a href=\"https://www.berlin.de/land/veranstaltungen/bezirke/\" target=\"_blank\" rel=\"noreferrer\">berlin.de</a> einsehbar sind."
+			"results-source-tooltip": "Die Ergebnisse kommen von den Kalendern der Berliner Bezirke, die von der BerlinOnline Stadtportal GmbH & Co. KG verwaltet werden und auch auf <a href=\"https://www.berlin.de/land/veranstaltungen/bezirke/\" target=\"_blank\" rel=\"noreferrer\">berlin.de</a> einsehbar sind.",
+			"description-read-more": "Weiterlesen"
 		},
 		"artist-section": {
 			"title": "Ihr macht die Kultur, wir sagen allen Bescheid",
