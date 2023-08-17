@@ -50,7 +50,11 @@ export default function ItemContent({ eventWithAttraction, locale, onExpandedDes
 			<Spacer size={10} />
 			<Title>{getLocalizedContent(attraction?.title)}</Title>
 			<Spacer size={10} />
-			<Description description={getLocalizedContent(attraction?.description)} onExpanded={onExpandedDescription} />
+			<Description
+				description={getLocalizedContent(attraction?.description)}
+				attractionId={attraction?.identifier || ""}
+				onExpanded={onExpandedDescription}
+			/>
 		</>
 	);
 }

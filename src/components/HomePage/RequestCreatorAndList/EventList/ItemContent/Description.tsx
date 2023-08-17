@@ -6,10 +6,11 @@ import Icon from "../../../../Icon";
 
 const readMoreButtonClass = "read-more-button";
 
-const Container = styled.div({
+const Container = styled.div<{ isInteractive: boolean }>(({ isInteractive }) => ({
 	position: "relative",
 	color: colors.black,
 	overflow: "hidden",
+	cursor: isInteractive ? "pointer" : undefined,
 	[`& .${readMoreButtonClass}`]: {
 		opacity: 0,
 	},
@@ -18,7 +19,7 @@ const Container = styled.div({
 			opacity: 1,
 		},
 	},
-});
+}));
 
 const Gradient = styled.div({
 	position: "absolute",
@@ -41,6 +42,7 @@ const ReadMoreContainer = styled.div({
 
 const ReadMoreButton = styled(Button)({
 	backgroundColor: colors.white,
+	color: colors.blueDark,
 	cursor: "pointer",
 	fontSize: fontSizes.small,
 	display: "inline-flex",
@@ -60,11 +62,13 @@ function sanitizeDescription(description: string) {
 
 type Props = {
 	description: string;
+	attractionId: string;
 	onExpanded(): void;
 };
 
-export default function Description({ description, onExpanded }: Props) {
+export default function Description({ description, attractionId, onExpanded }: Props) {
 	const [expanded, setExpanded] = useState(false);
+	const textId = `description-${attractionId}`;
 	const textRef = useRef<HTMLParagraphElement>(null);
 	// We want to show ~3 lines of text in the collapsed state.
 	const maxCollapsedHeight = 80;
@@ -88,16 +92,27 @@ export default function Description({ description, onExpanded }: Props) {
 
 	return (
 		<Container
-			style={{ height: expanded ? undefined : collapsedHeight }}
+			style={{ height: !canBeExpanded || expanded ? undefined : collapsedHeight }}
 			onClick={canBeExpanded && !expanded ? () => expand() : undefined}
+			isInteractive={canBeExpanded && !expanded}
+			aria-expanded={canBeExpanded ? expanded : undefined}
+			aria-controls={canBeExpanded ? textId : undefined}
 		>
-			<p ref={textRef}>{sanitizeDescription(description)}</p>
+			<p ref={textRef} id={textId}>
+				{sanitizeDescription(description)}
+			</p>
 			{canBeExpanded && (
 				<>
 					<Gradient role="none" style={{ opacity: expanded ? 0 : 1 }} />
 					{!expanded && (
 						<ReadMoreContainer>
-							<ReadMoreButton unstyled={true} onClick={expand} className={readMoreButtonClass} aria-expanded={expanded}>
+							<ReadMoreButton
+								unstyled={true}
+								onClick={expand}
+								className={readMoreButtonClass}
+								aria-expanded={canBeExpanded ? expanded : undefined}
+								aria-controls={canBeExpanded ? textId : undefined}
+							>
 								<Icon name="chevron-down" size={18} /> Weiterlesen
 							</ReadMoreButton>
 						</ReadMoreContainer>
