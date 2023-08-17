@@ -6,11 +6,11 @@ import Icon from "../../../../Icon";
 
 const readMoreButtonClass = "read-more-button";
 
-const Container = styled.div<{ isInteractive: boolean }>(({ isInteractive }) => ({
+const Container = styled.div(({ onClick }) => ({
 	position: "relative",
 	color: colors.black,
 	overflow: "hidden",
-	cursor: isInteractive ? "pointer" : undefined,
+	cursor: onClick ? "pointer" : undefined,
 	[`& .${readMoreButtonClass}`]: {
 		opacity: 0,
 	},
@@ -67,21 +67,24 @@ type Props = {
 };
 
 export default function Description({ description, attractionId, onExpanded }: Props) {
-	const [expanded, setExpanded] = useState(false);
 	const textId = `description-${attractionId}`;
 	const textRef = useRef<HTMLParagraphElement>(null);
 	// We want to show ~3 lines of text in the collapsed state.
-	const maxCollapsedHeight = 80;
-	const [textHeight, setTextHeight] = useState<number>(maxCollapsedHeight);
-	const collapsedHeight = Math.min(maxCollapsedHeight, textHeight);
-	const canBeExpanded = textHeight > collapsedHeight;
+	const collapsedHeight = 80;
+	const [expanded, setExpanded] = useState(true);
+	const [isInteractive, setIsInteractive] = useState(false);
 
-	const updateTotalHeight = useCallback(() => {
+	const initialize = useCallback(() => {
 		const element = textRef.current!;
 		const { height } = element.getBoundingClientRect();
-		setTextHeight(height);
+		const isExpandable = height > collapsedHeight;
+		if (isExpandable) {
+			setIsInteractive(true);
+			setExpanded(false);
+		}
 	}, []);
-	useEffect(() => updateTotalHeight(), [updateTotalHeight]);
+
+	useEffect(() => initialize(), [initialize]);
 
 	const expand = useCallback(() => setExpanded(true), []);
 	useEffect(() => {
@@ -90,34 +93,24 @@ export default function Description({ description, attractionId, onExpanded }: P
 		}
 	}, [expanded, onExpanded]);
 
+	const a11yButtonProps = isInteractive ? { "aria-expanded": expanded, "aria-controls": textId } : {};
+
 	return (
 		<Container
-			style={{ height: !canBeExpanded || expanded ? undefined : collapsedHeight }}
-			onClick={canBeExpanded && !expanded ? () => expand() : undefined}
-			isInteractive={canBeExpanded && !expanded}
-			aria-expanded={canBeExpanded ? expanded : undefined}
-			aria-controls={canBeExpanded ? textId : undefined}
+			style={{ height: expanded ? undefined : collapsedHeight }}
+			onClick={!expanded ? () => expand() : undefined}
+			{...a11yButtonProps}
 		>
 			<p ref={textRef} id={textId}>
 				{sanitizeDescription(description)}
 			</p>
-			{canBeExpanded && (
-				<>
-					<Gradient role="none" style={{ opacity: expanded ? 0 : 1 }} />
-					{!expanded && (
-						<ReadMoreContainer>
-							<ReadMoreButton
-								unstyled={true}
-								onClick={expand}
-								className={readMoreButtonClass}
-								aria-expanded={canBeExpanded ? expanded : undefined}
-								aria-controls={canBeExpanded ? textId : undefined}
-							>
-								<Icon name="chevron-down" size={18} /> Weiterlesen
-							</ReadMoreButton>
-						</ReadMoreContainer>
-					)}
-				</>
+			{isInteractive && <Gradient role="none" style={{ opacity: expanded ? 0 : 1 }} />}
+			{!expanded && (
+				<ReadMoreContainer>
+					<ReadMoreButton unstyled={true} onClick={expand} className={readMoreButtonClass} {...a11yButtonProps}>
+						<Icon name="chevron-down" size={18} /> Weiterlesen
+					</ReadMoreButton>
+				</ReadMoreContainer>
 			)}
 		</Container>
 	);
