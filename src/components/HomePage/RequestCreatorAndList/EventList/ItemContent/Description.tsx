@@ -90,10 +90,10 @@ export default function Description({ description, attractionId, onExpanded }: P
 
 	const expand = useCallback(() => setExpanded(true), []);
 	useEffect(() => {
-		if (expanded) {
+		if (isInteractive && expanded) {
 			onExpanded();
 		}
-	}, [expanded, onExpanded]);
+	}, [expanded, isInteractive, onExpanded]);
 
 	const a11yButtonProps = isInteractive ? { "aria-expanded": expanded, "aria-controls": textId } : {};
 
