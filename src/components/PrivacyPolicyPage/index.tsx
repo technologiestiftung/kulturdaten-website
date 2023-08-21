@@ -43,7 +43,7 @@ export default function PrivacyPolicyPage() {
 					Auswertung der Webseite.
 					</p>
 				<p>
-					Das Tool kann <Link href="https://matomo.org/cookie-consent-banners/">cookielos</Link> Aktivitäten auf unserer Website nachverfolgen und uns basierend darauf eine Auswertung erstellen. Wir können demnach keine Rückschlüsse auf die Identität der jeweiligen Nutzerin/des jeweiligen Nutzers vornehmen. Zweck der Erhebung ist es, innerhalb der Webpräsenz mögliche Fehler zu erkennen und zu lösen sowie den Inhalt den Bedürfnissen unserer Besucher*innen anzupassen und zu optimieren. Nur die Technologiestiftung Berlin hat Zugriff auf diese (aggregierten) Daten. Eine Weitergabe an Dritte erfolgt nicht. 					
+					Das Tool kann <Link href="https://matomo.org/cookie-consent-banners/">cookielos</Link> Aktivitäten auf unserer Website nachverfolgen und uns basierend darauf eine Auswertung erstellen. Wir können demnach keine Rückschlüsse auf die Identität der jeweiligen Nutzerin/des jeweiligen Nutzers vornehmen. Zweck der Erhebung ist es, innerhalb der Webpräsenz mögliche Fehler zu erkennen und zu lösen sowie den Inhalt den Bedürfnissen unserer Besucher:innen anzupassen und zu optimieren. Nur die Technologiestiftung Berlin hat Zugriff auf diese (aggregierten) Daten. Eine Weitergabe an Dritte erfolgt nicht. 					
 				</p>			
 
 				<Text type="h3">Ansprechpartner</Text>
