@@ -52,9 +52,6 @@ const ReadMoreButton = styled(Button)({
 	padding: `${spacings.get(1)}px ${spacings.get(2)}px`,
 	borderRadius: borderRadiuses.medium,
 	transition: `opacity ${timings.short} ease-in-out`,
-	"&:hover": {
-		backgroundColor: colors.grayLight,
-	},
 });
 
 function sanitizeDescription(description: string) {
