@@ -34,12 +34,20 @@ const Bar = styled.div<{ open: boolean }>(({ open }) => ({
 interface Props {
 	open: boolean;
 	onToggle: () => void;
+	navId: string;
 }
 
-export default function Burger({ open, onToggle }: Props) {
+export default function Burger({ open, onToggle, navId }: Props) {
 	const t = useTranslations("Home.header");
+
 	return (
-		<BurgerPack unstyled aria-label={t("burger-aria-label")} onClick={onToggle}>
+		<BurgerPack
+			unstyled
+			aria-label={t("burger-aria-label")}
+			aria-expanded={open}
+			aria-controls={navId}
+			onClick={onToggle}
+		>
 			<Bar open={open} />
 			<Bar open={open} />
 			<Bar open={open} />

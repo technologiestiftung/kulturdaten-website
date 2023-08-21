@@ -58,6 +58,8 @@ const Desktop = styled.div({
 });
 
 export default function Header({ activeAnchorLink }: Props) {
+	const navId = "navigation";
+
 	const [navigationOpen, setNavigationOpen] = useState(false);
 	const toggleOpen = () => setNavigationOpen(!navigationOpen);
 	return (
@@ -68,8 +70,8 @@ export default function Header({ activeAnchorLink }: Props) {
 					<Navigation activeAnchorLink={activeAnchorLink} />
 				</Desktop>
 				<Mobile>
-					<Burger open={navigationOpen} onToggle={toggleOpen} />
-					{navigationOpen && <NavigationOverlay onLinkClick={() => setNavigationOpen(false)} />}
+					<Burger open={navigationOpen} onToggle={toggleOpen} navId={navId} />
+					{navigationOpen && <NavigationOverlay navId={navId} onLinkClick={() => setNavigationOpen(false)} />}
 				</Mobile>
 			</ContentWrapper>
 		</HeaderContainer>

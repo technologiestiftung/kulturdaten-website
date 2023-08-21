@@ -13,10 +13,11 @@ const Backdrop = styled.div({
 
 interface Props {
 	onLinkClick: () => void;
+	navId: string;
 }
-export default function NavigationOverlay({ onLinkClick }: Props) {
+export default function NavigationOverlay({ onLinkClick, navId }: Props) {
 	return (
-		<Backdrop>
+		<Backdrop id={navId}>
 			<Navigation onLinkClick={onLinkClick} />
 		</Backdrop>
 	);
