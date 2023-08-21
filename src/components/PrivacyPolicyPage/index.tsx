@@ -38,13 +38,18 @@ export default function PrivacyPolicyPage() {
 					mit unserer Website bestimmte Daten und Einstellungen speichern.
 				</p>
 				<p>
-					Diese Seite wird nur mit technisch notwendigen Cookies betrieben, technisch nicht-notwendige Cookies kommen nicht zum Einsatz.
-					Wir verwenden das Webanalysetool Matomo (eine Anwendung der Firma Innocraft (InnoCraft Ltd, 150 Willis St, 6011 Wellington, New Zealand)) für die statistische
-					Auswertung der Webseite.
-					</p>
+					Diese Seite wird nur mit technisch notwendigen Cookies betrieben, technisch nicht-notwendige Cookies kommen
+					nicht zum Einsatz. Wir verwenden das Webanalysetool Matomo (eine Anwendung der Firma Innocraft (InnoCraft Ltd,
+					150 Willis St, 6011 Wellington, New Zealand)) für die statistische Auswertung der Webseite.
+				</p>
 				<p>
-					Das Tool kann <Link href="https://matomo.org/cookie-consent-banners/">cookielos</Link> Aktivitäten auf unserer Website nachverfolgen und uns basierend darauf eine Auswertung erstellen. Wir können demnach keine Rückschlüsse auf die Identität der jeweiligen Nutzerin/des jeweiligen Nutzers vornehmen. Zweck der Erhebung ist es, innerhalb der Webpräsenz mögliche Fehler zu erkennen und zu lösen sowie den Inhalt den Bedürfnissen unserer Besucher:innen anzupassen und zu optimieren. Nur die Technologiestiftung Berlin hat Zugriff auf diese (aggregierten) Daten. Eine Weitergabe an Dritte erfolgt nicht. 					
-				</p>			
+					Das Tool kann <Link href="https://matomo.org/cookie-consent-banners/">cookielos</Link> Aktivitäten auf unserer
+					Website nachverfolgen und uns basierend darauf eine Auswertung erstellen. Wir können demnach keine
+					Rückschlüsse auf die Identität der jeweiligen Nutzerin/des jeweiligen Nutzers vornehmen. Zweck der Erhebung
+					ist es, innerhalb der Webpräsenz mögliche Fehler zu erkennen und zu lösen sowie den Inhalt den Bedürfnissen
+					unserer Besucher:innen anzupassen und zu optimieren. Nur die Technologiestiftung Berlin hat Zugriff auf diese
+					(aggregierten) Daten. Eine Weitergabe an Dritte erfolgt nicht.
+				</p>
 
 				<Text type="h3">Ansprechpartner</Text>
 				<p>
