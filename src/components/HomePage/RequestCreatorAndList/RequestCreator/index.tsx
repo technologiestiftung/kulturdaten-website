@@ -1,5 +1,6 @@
 import { useTranslations } from "next-intl";
 import { useCallback, useState } from "react";
+import { trackEvent } from "../../../../services/analytics";
 import { getRandomIndexWithout } from "../../../../services/arrays";
 import ButtonWithIcon from "../../../ButtonWithIcon";
 import Spacer from "../../../Spacer";
@@ -30,6 +31,7 @@ export default function RequestCreator({ onStartRequestCreation, onRequestCreate
 	const handleCreateRequest = useCallback(() => {
 		onStartRequestCreation();
 		randomizeRequest();
+		trackEvent("Homepage", "Create random request");
 	}, [onStartRequestCreation, randomizeRequest]);
 	const handleAnimationFinished = useCallback(() => {
 		if (request) {
