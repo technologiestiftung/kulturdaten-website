@@ -48,8 +48,8 @@ export default function PrivacyPolicyPage() {
 					Rückschlüsse auf die Identität der jeweiligen Nutzerin/des jeweiligen Nutzers vornehmen. Zweck der Erhebung
 					ist es, innerhalb der Webpräsenz mögliche Fehler zu erkennen und zu lösen sowie den Inhalt den Bedürfnissen
 					unserer Besucher:innen anzupassen und zu optimieren. Nur die Technologiestiftung Berlin hat Zugriff auf diese
-					(aggregierten) Daten. Eine Weitergabe an Dritte erfolgt nicht. Falls du die Browser-Einstellung &quot;Do not Track&quot;
-					aktivierst hast, erheben wir keine Webseiten-Aktivitäten mittels Matomo.
+					(aggregierten) Daten. Eine Weitergabe an Dritte erfolgt nicht. Falls du die Browser-Einstellung &quot;Do not
+					Track&quot; aktivierst hast, erheben wir keine Webseiten-Aktivitäten mittels Matomo.
 				</p>
 
 				<Text type="h3">Ansprechpartner</Text>
