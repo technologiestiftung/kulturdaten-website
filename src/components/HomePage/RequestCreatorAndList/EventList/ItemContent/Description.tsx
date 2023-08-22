@@ -15,9 +15,11 @@ const Container = styled.div(({ onClick }) => ({
 	[`& .${readMoreButtonClass}`]: {
 		opacity: 0,
 	},
-	"&:hover, &:focus-within": {
-		[`.${readMoreButtonClass}`]: {
-			opacity: 1,
+	"@media (hover: hover)": {
+		"&:hover, &:focus-within": {
+			[`.${readMoreButtonClass}`]: {
+				opacity: 1,
+			},
 		},
 	},
 }));
