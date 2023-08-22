@@ -1,9 +1,9 @@
 import styled from "@emotion/styled";
 import { FC } from "react";
 import { colors, fontWeights, lineHeights, mediaQueries, spacings } from "../../common/styleVariables";
+import FoldSvg from "./FoldSvg";
 
 type BackgroundColor = string;
-const backgroundImageWidth = "600px";
 
 const HeaderWrapper = styled.div(() => {
 	return {
@@ -17,21 +17,15 @@ const BannerBackdrop = styled.div<{ backgroundColor: BackgroundColor }>(({ backg
 		flex: "1 1 50%",
 		position: "relative",
 		backgroundColor,
-		maxWidth: backgroundImageWidth,
 	};
 });
 
-const Fold = styled.div(() => {
-	const foldWidth = "36px";
-	const foldHeight = "46px";
-	return {
-		position: "absolute",
-		bottom: 0,
-		right: 0,
-		background: colors.grayLight,
-		width: foldWidth,
-		height: foldHeight,
-	};
+const Fold = styled.div({
+	width: "38px",
+	position: "absolute",
+	bottom: 0,
+	right: 0,
+	background: colors.grayLight,
 });
 
 const Title = styled.div(() => {
@@ -42,12 +36,7 @@ const Title = styled.div(() => {
 		alignItems: "center",
 		minHeight: "100%",
 		padding: `${spacings.get(10)}px ${spacings.get(5)}px`,
-		backgroundImage: `url("/images/title-frame-blue-corner.svg")`,
-		backgroundSize: backgroundImageWidth,
-		backgroundRepeat: "no-repeat",
-		backgroundPosition: "bottom right",
-		borderTop: `4px solid ${colors.blueDark}`,
-		borderLeft: `4px solid ${colors.blueDark}`,
+		border: `4px solid ${colors.blueDark}`,
 		color: colors.blueDark,
 		fontSize: `clamp(2.0rem, 8vw, 3.5rem)`,
 		fontWeight: fontWeights.medium,
@@ -82,8 +71,10 @@ const SectionTitle: FC<SectionTitleProps> = ({ label, headingLevel, backgroundCo
 	return (
 		<HeaderWrapper>
 			<BannerBackdrop backgroundColor={backgroundColor}>
-				<Fold />
 				<Title as={headingLevel}>{label}</Title>
+				<Fold>
+					<FoldSvg />
+				</Fold>
 			</BannerBackdrop>
 			<SectionImage headerImage={headerImage} />
 		</HeaderWrapper>
