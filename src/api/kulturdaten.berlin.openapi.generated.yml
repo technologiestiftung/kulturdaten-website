@@ -83,12 +83,12 @@ paths:
           schema:
             type: boolean
       responses:
-        '200':
+        "200":
           description: OK
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/GetAttractionsResponse'
+                $ref: "#/components/schemas/GetAttractionsResponse"
     post:
       tags:
         - Maintain cultural data
@@ -96,14 +96,14 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/CreateAttractionRequest'
+              $ref: "#/components/schemas/CreateAttractionRequest"
       responses:
-        '201':
+        "201":
           description: Created
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/CreateAttractionResponse'
+                $ref: "#/components/schemas/CreateAttractionResponse"
   /attractions/bulk-create:
     post:
       tags:
@@ -114,9 +114,9 @@ paths:
             schema:
               type: array
               items:
-                $ref: '#/components/schemas/CreateAttractionRequest'
+                $ref: "#/components/schemas/CreateAttractionRequest"
       responses:
-        '201':
+        "201":
           description: Created
           content:
             application/json:
@@ -126,7 +126,7 @@ paths:
                   attractions:
                     type: array
                     items:
-                      $ref: '#/components/schemas/CreateAttractionResponse'
+                      $ref: "#/components/schemas/CreateAttractionResponse"
   /attractions/search:
     post:
       tags:
@@ -135,14 +135,14 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/SearchAttractionsRequest'
+              $ref: "#/components/schemas/SearchAttractionsRequest"
       responses:
-        '200':
+        "200":
           description: OK
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/SearchAttractionsResponse'
+                $ref: "#/components/schemas/SearchAttractionsResponse"
   /attractions/{identifier}:
     get:
       tags:
@@ -159,12 +159,12 @@ paths:
           schema:
             type: boolean
       responses:
-        '200':
+        "200":
           description: OK
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/GetAttractionResponse'
+                $ref: "#/components/schemas/GetAttractionResponse"
     patch:
       tags:
         - Maintain cultural data
@@ -178,9 +178,9 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/UpdateAttractionRequest'
+              $ref: "#/components/schemas/UpdateAttractionRequest"
       responses:
-        '200':
+        "200":
           description: Updated
   /attractions/{identifier}/externallinks:
     post:
@@ -196,9 +196,9 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/AddExternalLinkRequest'
+              $ref: "#/components/schemas/AddExternalLinkRequest"
       responses:
-        '200':
+        "200":
           description: OK
     delete:
       tags:
@@ -213,9 +213,9 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/RemoveExternalLinkRequest'
+              $ref: "#/components/schemas/RemoveExternalLinkRequest"
       responses:
-        '204':
+        "204":
           description: OK
   /attractions/{identifier}/archive:
     post:
@@ -228,7 +228,7 @@ paths:
           schema:
             type: string
       responses:
-        '200':
+        "200":
           description: Archived
   /attractions/{identifier}/unarchive:
     post:
@@ -241,7 +241,7 @@ paths:
           schema:
             type: string
       responses:
-        '200':
+        "200":
           description: Unarchived
   /attractions/{identifier}/publish:
     post:
@@ -254,7 +254,7 @@ paths:
           schema:
             type: string
       responses:
-        '200':
+        "200":
           description: Published
   /attractions/{identifier}/unpublish:
     post:
@@ -267,7 +267,7 @@ paths:
           schema:
             type: string
       responses:
-        '200':
+        "200":
           description: Unpublished
   /events:
     get:
@@ -280,12 +280,12 @@ paths:
           schema:
             type: boolean
       responses:
-        '200':
+        "200":
           description: OK
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/GetEventsResponse'
+                $ref: "#/components/schemas/GetEventsResponse"
     post:
       tags:
         - Maintain cultural data
@@ -293,14 +293,14 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/CreateEventRequest'
+              $ref: "#/components/schemas/CreateEventRequest"
       responses:
-        '201':
+        "201":
           description: Created
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/CreateEventResponse'
+                $ref: "#/components/schemas/CreateEventResponse"
   /events/bulk-create:
     post:
       tags:
@@ -311,9 +311,9 @@ paths:
             schema:
               type: array
               items:
-                $ref: '#/components/schemas/CreateEventRequest'
+                $ref: "#/components/schemas/CreateEventRequest"
       responses:
-        '201':
+        "201":
           description: Created
           content:
             application/json:
@@ -323,7 +323,7 @@ paths:
                   attractions:
                     type: array
                     items:
-                      $ref: '#/components/schemas/CreateEventResponse'
+                      $ref: "#/components/schemas/CreateEventResponse"
   /events/search:
     post:
       tags:
@@ -332,14 +332,14 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/SearchEventsRequest'
+              $ref: "#/components/schemas/SearchEventsRequest"
       responses:
-        '200':
+        "200":
           description: OK
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/SearchEventsResponse'
+                $ref: "#/components/schemas/SearchEventsResponse"
   /events/{identifier}:
     get:
       tags:
@@ -356,12 +356,12 @@ paths:
           schema:
             type: boolean
       responses:
-        '200':
+        "200":
           description: OK
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/GetEventResponse'
+                $ref: "#/components/schemas/GetEventResponse"
     patch:
       tags:
         - Maintain cultural data
@@ -375,9 +375,9 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/UpdateEventRequest'
+              $ref: "#/components/schemas/UpdateEventRequest"
       responses:
-        '200':
+        "200":
           description: OK
   /events/{identifier}/locations:
     put:
@@ -393,9 +393,9 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/AddEventLocationRequest'
+              $ref: "#/components/schemas/AddEventLocationRequest"
       responses:
-        '200':
+        "200":
           description: OK
     delete:
       tags:
@@ -410,9 +410,9 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/RemoveEventLocationRequest'
+              $ref: "#/components/schemas/RemoveEventLocationRequest"
       responses:
-        '204':
+        "204":
           description: No Content
   /events/{identifier}/attractions:
     put:
@@ -428,9 +428,9 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/AddEventAttractionRequest'
+              $ref: "#/components/schemas/AddEventAttractionRequest"
       responses:
-        '200':
+        "200":
           description: OK
     delete:
       tags:
@@ -445,9 +445,9 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/RemoveEventAttractionRequest'
+              $ref: "#/components/schemas/RemoveEventAttractionRequest"
       responses:
-        '204':
+        "204":
           description: No Content
   /events/{identifier}/organizer:
     put:
@@ -463,9 +463,9 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/SetEventOrganizerRequest'
+              $ref: "#/components/schemas/SetEventOrganizerRequest"
       responses:
-        '200':
+        "200":
           description: OK
     delete:
       tags:
@@ -477,7 +477,7 @@ paths:
           schema:
             type: string
       responses:
-        '204':
+        "204":
           description: No Content
   /events/{identifier}/publish:
     post:
@@ -490,7 +490,7 @@ paths:
           schema:
             type: string
       responses:
-        '200':
+        "200":
           description: OK
   /events/{identifier}/unpublish:
     post:
@@ -503,7 +503,7 @@ paths:
           schema:
             type: string
       responses:
-        '200':
+        "200":
           description: OK
   /events/{identifier}/reschedule:
     post:
@@ -519,9 +519,9 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/RescheduleEventRequest'
+              $ref: "#/components/schemas/RescheduleEventRequest"
       responses:
-        '200':
+        "200":
           description: OK
   /events/{identifier}/postpone:
     post:
@@ -534,7 +534,7 @@ paths:
           schema:
             type: string
       responses:
-        '200':
+        "200":
           description: OK
   /events/{identifier}/cancel:
     post:
@@ -547,7 +547,7 @@ paths:
           schema:
             type: string
       responses:
-        '200':
+        "200":
           description: OK
   /events/{identifier}/archive:
     post:
@@ -560,7 +560,7 @@ paths:
           schema:
             type: string
       responses:
-        '200':
+        "200":
           description: OK
   /events/{identifier}/unarchive:
     post:
@@ -573,7 +573,7 @@ paths:
           schema:
             type: string
       responses:
-        '200':
+        "200":
           description: OK
   /events/{identifier}/duplicate:
     post:
@@ -586,12 +586,12 @@ paths:
           schema:
             type: string
       responses:
-        '200':
+        "200":
           description: OK
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/DuplicateEventResponse'
+                $ref: "#/components/schemas/DuplicateEventResponse"
   /locations:
     get:
       tags:
@@ -603,12 +603,12 @@ paths:
           schema:
             type: boolean
       responses:
-        '200':
+        "200":
           description: OK
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/GetLocationsResponse'
+                $ref: "#/components/schemas/GetLocationsResponse"
     post:
       tags:
         - Maintain cultural data
@@ -616,14 +616,14 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/CreateLocationRequest'
+              $ref: "#/components/schemas/CreateLocationRequest"
       responses:
-        '201':
+        "201":
           description: Created
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/CreateLocationResponse'
+                $ref: "#/components/schemas/CreateLocationResponse"
   /locations/bulk-create:
     post:
       tags:
@@ -634,9 +634,9 @@ paths:
             schema:
               type: array
               items:
-                $ref: '#/components/schemas/CreateLocationRequest'
+                $ref: "#/components/schemas/CreateLocationRequest"
       responses:
-        '201':
+        "201":
           description: Created
           content:
             application/json:
@@ -646,7 +646,7 @@ paths:
                   attractions:
                     type: array
                     items:
-                      $ref: '#/components/schemas/CreateLocationRequest'
+                      $ref: "#/components/schemas/CreateLocationRequest"
   /locations/search:
     post:
       tags:
@@ -655,14 +655,14 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/SearchLocationsRequest'
+              $ref: "#/components/schemas/SearchLocationsRequest"
       responses:
-        '200':
+        "200":
           description: OK
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/SearchLocationsResponse'
+                $ref: "#/components/schemas/SearchLocationsResponse"
   /locations/{id}:
     get:
       tags:
@@ -679,12 +679,12 @@ paths:
           schema:
             type: boolean
       responses:
-        '200':
+        "200":
           description: OK
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/GetLocationResponse'
+                $ref: "#/components/schemas/GetLocationResponse"
     patch:
       tags:
         - Maintain cultural data
@@ -698,9 +698,9 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/UpdateLocationRequest'
+              $ref: "#/components/schemas/UpdateLocationRequest"
       responses:
-        '200':
+        "200":
           description: OK
   /locations/{id}/manager:
     put:
@@ -716,9 +716,9 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/SetLocationManagerRequest'
+              $ref: "#/components/schemas/SetLocationManagerRequest"
       responses:
-        '200':
+        "200":
           description: OK
     delete:
       tags:
@@ -730,7 +730,7 @@ paths:
           schema:
             type: string
       responses:
-        '200':
+        "200":
           description: OK
   /locations/{id}/open:
     post:
@@ -743,7 +743,7 @@ paths:
           schema:
             type: string
       responses:
-        '200':
+        "200":
           description: OK
   /locations/{id}/close:
     post:
@@ -756,7 +756,7 @@ paths:
           schema:
             type: string
       responses:
-        '200':
+        "200":
           description: OK
   /locations/{id}/permanentlyClose:
     post:
@@ -769,7 +769,7 @@ paths:
           schema:
             type: string
       responses:
-        '200':
+        "200":
           description: OK
   /locations/{id}/archive:
     post:
@@ -782,7 +782,7 @@ paths:
           schema:
             type: string
       responses:
-        '200':
+        "200":
           description: OK
   /locations/{id}/unarchive:
     post:
@@ -795,7 +795,7 @@ paths:
           schema:
             type: string
       responses:
-        '200':
+        "200":
           description: OK
   /locations/{id}/claim:
     post:
@@ -811,9 +811,9 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/ClaimLocationRequest'
+              $ref: "#/components/schemas/ClaimLocationRequest"
       responses:
-        '200':
+        "200":
           description: OK
   /organizations:
     get:
@@ -826,12 +826,12 @@ paths:
           schema:
             type: boolean
       responses:
-        '200':
+        "200":
           description: OK
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/GetOrganizationsResponse'
+                $ref: "#/components/schemas/GetOrganizationsResponse"
     post:
       tags:
         - Maintain cultural data
@@ -839,20 +839,20 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/CreateOrganizationRequest'
+              $ref: "#/components/schemas/CreateOrganizationRequest"
       responses:
-        '201':
+        "201":
           description: Created
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/CreateOrganizationResponse'
-        '400':
+                $ref: "#/components/schemas/CreateOrganizationResponse"
+        "400":
           description: Not Created
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Error'
+                $ref: "#/components/schemas/Error"
   /organizations/bulk-create:
     post:
       tags:
@@ -863,9 +863,9 @@ paths:
             schema:
               type: array
               items:
-                $ref: '#/components/schemas/CreateOrganizationRequest'
+                $ref: "#/components/schemas/CreateOrganizationRequest"
       responses:
-        '201':
+        "201":
           description: Created
           content:
             application/json:
@@ -875,7 +875,7 @@ paths:
                   attractions:
                     type: array
                     items:
-                      $ref: '#/components/schemas/CreateOrganizationResponse'
+                      $ref: "#/components/schemas/CreateOrganizationResponse"
   /organizations/search:
     post:
       tags:
@@ -884,14 +884,14 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/SearchOrganizationsRequest'
+              $ref: "#/components/schemas/SearchOrganizationsRequest"
       responses:
-        '200':
+        "200":
           description: OK
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/SearchOrganizationsResponse'
+                $ref: "#/components/schemas/SearchOrganizationsResponse"
   /organizations/{identifier}:
     get:
       tags:
@@ -908,18 +908,18 @@ paths:
           schema:
             type: boolean
       responses:
-        '200':
+        "200":
           description: OK
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/GetOrganizationResponse'
-        '404':
+                $ref: "#/components/schemas/GetOrganizationResponse"
+        "404":
           description: Not Found
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NotFoundError'
+                $ref: "#/components/schemas/NotFoundError"
     patch:
       tags:
         - Maintain cultural data
@@ -933,9 +933,9 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/UpdateOrganizationRequest'
+              $ref: "#/components/schemas/UpdateOrganizationRequest"
       responses:
-        '200':
+        "200":
           description: OK
   /organizations/{identifier}/activate:
     post:
@@ -948,7 +948,7 @@ paths:
           schema:
             type: string
       responses:
-        '200':
+        "200":
           description: OK
   /organizations/{identifier}/deactivate:
     post:
@@ -961,7 +961,7 @@ paths:
           schema:
             type: string
       responses:
-        '200':
+        "200":
           description: OK
   /organizations/{identifier}/retire:
     post:
@@ -974,7 +974,7 @@ paths:
           schema:
             type: string
       responses:
-        '200':
+        "200":
           description: OK
   /organizations/{identifier}/archive:
     post:
@@ -987,7 +987,7 @@ paths:
           schema:
             type: string
       responses:
-        '200':
+        "200":
           description: OK
   /organizations/{identifier}/unarchive:
     post:
@@ -1000,7 +1000,7 @@ paths:
           schema:
             type: string
       responses:
-        '200':
+        "200":
           description: OK
   /users:
     get:
@@ -1009,12 +1009,12 @@ paths:
       security:
         - bearerAuth: []
       responses:
-        '200':
+        "200":
           description: OK
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/GetUsersResponse'
+                $ref: "#/components/schemas/GetUsersResponse"
     post:
       tags:
         - Users
@@ -1022,20 +1022,20 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/CreateUserRequest'
+              $ref: "#/components/schemas/CreateUserRequest"
       responses:
-        '201':
+        "201":
           description: OK
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/CreateUserResponse'
-        '409':
+                $ref: "#/components/schemas/CreateUserResponse"
+        "409":
           description: Conflict
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/EmailAlreadyInUseError'
+                $ref: "#/components/schemas/EmailAlreadyInUseError"
   /users/{identifier}:
     parameters:
       - in: path
@@ -1050,7 +1050,7 @@ paths:
       security:
         - bearerAuth: []
       responses:
-        '200':
+        "200":
           description: OK
           content:
             application/json:
@@ -1058,13 +1058,13 @@ paths:
                 type: object
                 properties:
                   user:
-                    $ref: '#/components/schemas/GetUserResponse'
-        '404':
+                    $ref: "#/components/schemas/GetUserResponse"
+        "404":
           description: Not Found
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NotFoundError'
+                $ref: "#/components/schemas/NotFoundError"
     patch:
       tags:
         - Users
@@ -1074,30 +1074,30 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/UpdateUserRequest'
+              $ref: "#/components/schemas/UpdateUserRequest"
       responses:
-        '204':
+        "204":
           description: OK
-        '404':
+        "404":
           description: Not Found
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NotFoundError'
+                $ref: "#/components/schemas/NotFoundError"
     delete:
       tags:
         - Users
       security:
         - bearerAuth: []
       responses:
-        '204':
+        "204":
           description: OK
-        '404':
+        "404":
           description: Not Found
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NotFoundError'
+                $ref: "#/components/schemas/NotFoundError"
   /users/{identifier}/updatePassword:
     parameters:
       - in: path
@@ -1115,16 +1115,16 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/UpdateUserPasswordRequest'
+              $ref: "#/components/schemas/UpdateUserPasswordRequest"
       responses:
-        '204':
+        "204":
           description: OK
-        '404':
+        "404":
           description: Not Found
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NotFoundError'
+                $ref: "#/components/schemas/NotFoundError"
   /tools/eventGeneration:
     post:
       tags:
@@ -1133,14 +1133,14 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/GenerateEventsRequest'
+              $ref: "#/components/schemas/GenerateEventsRequest"
       responses:
-        '200':
+        "200":
           description: OK
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/GenerateEventsResponse'
+                $ref: "#/components/schemas/GenerateEventsResponse"
   /authentication/login:
     post:
       tags:
@@ -1149,31 +1149,31 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/LoginRequest'
+              $ref: "#/components/schemas/LoginRequest"
       responses:
-        '200':
+        "200":
           description: OK
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/LoginResponse'
+                $ref: "#/components/schemas/LoginResponse"
   /health:
     get:
       tags:
         - Server
       responses:
-        '200':
+        "200":
           description: OK
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/HealthResponse'
+                $ref: "#/components/schemas/HealthResponse"
   /admin/harvest/baevents-bezirkskalender:
     post:
       tags:
         - Admin
       responses:
-        '200':
+        "200":
           description: OK
           content:
             application/json:
@@ -1183,11 +1183,11 @@ paths:
                   createdOrganizations:
                     type: array
                     items:
-                      $ref: '#/components/schemas/Reference'
+                      $ref: "#/components/schemas/Reference"
                   createdLocations:
                     type: array
                     items:
-                      $ref: '#/components/schemas/Reference'
+                      $ref: "#/components/schemas/Reference"
 components:
   securitySchemes:
     bearerAuth:

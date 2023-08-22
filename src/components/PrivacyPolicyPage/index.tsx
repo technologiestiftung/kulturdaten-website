@@ -38,72 +38,20 @@ export default function PrivacyPolicyPage() {
 					mit unserer Website bestimmte Daten und Einstellungen speichern.
 				</p>
 				<p>
-					Du hast die Möglichkeit, dem Setzen von Cookies über die jeweiligen Browser-Einstellungen oder mit Hilfe
-					anderer Erweiterungen wie Ghostery oder uBlock generell zu widersprechen bzw. diese einzuschränken. Welche
-					Erweiterungen du mit deinem Internetbrowser nutzen kannst, findest du auf den jeweiligen Seiten der
-					Herstellerfirmen.
+					Diese Seite wird nur mit technisch notwendigen Cookies betrieben, technisch nicht-notwendige Cookies kommen
+					nicht zum Einsatz. Wir verwenden das Webanalysetool Matomo (eine Anwendung der Firma Innocraft (InnoCraft Ltd,
+					150 Willis St, 6011 Wellington, New Zealand)) für die statistische Auswertung der Webseite.
 				</p>
 				<p>
-					Du kannst bei der erstmaligen Nutzung unserer Online-Dienste eine Entscheidung treffen, ob du der
-					Technologiestiftung Berlin erlaubst, Cookies zur Verbesserung des Online-Angebots zu setzen oder nicht.
+					Das Tool kann in anonymisierter Form Aktivitäten auf unserer Website nachverfolgen und uns basierend darauf
+					eine Auswertung erstellen. Wir können demnach keine Rückschlüsse auf die Identität der jeweiligen Nutzerin/des
+					jeweiligen Nutzers vornehmen. Zweck der Erhebung ist es, innerhalb der Webpräsenz mögliche Fehler zu erkennen
+					und zu lösen sowie den Inhalt den Bedürfnissen unserer Besucher:innen anzupassen und zu optimieren. Nur die
+					Technologiestiftung Berlin hat Zugriff auf diese Daten. Eine Weitergabe an Dritte erfolgt nicht. Falls du die
+					Browser-Einstellung &quot;Do not Track&quot; aktivierst hast, erheben wir keine Webseiten-Aktivitäten mittels
+					Matomo.
 				</p>
-				<p>
-					Wir nutzen Cookies für das Webanalysetool Matomo und benutzen dieses ausschließlich für die statistische
-					Auswertung der Webseite und erheben nur pseudonymisierte Daten.
-				</p>
-				<p>Dies ist eine Anwendung der Firma Innocraft (InnoCraft Ltd, 150 Willis St, 6011 Wellington, New Zealand).</p>
-				<p>
-					Das Tool kann mit Hilfe von Cookies Aktivitäten auf unserer Website nachverfolgen und uns eine Auswertung
-					erstellen. Folgende Informationen sind dadurch für uns auswertbar:
-				</p>
-				<ul>
-					<li>
-						Aktionen: Seitenbesuche, Linkklicks, Downloads, Eingangs- und Ausgangsseite sowie der jeweilige Zeitpunkt
-						der Aktion
-					</li>
-					<li>
-						Informationen über Benutzergeräte und Einstellungen: Hersteller/Marke, Modell/Geräteversion, Gerätetyp,
-						Bildschirmauflösung, Spracheinstellung des Browsers
-					</li>
-					<li>Informationen über den Standort: Land des Zugriffs</li>
-					<li>
-						Matomo verarbeitet Daten pseudonymisiert. Die Daten werden von Matomo anonymisiert, bevor eine Anzeige für
-						uns erfolgt. Wir können demnach keine Rückschlüsse auf die Identität der jeweiligen Nutzerin/des jeweiligen
-						Nutzers vornehmen.
-					</li>
-				</ul>
-				<p>
-					Zweck der Erhebung ist es, innerhalb der Webpräsenz mögliche Fehler zu erkennen und zu lösen sowie den Inhalt
-					den Bedürfnissen unserer Besucher*innen anzupassen und zu optimieren. Diese Interessen sind nach Art. 6. Abs 1
-					S.1. lit f DSGVO berechtigt. Nur die Technologiestiftung Berlin hat Zugriff auf diese Daten. Eine Weitergabe
-					an Dritte erfolgt nicht.
-				</p>
-				<p>
-					Neben den oben aufgeführten Möglichkeiten, Cookies über die Browsereinstellungen zu verweigern, kannst du auch
-					direkt beim Webanalysetool eine Opt-Out-Möglichkeit wählen:
-				</p>
-				<p>
-					<iframe
-						title="Piwik-Embed"
-						style={{
-							border: "0",
-							width: "1000px",
-							height: "200px",
-						}}
-						src="https://piwik.technologiestiftung-berlin.de/index.php?module=CoreAdminHome&action=optOut&language=de&backgroundColor=&fontColor=&fontSize=14pt&fontFamily=Arial"
-					/>
-				</p>
-				<p>Klicke auf den unteren Button, um den Inhalt von piwik.technologiestiftung-berlin.de zu laden.</p>
-				<p>
-					Matamo ist eine freie Open-Source-Software und setzt hohe Standards, um Datenmissbrauch zu vermeiden. Mehr
-					Informationen finden sich <Link href="https://matomo.org/gdpr-analytics/">hier</Link>.
-				</p>
-				<Text type="h3">Welche Rechte du an deinen Daten hast</Text>
-				<p>
-					Du kannst die Löschung, Berichtigung oder Einschränkung aller personenbezogenen Daten, die wir von dir
-					gespeichert haben, anfordern. Dies umfasst nicht die Daten, die wir aufgrund administrativer, rechtlicher oder
-					sicherheitsrelevanter Notwendigkeiten aufbewahren müssen.
-				</p>
+
 				<Text type="h3">Ansprechpartner</Text>
 				<p>
 					Um von deinen Rechten Gebrauch zu machen und für andere Nachfragen, kontaktiere bei Nachfragen den
