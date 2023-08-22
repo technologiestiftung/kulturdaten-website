@@ -1,5 +1,6 @@
 import { useTranslations } from "next-intl";
 import { headerHeight, spacings } from "../../common/styleVariables";
+import useHtmlLang from "../../hooks/useHtmlLang";
 import { HeaderSimple } from "../Header";
 import { LinkInternal } from "../Link";
 import Page from "../Page";
@@ -9,6 +10,8 @@ import Text from "../Text";
 
 export default function ImprintPage() {
 	const t = useTranslations("Imprint");
+	// This page is currently only available in German.
+	useHtmlLang("de");
 	return (
 		<Page
 			// TODO: Update/add more metadata before release.
