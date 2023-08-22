@@ -1,6 +1,6 @@
 import { useTranslations } from "next-intl";
 import { useCallback, useRef, useState } from "react";
-import { EventWithAttraction, loadEventsWithAttractions } from "../../../services/apiRequests";
+import { EventWithAttraction } from "../../../services/apiRequests";
 import SectionSubtitle from "../../SectionSubtitle";
 import Spacer from "../../Spacer";
 import Text from "../../Text";
@@ -24,7 +24,7 @@ export default function RequestCreatorAndList() {
 		window.clearTimeout(timeoutId.current);
 		setStatus("loading");
 		const artificalDelayMs = 1_000;
-		const newEventsWithAttractions = await loadEventsWithAttractions(request.searchFilter);
+		const newEventsWithAttractions = await request.loadData();
 		timeoutId.current = window.setTimeout(() => {
 			setEventsWithAttractions(newEventsWithAttractions);
 			setStatus("done");

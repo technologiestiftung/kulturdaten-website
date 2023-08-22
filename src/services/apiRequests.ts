@@ -11,16 +11,35 @@ export type EventWithAttraction = {
 };
 
 /**
+ * Returns a list of events that all have different attraction titles (to have some variety).
+ */
+function getDifferentEvents(events: Event[], amount: number) {
+	const differentEvents = [];
+	const attractionTitles = new Set<string>();
+	for (const event of events) {
+		if (differentEvents.length >= amount) {
+			break;
+		}
+		const attractionTitle = event.attractions?.[0].referenceLabel?.de || event.identifier;
+		if (!attractionTitles.has(attractionTitle)) {
+			attractionTitles.add(attractionTitle);
+			differentEvents.push(event);
+		}
+	}
+	return differentEvents;
+}
+
+/**
  * Loads all events with their matching (first) attraction and returns a nested list.
  */
 export async function loadEventsWithAttractions(
 	searchFilter: SearchEventsRequest["searchFilter"]
 ): Promise<EventWithAttraction[]> {
-	const eventsResponse = await apiClient.discoverCulturalData.postEventsSearch({ searchFilter });
+	const eventsResponse = await apiClient.discoverCulturalData.postEventsSearch(1, 500, { searchFilter });
 	const events = eventsResponse.data?.events || [];
-	const first5Events = events.slice(0, 5);
-	const attractionIds = first5Events.map(getAttractionId).filter(Boolean);
-	const attractionsResponse = await apiClient.discoverCulturalData.postAttractionsSearch({
+	const fiveDifferentEvents = getDifferentEvents(events, 5);
+	const attractionIds = fiveDifferentEvents.map(getAttractionId).filter(Boolean);
+	const attractionsResponse = await apiClient.discoverCulturalData.postAttractionsSearch(1, 500, {
 		searchFilter: {
 			identifier: {
 				$regex: attractionIds.join("|"),
@@ -29,7 +48,7 @@ export async function loadEventsWithAttractions(
 		},
 	});
 	const attractions = attractionsResponse.data?.attractions || [];
-	const eventsWithAttractions = first5Events.map((event) => {
+	const eventsWithAttractions = fiveDifferentEvents.map((event) => {
 		const attractionId = getAttractionId(event);
 		const matchingAttraction = attractionId
 			? attractions.find((attraction) => attraction.identifier === attractionId) || null
