@@ -67,19 +67,19 @@ export default function HomePage() {
 				<IntroSection />
 				<RequestCreatorAndList />
 			</Section>
-			<NewsletterSection />
+			<NewsletterSection trackingPosition="first" />
 			<Section ref={artistSectionRef} id={AnchorLinks.ARTISTSECTION}>
 				<ArtistSection />
 			</Section>
-			<NewsletterSection />
+			<NewsletterSection trackingPosition="second" />
 			<Section ref={interestedSectionRef} id={AnchorLinks.INTERESTEDSECTION}>
 				<CultureInterestedSection />
 			</Section>
-			<NewsletterSection />
+			<NewsletterSection trackingPosition="third" />
 			<Section ref={dataSectionRef} id={AnchorLinks.DATASECTION}>
 				<DataUsersSection />
 			</Section>
-			<NewsletterSection />
+			<NewsletterSection trackingPosition="fourth" />
 		</Page>
 	);
 }
