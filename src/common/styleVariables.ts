@@ -60,7 +60,7 @@ export const widths = {
 export const headerHeight = "4rem";
 
 export const borderWidths = {
-	default: 3,
+	default: "3px",
 };
 
 export const borderRadiuses = {
