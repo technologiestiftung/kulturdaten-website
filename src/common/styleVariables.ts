@@ -64,7 +64,7 @@ export const borderWidths = {
 };
 
 export const borderRadiuses = {
-	medium: 10,
+	medium: "10px",
 	round: "50%",
 };
 
