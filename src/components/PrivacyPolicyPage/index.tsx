@@ -17,7 +17,8 @@ export default function PrivacyPolicyPage() {
 			}}
 			header={<HeaderSimple />}
 		>
-			<Reader>
+			{/* This page is currently only available in German. */}
+			<Reader lang="de">
 				<Spacer size={`calc(${headerHeight} + ${spacings.get(3)}px)`} />
 				<Text type="h1">Datenschutzerklärung</Text>
 				<Text type="h2">Wer wir sind</Text>

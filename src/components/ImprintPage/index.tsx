@@ -17,7 +17,8 @@ export default function ImprintPage() {
 			}}
 			header={<HeaderSimple />}
 		>
-			<Reader>
+			{/* This page is currently only available in German. */}
+			<Reader lang="de">
 				<Spacer size={`calc(${headerHeight} + ${spacings.get(3)}px)`} />
 				<Text type="h1">Impressum</Text>
 				<Text type="h2">Angaben zur Technologiestiftung Berlin</Text>
