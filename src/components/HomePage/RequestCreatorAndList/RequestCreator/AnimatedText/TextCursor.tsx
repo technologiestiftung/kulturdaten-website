@@ -9,7 +9,7 @@ const blink = keyframes({
 	"100%": { opacity: 0 },
 });
 
-const Container = styled.div({
+const Container = styled.span({
 	fontSize: "1.1em",
 	lineHeight: lineHeights.single,
 	display: "inline-flex",

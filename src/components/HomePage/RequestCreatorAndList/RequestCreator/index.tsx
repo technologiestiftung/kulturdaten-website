@@ -7,6 +7,7 @@ import Spacer from "../../../Spacer";
 import Block from "../Block";
 import { REQUESTS, Request } from "../requests";
 import AnimatedText from "./AnimatedText";
+import Text from "../../../Text";
 
 function useRequest() {
 	const [request, setRequest] = useState<Request | null>(null);
@@ -45,7 +46,9 @@ export default function RequestCreator({ onStartRequestCreation, onRequestCreate
 			</ButtonWithIcon>
 			<Spacer size={30} />
 			<Block>
-				<AnimatedText text={requestText} onAnimationFinished={handleAnimationFinished} />
+				<Text type="p">
+					<AnimatedText text={requestText} onAnimationFinished={handleAnimationFinished} />
+				</Text>
 			</Block>
 		</>
 	);
