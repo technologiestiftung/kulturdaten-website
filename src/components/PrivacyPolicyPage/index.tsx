@@ -1,6 +1,5 @@
 import { useTranslations } from "next-intl";
 import { headerHeight, spacings } from "../../common/styleVariables";
-import useHtmlLang from "../../hooks/useHtmlLang";
 import { HeaderSimple } from "../Header";
 import Link, { LinkInternal } from "../Link";
 import Page from "../Page";
@@ -10,8 +9,6 @@ import Text from "../Text";
 
 export default function PrivacyPolicyPage() {
 	const t = useTranslations("Privacy-Policy");
-	// This page is currently only available in German.
-	useHtmlLang("de");
 	return (
 		<Page
 			// TODO: Update/add more metadata before release.
@@ -20,7 +17,8 @@ export default function PrivacyPolicyPage() {
 			}}
 			header={<HeaderSimple />}
 		>
-			<Reader>
+			{/* This page is currently only available in German. */}
+			<Reader lang="de">
 				<Spacer size={`calc(${headerHeight} + ${spacings.get(3)}px)`} />
 				<Text type="h1">Datenschutzerklärung</Text>
 				<Text type="h2">Wer wir sind</Text>
