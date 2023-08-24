@@ -1,10 +1,10 @@
 import styled from "@emotion/styled";
 import { useCallback } from "react";
-import { Event } from "../../../../../api/client/models/Event";
 import { fontSizes, fontWeights, lineHeights } from "../../../../../common/styleVariables";
 import { Locale, fallbackLocale } from "../../../../../hooks/useLocale";
 import { EventWithAttraction } from "../../../../../services/apiRequests";
 import formatDate from "../../../../../services/dates";
+import { getStartDateAsISO } from "../../../../../services/events";
 import Spacer from "../../../../Spacer";
 import Description from "./Description";
 
@@ -24,10 +24,6 @@ type Props = {
 	locale: Locale;
 	onExpandedDescription(): void;
 };
-
-function getStartDateAsISO(event: Event) {
-	return `${event.schedule?.startDate}T${event.schedule?.startTime}`;
-}
 
 export default function ItemContent({ eventWithAttraction, locale, onExpandedDescription }: Props) {
 	const { event, attraction } = eventWithAttraction;
