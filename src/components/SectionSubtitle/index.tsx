@@ -6,7 +6,7 @@ import Text from "../Text";
 const SubtitleWrapper = styled.div({
 	borderTop: `4px solid ${colors.blueDark}`,
 	marginTop: spacings.get(12),
-	padding: `${spacings.get(2)}px 0 ${spacings.get(8)}px`,
+	padding: `${spacings.get(2)} 0 ${spacings.get(8)}`,
 });
 
 interface Props {

@@ -5,7 +5,7 @@ import { borderRadiuses, colors, fontSizes, fontWeights, spacings } from "../../
 const LogoLink = styled(Link)({
 	display: "flex",
 	alignItems: "center",
-	gap: `0 ${spacings.get(3)}px`,
+	gap: `0 ${spacings.get(3)}`,
 	color: colors.blueDark,
 	textDecoration: "none",
 });

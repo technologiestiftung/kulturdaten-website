@@ -51,7 +51,7 @@ const ReadMoreButton = styled(Button)({
 	display: "inline-flex",
 	alignItems: "center",
 	gap: spacings.get(0.5),
-	padding: `${spacings.get(1)}px ${spacings.get(2)}px`,
+	padding: `${spacings.get(1)} ${spacings.get(2)}`,
 	borderRadius: borderRadiuses.medium,
 	transition: `opacity ${timings.short} ease-in-out`,
 });

@@ -38,7 +38,7 @@ export const colors = {
 const spacingUnit = 5;
 
 export const spacings = {
-	get: (factor: number) => factor * spacingUnit,
+	get: (factor: number) => `${factor * spacingUnit}px`,
 	horizontalPagePadding: `clamp(${2 * spacingUnit}px, 5vw, ${10 * spacingUnit}px)`,
 };
 

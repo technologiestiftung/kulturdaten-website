@@ -8,8 +8,8 @@ const BurgerPack = styled(Button)({
 	flexDirection: "column",
 	justifyContent: "center",
 	alignItems: "center",
-	width: `${spacings.get(8)}px`,
-	height: `${spacings.get(8)}px`,
+	width: spacings.get(8),
+	height: spacings.get(8),
 	cursor: "pointer",
 });
 

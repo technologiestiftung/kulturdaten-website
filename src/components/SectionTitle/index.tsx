@@ -35,7 +35,7 @@ const Title = styled.div(() => {
 		justifyContent: "center",
 		alignItems: "center",
 		minHeight: "100%",
-		padding: `${spacings.get(10)}px ${spacings.get(5)}px`,
+		padding: `${spacings.get(10)} ${spacings.get(5)}`,
 		border: `4px solid ${colors.blueDark}`,
 		color: colors.blueDark,
 		fontSize: `clamp(2.0rem, 8vw, 3.5rem)`,
