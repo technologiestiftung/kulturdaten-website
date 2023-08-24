@@ -63,13 +63,13 @@ export default function Footer() {
 			<Row>
 				<div>
 					<LogoTitle>{t("project-by")}</LogoTitle>
-					<a href="https://www.technologiestiftung-berlin.de/" target="_blank">
+					<a href="https://www.technologiestiftung-berlin.de/" target="_blank" rel="noreferrer">
 						<img src="/images/tsb-logo.svg" width={220} alt={t("tsb-logo-alt")} />
 					</a>
 				</div>
 				<div>
 					<LogoTitle>{t("supported-by")}</LogoTitle>
-					<a href="https://www.berlin.de/sen/kultgz/" target="_blank">
+					<a href="https://www.berlin.de/sen/kultgz/" target="_blank" rel="noreferrer">
 						<img src="/images/sen-kugz-logo.svg" width={400} alt={t("sen-kugz-logo-alt")} />
 					</a>
 				</div>
