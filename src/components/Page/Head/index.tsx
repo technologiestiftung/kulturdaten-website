@@ -1,9 +1,9 @@
 import NextHead from "next/head";
 import { Metadata } from "..";
 
-type Props = {
+interface Props {
 	metadata: Metadata;
-};
+}
 
 export default function Head({ metadata }: Props) {
 	const { title, description } = metadata;

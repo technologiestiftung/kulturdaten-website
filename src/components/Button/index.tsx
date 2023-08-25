@@ -26,19 +26,21 @@ const StyledButton = styled.button({
 	},
 });
 
-const StyledButtonAsLink = StyledButton.withComponent("a");
-
-type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
+interface StyledButtonProps {
 	as?: "button" | undefined;
 	unstyled?: boolean;
-};
+}
 
-type LinkProps = AnchorHTMLAttributes<HTMLAnchorElement> & {
+const StyledButtonAsLink = StyledButton.withComponent("a");
+
+interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement>, StyledButtonProps {}
+
+interface LinkProps extends AnchorHTMLAttributes<HTMLAnchorElement> {
 	as: "a";
 	href: string;
 	rel?: string;
 	target?: string;
-};
+}
 
 type Props = ButtonProps | LinkProps;
 

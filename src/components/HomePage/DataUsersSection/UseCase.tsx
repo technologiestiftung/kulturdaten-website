@@ -8,12 +8,12 @@ const Image = styled.img({
 	border: `${borderWidths.default} solid ${colors.blueDark}`,
 });
 
-type Props = {
+interface Props {
 	imageSrc: string;
 	imageAlt: string;
 	title: string;
 	description: string;
-};
+}
 
 export default function UseCase({ imageSrc, imageAlt, title, description }: Props) {
 	return (

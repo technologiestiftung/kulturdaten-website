@@ -1,9 +1,9 @@
 import styled from "@emotion/styled";
 import { borderRadiuses, borderWidths, colors, spacings } from "../../../common/styleVariables";
 
-type Props = {
+interface Props {
 	padding?: string | number;
-};
+}
 
 const Block = styled.div<Props>(({ padding = spacings.get(5) }) => ({
 	padding,

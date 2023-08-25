@@ -35,11 +35,11 @@ const StyledDiv = styled("div", {
 	whiteSpace: "pre-line",
 }));
 
-type Props = HTMLAttributes<HTMLDivElement> & {
+interface Props extends HTMLAttributes<HTMLDivElement> {
 	type: TextType;
 	as?: keyof JSX.IntrinsicElements;
 	color?: keyof typeof colors;
-};
+}
 
 export default function Text({ type, as = type, ...props }: Props) {
 	return <StyledDiv type={type} as={as} {...props} />;

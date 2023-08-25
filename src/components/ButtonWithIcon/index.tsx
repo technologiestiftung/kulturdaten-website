@@ -14,18 +14,18 @@ const StyledIcon = styled(Icon)({
 	flex: "0 0 auto",
 });
 
-type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
+interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 	as?: "button" | undefined;
 	icon: IconProps["name"];
-};
+}
 
-type LinkProps = AnchorHTMLAttributes<HTMLAnchorElement> & {
+interface LinkProps extends AnchorHTMLAttributes<HTMLAnchorElement> {
 	as: "a";
 	icon: IconProps["name"];
 	href: string;
 	rel?: string;
 	target?: string;
-};
+}
 
 type Props = ButtonProps | LinkProps;
 

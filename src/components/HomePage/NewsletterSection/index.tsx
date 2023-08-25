@@ -22,9 +22,9 @@ const TextContainer = styled.div({
 	flex: "1 1 auto",
 });
 
-type Props = {
+interface Props {
 	trackingPosition: string;
-};
+}
 
 export default function NewsletterSection({ trackingPosition }: Props) {
 	const t = useTranslations("Home.newsletter-section");

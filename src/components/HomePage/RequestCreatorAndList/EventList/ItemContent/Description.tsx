@@ -60,11 +60,11 @@ function sanitizeDescription(description: string) {
 	return description.replace(/&shy;/g, "").replace(/(\n)$/gm, "");
 }
 
-type Props = {
+interface Props {
 	description: string;
 	attractionId: string;
 	onExpanded(): void;
-};
+}
 
 export default function Description({ description, attractionId, onExpanded }: Props) {
 	const t = useTranslations("Home.for-interested");

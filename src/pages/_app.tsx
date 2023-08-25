@@ -18,11 +18,11 @@ if (typeof window !== "undefined" && process.env.NODE_ENV !== "production") {
 	loadAxe();
 }
 
-type CustomPageProps = {
+interface Props {
 	messages: IntlMessages;
-};
+}
 
-export default function App({ Component, pageProps }: AppProps<CustomPageProps>) {
+export default function App({ Component, pageProps }: AppProps<Props>) {
 	useAnalytics();
 	return (
 		<NextIntlClientProvider messages={pageProps.messages}>

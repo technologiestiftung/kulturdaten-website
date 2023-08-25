@@ -20,10 +20,10 @@ function useRequest() {
 	return { request, randomizeRequest };
 }
 
-type Props = {
+interface Props {
 	onStartRequestCreation(): void;
 	onRequestCreated(request: Request): void;
-};
+}
 
 export default function RequestCreator({ onStartRequestCreation, onRequestCreated }: Props) {
 	const { request, randomizeRequest } = useRequest();
