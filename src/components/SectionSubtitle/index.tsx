@@ -13,7 +13,7 @@ interface Props {
 	label: string;
 }
 
-const SectionSubtitle: FC<Props> = ({ label }) => {
+export default function SectionSubtitle({ label }: Props) {
 	return (
 		<SubtitleWrapper>
 			<Text type="h3" as="h2" color="blueDark">
@@ -21,6 +21,4 @@ const SectionSubtitle: FC<Props> = ({ label }) => {
 			</Text>
 		</SubtitleWrapper>
 	);
-};
-
-export default SectionSubtitle;
+}

@@ -60,14 +60,14 @@ const SectionImage = styled.div<{ headerImage: string }>(({ headerImage }) => {
 	};
 });
 
-interface SectionTitleProps {
+interface Props {
 	label: string;
 	headingLevel: "h1" | "h2";
 	backgroundColor: BackgroundColor;
 	headerImage: string;
 }
 
-const SectionTitle: FC<SectionTitleProps> = ({ label, headingLevel, backgroundColor, headerImage }) => {
+export default function SectionTitle({ label, headingLevel, backgroundColor, headerImage }: Props) {
 	return (
 		<HeaderWrapper>
 			<BannerBackdrop backgroundColor={backgroundColor}>
@@ -79,6 +79,4 @@ const SectionTitle: FC<SectionTitleProps> = ({ label, headingLevel, backgroundCo
 			<SectionImage headerImage={headerImage} />
 		</HeaderWrapper>
 	);
-};
-
-export default SectionTitle;
+}
