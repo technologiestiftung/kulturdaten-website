@@ -18,7 +18,6 @@ const LoadingContainer = styled.div({
 const List = styled.ul({
 	listStyleType: "none",
 	padding: 0,
-	transition: `opacity ${timings.medium} ease-in-out`,
 });
 
 const Item = styled.li({
@@ -83,7 +82,7 @@ export default function EventList({ isLoading, eventsWithAttractions }: Props) {
 			{!isLoading && (
 				<>
 					{eventsWithAttractions.length ? (
-						<List ref={listRef} style={{ opacity: isLoading ? 0 : 1 }}>
+						<List ref={listRef}>
 							{eventsWithAttractions.map((eventWithAttraction) => (
 								<Item key={eventWithAttraction.event.identifier}>
 									<ItemContent
