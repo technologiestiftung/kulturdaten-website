@@ -32,7 +32,7 @@ const Title = styled.div(() => {
 		display: "flex",
 		position: "relative",
 		justifyContent: "center",
-		alignItems: "center",
+		alignItems: "flex-start",
 		minHeight: "100%",
 		padding: `${spacings.get(10)} ${spacings.get(5)}`,
 		border: `4px solid ${colors.blueDark}`,
