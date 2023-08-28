@@ -8,6 +8,7 @@ import { EventWithAttraction } from "../../../../services/apiRequests";
 import LoadingIndicator from "../../../LoadingIndicator";
 import Block from "../Block";
 import ItemContent from "./ItemContent";
+import NoResults from "./NoResults";
 
 const LoadingContainer = styled.div({
 	display: "flex",
@@ -41,12 +42,20 @@ interface Props {
 export default function EventList({ isLoading, eventsWithAttractions }: Props) {
 	const locale = useLocale();
 	const listRef = useRef<HTMLUListElement>(null);
-	const loadingHeight = "80px";
 	const [listHeight, setListHeight] = useState<number | undefined>(undefined);
 	const updateListHeight = () => {
-		const element = listRef.current!;
+		const element = listRef.current;
+		if (!element) {
+			return;
+		}
 		const { height } = element.getBoundingClientRect();
 		setListHeight(height);
+	};
+	const getBlockHeight = () => {
+		if (isLoading || eventsWithAttractions.length === 0) {
+			return undefined;
+		}
+		return listHeight;
 	};
 	useEffect(() => {
 		if (isLoading) {
@@ -61,7 +70,7 @@ export default function EventList({ isLoading, eventsWithAttractions }: Props) {
 		<Block
 			padding={0}
 			style={{
-				height: isLoading || listHeight === undefined ? loadingHeight : listHeight,
+				height: getBlockHeight(),
 				overflow: "hidden",
 				transition: `height ${timings.medium} ease-in-out`,
 			}}
@@ -71,17 +80,25 @@ export default function EventList({ isLoading, eventsWithAttractions }: Props) {
 					<LoadingIndicator />
 				</LoadingContainer>
 			)}
-			<List ref={listRef} style={{ opacity: isLoading ? 0 : 1 }}>
-				{eventsWithAttractions.map((eventWithAttraction) => (
-					<Item key={eventWithAttraction.event.identifier}>
-						<ItemContent
-							eventWithAttraction={eventWithAttraction}
-							locale={locale}
-							onExpandedDescription={handleExpandedDescription}
-						/>
-					</Item>
-				))}
-			</List>
+			{!isLoading && (
+				<>
+					{eventsWithAttractions.length ? (
+						<List ref={listRef} style={{ opacity: isLoading ? 0 : 1 }}>
+							{eventsWithAttractions.map((eventWithAttraction) => (
+								<Item key={eventWithAttraction.event.identifier}>
+									<ItemContent
+										eventWithAttraction={eventWithAttraction}
+										locale={locale}
+										onExpandedDescription={handleExpandedDescription}
+									/>
+								</Item>
+							))}
+						</List>
+					) : (
+						<NoResults />
+					)}
+				</>
+			)}
 		</Block>
 	);
 }
