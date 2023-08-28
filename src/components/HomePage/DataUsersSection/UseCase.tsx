@@ -1,5 +1,6 @@
 import styled from "@emotion/styled";
 import { borderWidths, colors } from "../../../common/styleVariables";
+import SectionDescription from "../../SectionDescription";
 import Spacer from "../../Spacer";
 import Text from "../../Text";
 
@@ -23,7 +24,7 @@ export default function UseCase({ imageSrc, imageAlt, title, description }: Prop
 				{title}
 			</Text>
 			<Spacer size={8} />
-			<Text type="p">{description}</Text>
+			<SectionDescription description={description} />
 		</>
 	);
 }

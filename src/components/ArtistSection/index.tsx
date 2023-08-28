@@ -1,21 +1,22 @@
 import { useTranslations } from "next-intl";
-import SectionTitle from "../SectionTitle";
 import { colors } from "../../common/styleVariables";
+import SectionDescription from "../SectionDescription";
 import SectionSubtitle from "../SectionSubtitle";
+import SectionTitle from "../SectionTitle";
 
 export default function ArtistSection() {
-	const t = useTranslations("Home");
+	const t = useTranslations("Home.artist-section");
 
 	return (
 		<>
 			<SectionTitle
-				label={t("artist-section.title")}
+				label={t("title")}
 				headingLevel="h2"
 				backgroundColor={colors.green}
 				headerImage="/images/kulturakteure-header-image.jpg"
 			/>
-			<SectionSubtitle label={t("artist-section.subtitle")} />
-			<p>{t("artist-section.description")}</p>
+			<SectionSubtitle label={t("subtitle")} />
+			<SectionDescription description={t.raw("description")} />
 		</>
 	);
 }

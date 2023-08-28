@@ -1,5 +1,6 @@
 import { useTranslations } from "next-intl";
 import { colors } from "../../../common/styleVariables";
+import SectionDescription from "../../SectionDescription";
 import SectionSubtitle from "../../SectionSubtitle";
 import SectionTitle from "../../SectionTitle";
 
@@ -14,7 +15,7 @@ export default function IntroSection() {
 				headerImage="/images/intro-header-image@2x.jpg"
 			/>
 			<SectionSubtitle label={t("subtitle")} />
-			<p>{t("description")}</p>
+			<SectionDescription description={t.raw("description")} />
 		</>
 	);
 }
