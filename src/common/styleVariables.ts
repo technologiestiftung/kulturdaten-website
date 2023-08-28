@@ -21,6 +21,7 @@ export const lineHeights = {
 	default: 1.6,
 	headline: 1.4,
 	buttons: 1.3,
+	heroHeadline: 1.25,
 	single: 1.0,
 };
 

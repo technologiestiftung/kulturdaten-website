@@ -39,7 +39,7 @@ const Title = styled.div(() => {
 		color: colors.blueDark,
 		fontSize: `clamp(2.0rem, 8vw, 3.5rem)`,
 		fontWeight: fontWeights.medium,
-		lineHeight: lineHeights.headline,
+		lineHeight: lineHeights.heroHeadline,
 	};
 });
 
