@@ -62,7 +62,7 @@ export default function HomePage() {
 			}}
 			header={<Header activeAnchorLink={activeAnchorLink} />}
 		>
-			<Spacer size={32} />
+			<Spacer size={64} />
 			<Section>
 				<IntroSection />
 				<RequestCreatorAndList />
