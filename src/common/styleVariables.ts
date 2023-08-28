@@ -28,6 +28,7 @@ export const lineHeights = {
 export const colors = {
 	black: "#3b3b3a",
 	blueDark: "#1e3791",
+	blueDarkHover: "#152666",
 	yellow: "#f5f4a4",
 	green: "#beffa9",
 	red: "#ffd1bA",
@@ -69,7 +70,8 @@ export const borderWidths = {
 };
 
 export const borderRadiuses = {
-	medium: "10px",
+	small: "2px",
+	medium: "4px",
 	round: "50%",
 };
 
