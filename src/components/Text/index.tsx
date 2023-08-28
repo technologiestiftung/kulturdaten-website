@@ -11,12 +11,12 @@ export const textStyles: Record<TextType, CSSObject> = {
 	},
 	h1: {
 		fontSize: fontSizes.extraLarge,
-		fontWeight: fontWeights.bold,
+		fontWeight: fontWeights.medium,
 		lineHeight: lineHeights.headline,
 	},
 	h2: {
 		fontSize: fontSizes.large,
-		fontWeight: fontWeights.bold,
+		fontWeight: fontWeights.medium,
 		lineHeight: lineHeights.headline,
 	},
 	h3: {
