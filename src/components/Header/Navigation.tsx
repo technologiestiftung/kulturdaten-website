@@ -28,10 +28,10 @@ const AnchorLinkItem = styled.li({});
 
 const AnchorLink = styled.a<{ active: boolean }>((props) => ({
 	color: colors.blueDark,
-	fontWeight: fontWeights.medium,
+	fontSize: fontSizes.default,
+	fontWeight: fontWeights.default,
 	textDecoration: "none",
 	borderBottom: props.active ? `2px solid ${colors.blueDark}` : "none",
-	fontSize: fontSizes.small,
 	transition: `all ${timings.short} ease-in-out`,
 	"&:hover": {
 		borderBottom: `2px solid ${colors.blueDark}`,
