@@ -2,7 +2,7 @@ import styled from "@emotion/styled";
 import { useTranslations } from "next-intl";
 import { borderWidths, colors, spacings } from "../../../common/styleVariables";
 import { trackEvent } from "../../../services/analytics";
-import ButtonWithIcon from "../../ButtonWithIcon";
+import Button from "../../Button";
 import Spacer from "../../Spacer";
 import Text from "../../Text";
 
@@ -38,9 +38,9 @@ export default function NewsletterSection() {
 					{t("title")}
 				</Text>
 				<Spacer size={16} />
-				<ButtonWithIcon as="a" icon="mail" href="mailto:kontakt@kulturdaten.berlin" onClick={trackButtonClick}>
+				<Button as="a" href="mailto:kontakt@kulturdaten.berlin" onClick={trackButtonClick}>
 					{t("button")}
-				</ButtonWithIcon>
+				</Button>
 			</TextContainer>
 		</Container>
 	);
