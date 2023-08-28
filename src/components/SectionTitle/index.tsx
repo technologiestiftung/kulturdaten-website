@@ -1,5 +1,13 @@
 import styled from "@emotion/styled";
-import { colors, fontWeights, lineHeights, mediaQueries, spacings } from "../../common/styleVariables";
+import {
+	borderRadiuses,
+	borderWidths,
+	colors,
+	fontWeights,
+	lineHeights,
+	mediaQueries,
+	spacings,
+} from "../../common/styleVariables";
 import FoldSvg from "./FoldSvg";
 
 type BackgroundColor = string;
@@ -11,11 +19,10 @@ const HeaderWrapper = styled.div(() => {
 	};
 });
 
-const BannerBackdrop = styled.div<{ backgroundColor: BackgroundColor }>(({ backgroundColor }) => {
+const BannerBackdrop = styled.div(() => {
 	return {
 		flex: "1 1 50%",
 		position: "relative",
-		backgroundColor,
 	};
 });
 
@@ -27,7 +34,7 @@ const Fold = styled.div({
 	background: colors.white,
 });
 
-const Title = styled.div(() => {
+const Title = styled.div<{ backgroundColor: BackgroundColor }>(({ backgroundColor }) => {
 	return {
 		display: "flex",
 		position: "relative",
@@ -35,7 +42,9 @@ const Title = styled.div(() => {
 		alignItems: "flex-start",
 		minHeight: "100%",
 		padding: `${spacings.get(10)} ${spacings.get(5)}`,
-		border: `4px solid ${colors.blueDark}`,
+		backgroundColor,
+		border: `${borderWidths.medium} solid ${colors.blueDark}`,
+		borderRadius: borderRadiuses.small,
 		color: colors.blueDark,
 		fontSize: `clamp(2.0rem, 8vw, 3.5rem)`,
 		fontWeight: fontWeights.medium,
@@ -52,7 +61,8 @@ const SectionImage = styled.div<{ headerImage: string }>(({ headerImage }) => {
 		backgroundSize: "cover",
 		backgroundRepeat: "no-repeat",
 		backgroundPosition: "center center",
-		border: `4px solid ${colors.blueDark}`,
+		border: `${borderWidths.medium} solid ${colors.blueDark}`,
+		borderRadius: borderRadiuses.small,
 		[mediaQueries.s]: {
 			display: "block",
 		},
@@ -69,8 +79,10 @@ interface Props {
 export default function SectionTitle({ label, headingLevel, backgroundColor, headerImage }: Props) {
 	return (
 		<HeaderWrapper>
-			<BannerBackdrop backgroundColor={backgroundColor}>
-				<Title as={headingLevel}>{label}</Title>
+			<BannerBackdrop>
+				<Title as={headingLevel} backgroundColor={backgroundColor}>
+					{label}
+				</Title>
 				<Fold>
 					<FoldSvg />
 				</Fold>
