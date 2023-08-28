@@ -1,6 +1,5 @@
 import styled from "@emotion/styled";
 import { borderWidths, colors } from "../../../common/styleVariables";
-import Hr from "../../Hr";
 import Spacer from "../../Spacer";
 import Text from "../../Text";
 
@@ -19,13 +18,11 @@ export default function UseCase({ imageSrc, imageAlt, title, description }: Prop
 	return (
 		<>
 			<Image src={imageSrc} alt={imageAlt} />
-			<Spacer size={24} />
-			<Hr height={4} />
-			<Spacer size={24} />
+			<Spacer size={16} />
 			<Text type="h3" color="blueDark">
 				{title}
 			</Text>
-			<Spacer size={12} />
+			<Spacer size={8} />
 			<Text type="p">{description}</Text>
 		</>
 	);
