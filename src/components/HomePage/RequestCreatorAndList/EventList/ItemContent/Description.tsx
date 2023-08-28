@@ -30,7 +30,7 @@ const Gradient = styled.div({
 	left: 0,
 	width: "100%",
 	height: "70%",
-	background: `linear-gradient(0deg, ${colors.turquoise} 0%, rgba(160, 250, 242, 0) 100%)`,
+	background: `linear-gradient(0deg, ${colors.white} 0%, rgba(255, 255, 255, 0) 100%)`,
 	transition: `opacity ${timings.medium} ease-in-out`,
 	pointerEvents: "none",
 });
@@ -41,11 +41,12 @@ const ReadMoreContainer = styled.div({
 	left: 0,
 	width: "100%",
 	textAlign: "center",
+	paddingBottom: "2px",
 });
 
 const ReadMoreButton = styled(Button)({
-	backgroundColor: colors.white,
-	color: colors.blueDark,
+	backgroundColor: colors.blueDark,
+	color: colors.white,
 	cursor: "pointer",
 	fontSize: fontSizes.small,
 	display: "inline-flex",
