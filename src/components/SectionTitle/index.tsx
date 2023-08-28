@@ -24,7 +24,7 @@ const Fold = styled.div({
 	position: "absolute",
 	bottom: 0,
 	right: 0,
-	background: colors.grayLight,
+	background: colors.white,
 });
 
 const Title = styled.div(() => {
