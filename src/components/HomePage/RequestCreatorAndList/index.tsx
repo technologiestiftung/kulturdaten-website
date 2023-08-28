@@ -1,7 +1,6 @@
 import { useTranslations } from "next-intl";
 import { useCallback, useRef, useState } from "react";
 import { EventWithAttraction } from "../../../services/apiRequests";
-import SectionSubtitle from "../../SectionSubtitle";
 import Spacer from "../../Spacer";
 import Text from "../../Text";
 import Tooltip from "../../Tooltip";
@@ -32,7 +31,10 @@ export default function RequestCreatorAndList() {
 	}, []);
 	return (
 		<>
-			<SectionSubtitle label={t("subtitle")} />
+			<Text type="h4" as="h2" color="blueDark">
+				{t("subtitle")}
+			</Text>
+			<Spacer size={24} />
 			<RequestCreator onStartRequestCreation={handleRequestStarted} onRequestCreated={handleRequestCreated} />
 			{(status === "loading" || status === "done") && (
 				<>

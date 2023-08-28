@@ -65,6 +65,7 @@ export default function HomePage() {
 			<Spacer size={32} />
 			<Section>
 				<IntroSection />
+				<Spacer size={64} />
 				<RequestCreatorAndList />
 			</Section>
 			<NewsletterSection trackingPosition="first" />

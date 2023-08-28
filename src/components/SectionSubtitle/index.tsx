@@ -9,7 +9,7 @@ export default function SectionSubtitle({ label }: Props) {
 	return (
 		<>
 			<Spacer size={64} />
-			<Text type="h1" as="h2" color="blueDark">
+			<Text type="h2" as="h2" color="blueDark">
 				{label}
 			</Text>
 			<Spacer size={24} />
