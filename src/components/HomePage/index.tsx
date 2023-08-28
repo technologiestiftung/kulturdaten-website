@@ -65,7 +65,6 @@ export default function HomePage() {
 			<Spacer size={32} />
 			<Section>
 				<IntroSection />
-				<Spacer size={64} />
 				<RequestCreatorAndList />
 			</Section>
 			<Section ref={artistSectionRef} id={AnchorLinks.ARTISTSECTION}>

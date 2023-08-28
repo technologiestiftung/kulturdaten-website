@@ -20,7 +20,7 @@ export default function DataUsersSection() {
 			<p>{t("description")}</p>
 			<Spacer size={64} />
 			<UseCases />
-			<SectionSubtitle label={t("project-future-subtitle")} />
+			<SectionSubtitle label={t("project-future-subtitle")} textType="h4" />
 			<HTMLText text={t.raw("project-future-description")} />
 		</>
 	);

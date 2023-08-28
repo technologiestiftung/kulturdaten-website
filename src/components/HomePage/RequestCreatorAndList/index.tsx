@@ -7,6 +7,7 @@ import Tooltip from "../../Tooltip";
 import EventList from "./EventList";
 import RequestCreator from "./RequestCreator";
 import { Request } from "./requests";
+import SectionSubtitle from "../../SectionSubtitle";
 
 type PromptStatus = "idle" | "creating prompt" | "loading" | "done";
 
@@ -31,10 +32,7 @@ export default function RequestCreatorAndList() {
 	}, []);
 	return (
 		<>
-			<Text type="h4" as="h2" color="blueDark">
-				{t("subtitle")}
-			</Text>
-			<Spacer size={24} />
+			<SectionSubtitle label={t("subtitle")} textType="h4" />
 			<RequestCreator onStartRequestCreation={handleRequestStarted} onRequestCreated={handleRequestCreated} />
 			{(status === "loading" || status === "done") && (
 				<>

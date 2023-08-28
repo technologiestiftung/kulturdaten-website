@@ -2,7 +2,7 @@ import styled, { CSSObject } from "@emotion/styled";
 import { HTMLAttributes } from "react";
 import { colors, fontSizes, fontWeights, lineHeights } from "../../common/styleVariables";
 
-type TextType = "p" | "h1" | "h2" | "h3" | "h4";
+export type TextType = "p" | "h1" | "h2" | "h3" | "h4";
 
 export const textStyles: Record<TextType, CSSObject> = {
 	p: {
