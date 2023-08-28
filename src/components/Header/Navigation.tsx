@@ -31,7 +31,7 @@ const AnchorLink = styled.a<{ active: boolean }>((props) => ({
 	fontSize: fontSizes.default,
 	fontWeight: fontWeights.default,
 	textDecoration: "none",
-	borderBottom: props.active ? `2px solid ${colors.blueDark}` : "none",
+	borderBottom: `2px solid ${props.active ? colors.blueDark : "transparent"}`,
 	transition: `all ${timings.short} ease-in-out`,
 	"&:hover": {
 		borderBottom: `2px solid ${colors.blueDark}`,
