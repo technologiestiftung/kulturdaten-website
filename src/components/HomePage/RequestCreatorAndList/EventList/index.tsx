@@ -13,12 +13,11 @@ import NoResults from "./NoResults";
 const LoadingContainer = styled.div({
 	display: "flex",
 	justifyContent: "center",
-	padding: spacings.get(5),
 });
 
 const List = styled.ul({
 	listStyleType: "none",
-	padding: spacings.get(5),
+	padding: 0,
 	transition: `opacity ${timings.medium} ease-in-out`,
 });
 
@@ -40,6 +39,7 @@ interface Props {
 }
 
 export default function EventList({ isLoading, eventsWithAttractions }: Props) {
+	const blockPadding = spacings.getNumber(5);
 	const locale = useLocale();
 	const listRef = useRef<HTMLUListElement>(null);
 	const [listHeight, setListHeight] = useState<number | undefined>(undefined);
@@ -55,7 +55,7 @@ export default function EventList({ isLoading, eventsWithAttractions }: Props) {
 		if (isLoading || eventsWithAttractions.length === 0) {
 			return undefined;
 		}
-		return listHeight;
+		return (listHeight || 0) + blockPadding * 2;
 	};
 	useEffect(() => {
 		if (isLoading) {
@@ -68,7 +68,7 @@ export default function EventList({ isLoading, eventsWithAttractions }: Props) {
 	const handleExpandedDescription = useCallback(() => updateListHeight(), []);
 	return (
 		<Block
-			padding={0}
+			padding={blockPadding}
 			style={{
 				height: getBlockHeight(),
 				overflow: "hidden",

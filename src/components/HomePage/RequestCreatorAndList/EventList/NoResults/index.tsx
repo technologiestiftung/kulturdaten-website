@@ -6,7 +6,6 @@ import Icon from "../../../../Icon";
 const Container = styled.div({
 	display: "flex",
 	gap: spacings.get(1),
-	padding: spacings.get(5),
 });
 
 export default function NoResults() {
