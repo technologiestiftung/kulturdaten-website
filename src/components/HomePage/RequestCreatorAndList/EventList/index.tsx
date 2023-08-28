@@ -55,7 +55,7 @@ export default function EventList({ isLoading, eventsWithAttractions }: Props) {
 		updateListHeight();
 	}, [isLoading]);
 	const handleResize = useDebouncedCallback(() => updateListHeight(), 200);
-	useOnResize(listRef, handleResize);
+	useOnResize(listRef.current, handleResize);
 	const handleExpandedDescription = useCallback(() => updateListHeight(), []);
 	return (
 		<Block
