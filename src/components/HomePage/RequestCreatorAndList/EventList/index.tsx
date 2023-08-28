@@ -22,7 +22,7 @@ const List = styled.ul({
 });
 
 const Item = styled.li({
-	padding: `${spacings.get(3)}px 0`,
+	padding: `${spacings.get(3)} 0`,
 	borderBottom: `2px solid ${colors.blueDark}`,
 	"&:first-of-type": {
 		paddingTop: 0,

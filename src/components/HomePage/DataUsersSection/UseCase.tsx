@@ -5,7 +5,7 @@ import Spacer from "../../Spacer";
 import Text from "../../Text";
 
 const Image = styled.img({
-	border: `${borderWidths.default}px solid ${colors.blueDark}`,
+	border: `${borderWidths.default} solid ${colors.blueDark}`,
 });
 
 type Props = {

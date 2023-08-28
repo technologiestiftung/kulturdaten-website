@@ -16,7 +16,7 @@ const StyledButton = styled.button({
 	background: "transparent",
 	fontWeight: fontWeights.default,
 	textDecoration: "none",
-	border: `${borderWidths.default}px solid ${colors.blueDark}`,
+	border: `${borderWidths.default} solid ${colors.blueDark}`,
 	borderRadius: borderRadiuses.medium,
 	transition: `all ${timings.short} ease-in-out`,
 	"&:hover": {

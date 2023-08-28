@@ -6,7 +6,7 @@ import Spacer from "../../Spacer";
 
 const StyledFooter = styled.footer({
 	width: `min(100%, ${widths.maxContentWidth})`,
-	padding: `${spacings.get(10)}px ${spacings.horizontalPagePadding}`,
+	padding: `${spacings.get(10)} ${spacings.horizontalPagePadding}`,
 	margin: "0 auto",
 	backgroundColor: colors.grayLight,
 	color: colors.blueDark,

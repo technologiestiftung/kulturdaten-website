@@ -38,7 +38,7 @@ export const colors = {
 const spacingUnit = 5;
 
 export const spacings = {
-	get: (factor: number) => factor * spacingUnit,
+	get: (factor: number) => `${factor * spacingUnit}px`,
 	horizontalPagePadding: `clamp(${2 * spacingUnit}px, 5vw, ${10 * spacingUnit}px)`,
 };
 
@@ -60,11 +60,11 @@ export const widths = {
 export const headerHeight = "4rem";
 
 export const borderWidths = {
-	default: 3,
+	default: "3px",
 };
 
 export const borderRadiuses = {
-	medium: 10,
+	medium: "10px",
 	round: "50%",
 };
 

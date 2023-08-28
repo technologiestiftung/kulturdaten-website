@@ -22,7 +22,7 @@ const HeaderContainer = styled.header({
 	height: headerHeight,
 	zIndex: zIndexes.header,
 	color: colors.blueDark,
-	borderBottom: `${borderWidths.default}px solid ${colors.blueDark}`,
+	borderBottom: `${borderWidths.default} solid ${colors.blueDark}`,
 	backgroundColor: colors.white,
 });
 

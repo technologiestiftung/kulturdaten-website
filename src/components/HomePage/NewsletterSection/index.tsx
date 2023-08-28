@@ -8,10 +8,10 @@ import Text from "../../Text";
 
 const Container = styled.div({
 	display: "flex",
-	padding: `${spacings.get(8)}px ${spacings.horizontalPagePadding}`,
+	padding: `${spacings.get(8)} ${spacings.horizontalPagePadding}`,
 	backgroundColor: colors.white,
-	borderTop: `${borderWidths.default}px solid ${colors.blueDark}`,
-	borderBottom: `${borderWidths.default}px solid ${colors.blueDark}`,
+	borderTop: `${borderWidths.default} solid ${colors.blueDark}`,
+	borderBottom: `${borderWidths.default} solid ${colors.blueDark}`,
 });
 
 const ImageContainer = styled.div({

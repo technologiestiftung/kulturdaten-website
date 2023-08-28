@@ -5,8 +5,8 @@ import { AnchorLinks } from "../../common/types";
 
 const NavigationWrapper = styled.nav({
 	position: "absolute",
-	right: `${spacings.get(6)}px`,
-	top: `${spacings.get(6)}px`,
+	right: spacings.get(6),
+	top: spacings.get(6),
 	[mediaQueries.m]: {
 		position: "static",
 	},
