@@ -6,9 +6,9 @@ const StyledHr = styled.hr({
 	backgroundColor: colors.blueDark,
 });
 
-type Props = {
+interface Props {
 	height?: number;
-};
+}
 
 export default function Hr({ height = 2 }: Props) {
 	return <StyledHr style={{ height }} />;

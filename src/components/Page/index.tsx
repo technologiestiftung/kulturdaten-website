@@ -9,16 +9,16 @@ const Main = styled.main(() => ({
 	margin: "0 auto",
 }));
 
-export type Metadata = {
+export interface Metadata {
 	title: string;
 	description?: string;
-};
+}
 
-type Props = {
+interface Props {
 	children: ReactNode;
 	metadata: Metadata;
 	header?: ReactNode;
-};
+}
 
 export default function Page({ children, metadata, header }: Props) {
 	return (

@@ -12,9 +12,9 @@ const Container = styled.div({
 	animation: `${rotate} 1.5s linear infinite`,
 });
 
-type Props = {
+interface Props {
 	size?: number;
-};
+}
 
 export default function LoadingIndicator({ size }: Props) {
 	return (

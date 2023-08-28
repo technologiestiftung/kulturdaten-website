@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
 import TextCursor from "./TextCursor";
 
-type Props = {
+interface Props {
 	text: string;
 	onAnimationFinished(): void;
-};
+}
 
 export default function AnimatedText({ text: incomingText, onAnimationFinished }: Props) {
 	const [text, setText] = useState("");

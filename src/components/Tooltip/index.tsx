@@ -21,13 +21,13 @@ const StyledTooltip = styled(ReactTooltip)({
 	},
 });
 
-type Props = ITooltip & {
+interface Props extends ITooltip {
 	element?: keyof JSX.IntrinsicElements;
 	children: ReactNode;
 	tooltip: string;
 	tooltipAsHTML?: boolean;
 	id: string;
-};
+}
 
 export default function Tooltip({
 	element = "span",

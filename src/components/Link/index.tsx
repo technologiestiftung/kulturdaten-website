@@ -12,10 +12,10 @@ const linkStyles: CSSObject = {
 };
 const Link = styled.a<Props>(linkStyles);
 
-type Props = AnchorHTMLAttributes<HTMLAnchorElement> & {
+interface Props extends AnchorHTMLAttributes<HTMLAnchorElement> {
 	href: string;
 	children: ReactNode;
-};
+}
 
 export default Link;
 

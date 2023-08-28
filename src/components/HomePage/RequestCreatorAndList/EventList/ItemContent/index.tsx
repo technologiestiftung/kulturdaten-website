@@ -19,11 +19,11 @@ const Title = styled.div({
 	fontWeight: fontWeights.medium,
 });
 
-type Props = {
+interface Props {
 	eventWithAttraction: EventWithAttraction;
 	locale: Locale;
 	onExpandedDescription(): void;
-};
+}
 
 export default function ItemContent({ eventWithAttraction, locale, onExpandedDescription }: Props) {
 	const { event, attraction } = eventWithAttraction;

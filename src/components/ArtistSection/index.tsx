@@ -3,7 +3,7 @@ import SectionTitle from "../SectionTitle";
 import { colors } from "../../common/styleVariables";
 import SectionSubtitle from "../SectionSubtitle";
 
-const ArtistSection = () => {
+export default function ArtistSection() {
 	const t = useTranslations("Home");
 
 	return (
@@ -18,6 +18,4 @@ const ArtistSection = () => {
 			<p>{t("artist-section.description")}</p>
 		</>
 	);
-};
-
-export default ArtistSection;
+}

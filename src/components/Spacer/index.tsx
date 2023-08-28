@@ -2,9 +2,9 @@ import styled from "@emotion/styled";
 
 const StyledDiv = styled.div({});
 
-type Props = {
+interface Props {
 	size: number | string;
-};
+}
 
 export default function Spacer({ size }: Props) {
 	const flexBasis = typeof size === "number" ? `${size}px` : size;

@@ -33,10 +33,10 @@ const Item = styled.li({
 	},
 });
 
-type Props = {
+interface Props {
 	isLoading: boolean;
 	eventsWithAttractions: EventWithAttraction[];
-};
+}
 
 export default function EventList({ isLoading, eventsWithAttractions }: Props) {
 	const locale = useLocale();
