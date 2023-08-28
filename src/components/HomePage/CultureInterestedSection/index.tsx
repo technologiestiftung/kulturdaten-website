@@ -9,7 +9,7 @@ export default function CultureInterestedSection() {
 		<>
 			<SectionTitle
 				label={t("title")}
-				headingLevel="h1"
+				headingLevel="h2"
 				backgroundColor={colors.yellow}
 				headerImage="/images/interested-header-image@2x.jpg"
 			/>

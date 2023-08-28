@@ -20,7 +20,7 @@ export const textStyles: Record<TextType, CSSObject> = {
 		lineHeight: lineHeights.headline,
 	},
 	h3: {
-		fontSize: fontSizes.medium,
+		fontSize: fontSizes.large,
 		fontWeight: fontWeights.medium,
 		lineHeight: lineHeights.headline,
 	},

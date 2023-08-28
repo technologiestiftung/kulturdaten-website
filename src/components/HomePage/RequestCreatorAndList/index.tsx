@@ -32,7 +32,7 @@ export default function RequestCreatorAndList() {
 	}, []);
 	return (
 		<>
-			<SectionSubtitle label={t("subtitle")} textType="h4" />
+			<SectionSubtitle label={t("subtitle")} textType="h4" textAs="h2" />
 			<RequestCreator onStartRequestCreation={handleRequestStarted} onRequestCreated={handleRequestCreated} />
 			{(status === "loading" || status === "done") && (
 				<>

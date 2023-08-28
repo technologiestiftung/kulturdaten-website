@@ -12,7 +12,7 @@ export default function DataUsersSection() {
 		<>
 			<SectionTitle
 				label={t("title")}
-				headingLevel="h1"
+				headingLevel="h2"
 				backgroundColor={colors.red}
 				headerImage="/images/data-users-header-image@2x.jpg"
 			/>
@@ -20,7 +20,7 @@ export default function DataUsersSection() {
 			<p>{t("description")}</p>
 			<Spacer size={64} />
 			<UseCases />
-			<SectionSubtitle label={t("project-future-subtitle")} textType="h4" />
+			<SectionSubtitle label={t("project-future-subtitle")} textType="h4" textAs="h3" />
 			<HTMLText text={t.raw("project-future-description")} />
 		</>
 	);
