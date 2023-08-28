@@ -1,5 +1,4 @@
 import styled from "@emotion/styled";
-import { FC } from "react";
 import { colors, spacings } from "../../common/styleVariables";
 import Text from "../Text";
 

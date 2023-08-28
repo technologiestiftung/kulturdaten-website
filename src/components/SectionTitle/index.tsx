@@ -1,5 +1,4 @@
 import styled from "@emotion/styled";
-import { FC } from "react";
 import { colors, fontWeights, lineHeights, mediaQueries, spacings } from "../../common/styleVariables";
 import FoldSvg from "./FoldSvg";
 
