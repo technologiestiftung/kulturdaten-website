@@ -73,7 +73,7 @@ interface Props {
 	label: string;
 	headingLevel: "h1" | "h2";
 	backgroundColor: BackgroundColor;
-	headerImage: string;
+	headerImage?: string;
 }
 
 export default function SectionTitle({ label, headingLevel, backgroundColor, headerImage }: Props) {
@@ -87,7 +87,7 @@ export default function SectionTitle({ label, headingLevel, backgroundColor, hea
 					<FoldSvg />
 				</Fold>
 			</BannerBackdrop>
-			<SectionImage headerImage={headerImage} />
+			{headerImage && <SectionImage headerImage={headerImage} />}
 		</HeaderWrapper>
 	);
 }
