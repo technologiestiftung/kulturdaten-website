@@ -12,7 +12,7 @@
 		"intro-section": {
 			"hero-title": "The digital basis for culture in Berlin",
 			"subtitle": "Berlin’s cultural data - Free of charge. Open. For all.",
-			"description": "<p>In order to be found on the web, cultural actors have to painstakingly enter their programs manually in many places. With the kulturdaten.berlin platform, we want to radically simplify this process!</p><p>At the same time, people have many options to search for cultural offerings in Berlin online, but there is no central overview of all cultural institutions and events in the city.</p><p>That’s why we are working with cultural actors and institutions to develop the first open, digital infrastructure for cultural data in Berlin: Funded by the Senate Department for Culture and Social Cohesion, we are creating a central data platform that can connect cultural data with numerous portals in a targeted manner.</p>"
+			"description": "<p>In order to be found on the web, cultural actors have to painstakingly enter their programs manually in many places. With the kulturdaten.berlin platform, we want to radically simplify this process!</p><p>At the same time, people have many options to search for cultural offerings in Berlin online, but there is no central overview of all cultural institutions and events in the city.</p><p>That’s why the Technologiestiftung Berlin is working with cultural actors and institutions to develop the first open, digital infrastructure for cultural data in Berlin: Funded by the Senate Department for Culture and Social Cohesion, we are creating a central data platform that can connect cultural data with numerous portals in a targeted manner.</p>"
 		},
 		"newsletter-section": {
 			"title": "Are you interested, or do you have questions or suggestions?",
@@ -33,13 +33,15 @@
 		},
 		"artist-section": {
 			"title": "You focus on culture, we’ll let everyone know",
-			"subtitle": "kulturdaten.berlin - for cultural actors",
-			"description": "<p>What? When? Who? Where? For whom? In order to be found on the web, cultural actors have to painstakingly enter their programs manually in many places. This is a problem especially for smaller cultural actors, who have an exciting offer, but often do not have the financial or human resources to be well represented digitally. With the kulturdaten.berlin platform, we want to radically simplify this process!</p><p>That’s why we are developing the first open, digital infrastructure for cultural data in Berlin together with cultural actors, in order to connect information on cultural venues and offerings with numerous portals in a targeted manner.</p><p>And of course, not only institutions, but also groups, collectives and solo artists in particular can publish their profiles and offerings via kulturdaten.berlin.</p>"
+			"subtitle": "For cultural actors",
+			"description": "<p>What? When? Who? Where? For whom? In order to be found on the web, cultural actors have to painstakingly enter their programs manually in many places. This is a problem especially for smaller cultural actors, who have an exciting offer, but often do not have the financial or human resources to be well represented digitally. With the kulturdaten.berlin platform, we want to radically simplify this process!</p><p>That’s why we are developing the first open, digital infrastructure for cultural data in Berlin together with cultural actors, in order to connect information on cultural venues and offerings with numerous portals in a targeted manner.</p><p>And of course, not only institutions, but also groups, collectives and solo artists in particular can publish their profiles and offerings via kulturdaten.berlin.</p>",
+			"how-to-subtitle": "How can I use kulturdaten.berlin?",
+			"how-to-description": "<p>The data entry web app for cultural actors is currently under construction and is expected to be released in early 2024.</p><p>Let us know if you would like to have access to kulturdaten.berlin before the release.</p>"
 		},
 		"data-users-section": {
 			"title": "We provide the data, you provide the ideas",
-			"subtitle": "kulturdaten.berlin – for data consumers",
-			"description": "<p>kulturdaten.berlin will be the central data platform for everyone who wants to use data about Berlin’s cultural offerings. Using our data interface, event portals, for example, can obtain exactly the data they need for their particular sector focus in no time at all.</p><p>kulturdaten.berlin follows an open data approach and is based on open source technology. Whether it’s an app specifically for barrier-free cultural experiences or the expansion of a neighborhood website with concert tips in the neighborhood: We open up Berlin’s cultural data for subsequent use to anyone with fresh ideas.</p>",
+			"subtitle": "For data consumers",
+			"description": "<p>On the one hand, the internet offers many ways to find out about Berlin’s diverse cultural scene, but on the other hand, there is still a lack of a central overview of all the city’s cultural institutions and events. With kulturdaten.berlin, we want to create the basis for making it easier to discover the diversity of Berlin’s culture - from nice, small events in the neighborhood to major cultural productions. Via our data interface, event portals, for example, can obtain exactly the data they need for their particular sector focus in no time at all.</p><p>kulturdaten.berlin follows an open data approach and is based on open source technology. Whether it’s an app specifically for barrier-free cultural experiences or the expansion of a neighborhood website with concert tips in the neighborhood: we open up Berlin’s cultural data for subsequent use to anyone with fresh ideas.</p>",
 			"use-case-calendar-title": "Use Case: Cultural Calendar",
 			"use-case-calendar-description": "<p>Does your calendar provide a broad overview, cater specifically to children, or curate the most exciting events for literature enthusiasts?</p><p>Export or filter data – For example, by target audience or cultural genre.</p>",
 			"use-case-calendar-image-alt": "A digital calendar displaying the month view of April 2023.",
@@ -49,8 +51,8 @@
 			"use-case-analytics-title": "Use Case: Analytics Tool for the Public Sector",
 			"use-case-analytics-description": "<p>Create dashboard applications for cultural infrastructure analysis, management, and planning.</p><p>Use the consistent, reliable dataset from kulturdaten.berlin.</p>",
 			"use-case-analytics-image-alt": "A map of Berlin showing the number of cultural events in each district with red circles of varying sizes.",
-			"project-future-subtitle": "What’s Next?",
-			"project-future-description": "<p>kulturdaten.berlin is still under development – you’ll soon find the code and complete API documentation on <a href=\"https://github.com/technologiestiftung/\" target=\"_blank\">GitHub</a>.</p><p>Feel free to contact us so we can inform you when the API becomes available.</p>"
+			"how-to-subtitle": "How can I use kulturdaten.berlin?",
+			"how-to-description": "<p>kulturdaten.berlin is currently still under construction - you’ll soon find the code and full API documentation on our <a href=\"https://github.com/technologiestiftung/\" target=\"_blank\">GitHub page</a>.</p><p>Feel free to write us so we can let you know when the API is available.</p>"
 		},
 		"footer": {
 			"address-title": "Address",
