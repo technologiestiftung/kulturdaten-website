@@ -11,6 +11,7 @@ import {
 } from "../../common/styleVariables";
 import { AnchorLinks } from "../../common/types";
 import Burger from "./Burger";
+import LanguageSwitch from "./LanguageSwitch";
 import Logo from "./Logo";
 import Navigation from "./Navigation";
 import NavigationOverlay from "./NavigationOverlay";
@@ -45,6 +46,10 @@ interface Props {
 }
 
 const Mobile = styled.div({
+	flex: "1 1 auto",
+	display: "flex",
+	justifyContent: "space-between",
+	alignItems: "center",
 	[mediaQueries.m]: {
 		display: "none",
 	},
@@ -53,7 +58,10 @@ const Mobile = styled.div({
 const Desktop = styled.div({
 	display: "none",
 	[mediaQueries.m]: {
-		display: "block",
+		flex: "1 1 auto",
+		display: "flex",
+		justifyContent: "space-between",
+		alignItems: "center",
 	},
 });
 
@@ -65,11 +73,13 @@ export default function Header({ activeAnchorLink }: Props) {
 	return (
 		<HeaderContainer>
 			<ContentWrapper>
-				<Logo />
 				<Desktop>
+					<Logo />
 					<Navigation activeAnchorLink={activeAnchorLink} />
+					<LanguageSwitch />
 				</Desktop>
 				<Mobile>
+					<Logo />
 					<Burger open={navigationOpen} onToggle={toggleOpen} navId={navId} />
 					{navigationOpen && <NavigationOverlay navId={navId} onLinkClick={() => setNavigationOpen(false)} />}
 				</Mobile>

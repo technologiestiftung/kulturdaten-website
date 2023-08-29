@@ -6,7 +6,9 @@
 			"link-interested": "For culture enthusiasts",
 			"link-artists": "For cultural actors",
 			"link-data": "For data users",
-			"burger-aria-label": "Open menu"
+			"burger-aria-label": "Open menu",
+			"switch-language-de": "Show this page in German",
+			"switch-language-en": "Show this page in English"
 		},
 		"title": "kulturdaten.berlin-Website coming soon!",
 		"intro-section": {
