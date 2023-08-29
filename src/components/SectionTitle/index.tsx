@@ -60,7 +60,7 @@ const SectionImage = styled.div<{ headerImage: string }>(({ headerImage }) => {
 		backgroundImage: `url(${headerImage})`,
 		backgroundSize: "cover",
 		backgroundRepeat: "no-repeat",
-		backgroundPosition: "center center",
+		backgroundPosition: "center bottom",
 		border: `${borderWidths.medium} solid ${colors.blueDark}`,
 		borderRadius: borderRadiuses.small,
 		[mediaQueries.s]: {
