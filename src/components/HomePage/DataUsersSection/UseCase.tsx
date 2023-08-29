@@ -20,7 +20,7 @@ export default function UseCase({ imageSrc, imageAlt, title, description }: Prop
 		<>
 			<Image src={imageSrc} alt={imageAlt} />
 			<Spacer size={16} />
-			<Text type="h4" as="h3" color="blueDark">
+			<Text type="h4" color="blueDark">
 				{title}
 			</Text>
 			<Spacer size={8} />

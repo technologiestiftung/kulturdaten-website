@@ -16,7 +16,7 @@ export default function DataUsersSection() {
 				backgroundColor={colors.red}
 				headerImage="/images/data-users-header-image@2x.jpg"
 			/>
-			<SectionSubtitle label={t("subtitle")} />
+			<SectionSubtitle label={t("subtitle")} textType="h2" textAs="h3" />
 			<SectionDescription description={t.raw("description")} />
 			<Spacer size={64} />
 			<UseCases />

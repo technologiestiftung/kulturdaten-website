@@ -14,7 +14,7 @@ export default function CultureInterestedSection() {
 				backgroundColor={colors.yellow}
 				headerImage="/images/interested-header-image@2x.jpg"
 			/>
-			<SectionSubtitle label={t("subtitle")} />
+			<SectionSubtitle label={t("subtitle")} textType="h2" textAs="h3" />
 			<SectionDescription description={t.raw("description")} />
 		</>
 	);

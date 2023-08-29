@@ -32,12 +32,12 @@ export default function RequestCreatorAndList() {
 	}, []);
 	return (
 		<>
-			<SectionSubtitle label={t("subtitle")} textType="h4" textAs="h2" />
+			<SectionSubtitle label={t("subtitle")} textType="h4" textAs="h3" />
 			<RequestCreator onStartRequestCreation={handleRequestStarted} onRequestCreated={handleRequestCreated} />
 			{(status === "loading" || status === "done") && (
 				<>
 					<Spacer size={32} />
-					<Text type="h3" color="blueDark">
+					<Text type="h3" as="h4" color="blueDark">
 						{t("results-title")}
 					</Text>
 					<Spacer size={4} />

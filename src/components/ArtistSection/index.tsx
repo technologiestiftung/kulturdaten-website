@@ -15,7 +15,7 @@ export default function ArtistSection() {
 				backgroundColor={colors.green}
 				headerImage="/images/kulturakteure-header-image.jpg"
 			/>
-			<SectionSubtitle label={t("subtitle")} />
+			<SectionSubtitle label={t("subtitle")} textType="h2" textAs="h3" />
 			<SectionDescription description={t.raw("description")} />
 		</>
 	);
