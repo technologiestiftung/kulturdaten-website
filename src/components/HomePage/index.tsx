@@ -60,10 +60,11 @@ export default function HomePage() {
 			<Section ref={artistSectionRef} id={AnchorLinks.ARTISTSECTION}>
 				<ArtistSection />
 			</Section>
+			<NewsletterSection trackingLocation="artist-section" />
 			<Section ref={dataSectionRef} id={AnchorLinks.DATASECTION}>
 				<DataUsersSection />
 			</Section>
-			<NewsletterSection />
+			<NewsletterSection trackingLocation="data-users-section" />
 		</Page>
 	);
 }
