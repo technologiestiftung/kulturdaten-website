@@ -8,7 +8,10 @@ const Backdrop = styled.div({
 	top: headerHeight,
 	left: 0,
 	width: "100vw",
-	height: `calc(100vh - ${headerHeight})`,
+	height: `calc(100dvh - ${headerHeight})`,
+	"@supports not (height: 100dvh)": {
+		height: `calc(90vh - ${headerHeight})`,
+	},
 	backgroundColor: colors.white,
 	display: "flex",
 	flexDirection: "column",
