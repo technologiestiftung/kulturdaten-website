@@ -29,7 +29,7 @@ export default function Logo() {
 	return (
 		<LogoLink href="/">
 			<Circle />
-			<Title aria-label="kulturdaten.berlin" className="title">
+			<Title aria-label="kulturdaten.berlin">
 				KULTURDATEN.<LightTitle>BERLIN</LightTitle>
 			</Title>
 		</LogoLink>
