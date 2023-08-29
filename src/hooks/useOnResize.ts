@@ -1,19 +1,16 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 
 /**
- * Triggers the onResize callback whenever the element in the ref changes its dimensions.
+ * Triggers the onResize callback whenever the element changes its dimensions.
  */
-export default function useOnResize<E extends HTMLElement>(
-	ref: React.RefObject<E | null> | React.ForwardedRef<E | null>,
-	onResize: () => void
-) {
+export default function useOnResize<E extends HTMLElement>(element: E | null, onResize: () => void) {
 	return useEffect(() => {
-		if (!ref || !("current" in ref) || !ref.current) {
+		if (!element) {
 			return;
 		}
 		if (typeof ResizeObserver === "function") {
 			let resizeObserver: ResizeObserver | null = new ResizeObserver(() => onResize());
-			resizeObserver.observe(ref.current);
+			resizeObserver.observe(element);
 			return () => {
 				if (!resizeObserver) {
 					return;
@@ -27,5 +24,5 @@ export default function useOnResize<E extends HTMLElement>(
 		return () => {
 			window.removeEventListener("resize", onResize);
 		};
-	}, [ref, onResize]);
+	}, [element, onResize]);
 }

@@ -28,6 +28,7 @@
 			"results-title": "Your results:",
 			"results-source-title": "Where do the results come from?",
 			"results-source-tooltip": "The results come from the calendars of Berlin’s districts, which are managed by BerlinOnline Stadtportal GmbH & Co. KG and can also be viewed on <a href=\"https://www.berlin.de/land/veranstaltungen/bezirke/\" target=\"_blank\" rel=\"noreferrer\">berlin.de</a>.",
+			"no-results": "Oops! We didn’t find any upcoming events for your request.",
 			"description-read-more": "Read more"
 		},
 		"artist-section": {
