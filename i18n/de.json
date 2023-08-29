@@ -12,7 +12,7 @@
 		"intro-section": {
 			"hero-title": "Die digitale Basis für Kultur in Berlin",
 			"subtitle": "Berlins Kulturdaten – kostenlos, offen, für alle",
-			"description": "<p>Um im Web gefunden zu werden, müssen Kulturakteur:innen ihr Programm an vielen Stellen mühsam händisch einpflegen. Mit der Plattform kulturdaten.berlin wollen wir diesen Prozess radikal vereinfachen!</p><p>Gleichzeitig bietet das Internet für Kulturinteressierte zwar viele Möglichkeiten, sich über Kulturangebote in Berlin zu informieren, aber es gibt keine zentrale Übersicht über alle kulturellen Einrichtungen und Veranstaltungen in der Stadt.</p><p>Deswegen entwickeln wir gemeinsam mit Kulturakteur:innen und -institutionen die erste offene, digitale Infrastruktur für Kulturdaten in Berlin: Gefördert durch die Senatsverwaltung für Kultur und Gesellschaftlichen Zusammenhalt entsteht eine zentrale Datenplattform, die Kulturdaten mit zahlreichen Portalen zielgerichtet vernetzen kann.</p>"
+			"description": "<p>Um im Web gefunden zu werden, müssen Kulturakteur:innen ihr Programm an vielen Stellen mühsam händisch einpflegen. Mit der Plattform kulturdaten.berlin wollen wir diesen Prozess radikal vereinfachen!</p><p>Gleichzeitig bietet das Internet für Kulturinteressierte zwar viele Möglichkeiten, sich über Kulturangebote in Berlin zu informieren, aber es gibt keine zentrale Übersicht über alle kulturellen Einrichtungen und Veranstaltungen in der Stadt.</p><p>Deswegen entwickelt die Technologiestiftung Berlin gemeinsam mit Kulturakteur:innen und -institutionen die erste offene, digitale Infrastruktur für Kulturdaten in Berlin: Gefördert durch die Senatsverwaltung für Kultur und Gesellschaftlichen Zusammenhalt entsteht eine zentrale Datenplattform, die Kulturdaten mit zahlreichen Portalen zielgerichtet vernetzen kann.</p>"
 		},
 		"newsletter-section": {
 			"title": "Interesse geweckt, oder noch Fragen oder Wünsche?",
@@ -33,18 +33,15 @@
 		},
 		"artist-section": {
 			"title": "Ihr macht die Kultur, wir sagen allen Bescheid",
-			"subtitle": "kulturdaten.berlin – für Kulturakteur:innen",
-			"description": "<p>Was? Wann? Wer? Wo? Für wen? Um im Web gefunden zu werden, müssen Kulturakteur:innen ihr Programm an vielen Stellen mühsam händisch einpflegen. Dies ist vor allem für kleinere Kulturakteur:innen ein Problem, die zwar ein spannendes Angebot, aber oft nicht die finanziellen oder personellen Möglichkeiten haben, digital gut repräsentiert zu sein. Mit der Plattform kulturdaten.berlin wollen wir diesen Prozess radikal vereinfachen!</p><p>Deswegen entwickeln wir gemeinsam mit Kulturakteur:innen die erste offene, digitale Infrastruktur für Kulturdaten in Berlin, um Informationen zu Kulturorten und -angeboten mit zahlreichen Portalen zielgerichtet zu vernetzen.</p><p>Und natürlich können nicht nur Institutionen, sondern insbesondere auch Gruppen, Kollektive und Solokünstler:innen ihre Profile und Angebote über kulturdaten.berlin publizieren.</p>"
-		},
-		"culture-interested-section": {
-			"title": "Von Berliner:innen, für Berliner:innen",
-			"subtitle": "kulturdaten.berlin – für Kulturinteressierte",
-			"description": "<p>Es ist gar nicht so lange her, da haben sich die meisten von uns vor allem über Print-Magazine wie Zitty und 030 zu Kulturangeboten informiert. Heute ist das kaum noch vorstellbar – längst stöbern die meisten von uns vor allem online nach passenden Kultur-Highlights. Und das bietet einerseits viele Möglichkeiten, sich über Berlins vielfältige Kulturszene zu informieren, andererseits fehlt es aber an einem zentralen Überblick über alle kulturellen Einrichtungen und Veranstaltungen der Stadt.</p><p>Mit kulturdaten.berlin schaffen wir die Grundlage dafür, die Vielfalt der Berliner Kultur einfacher entdecken zu können – von schönen, kleinen Veranstaltungen im Kiez bis zu großen Kulturproduktionen.</p>"
+			"subtitle": "Für Kulturakteur:innen",
+			"description": "<p>Was? Wann? Wer? Wo? Für wen? Um im Web gefunden zu werden, müssen Kulturakteur:innen ihr Programm an vielen Stellen mühsam händisch einpflegen. Dies ist vor allem für kleinere Kulturakteur:innen ein Problem, die zwar ein spannendes Angebot, aber oft nicht die finanziellen oder personellen Möglichkeiten haben, digital gut repräsentiert zu sein. Mit der Plattform kulturdaten.berlin wollen wir diesen Prozess radikal vereinfachen!</p><p>Deswegen entwickeln wir gemeinsam mit Kulturakteur:innen die erste offene, digitale Infrastruktur für Kulturdaten in Berlin, um Informationen zu Kulturorten und -angeboten mit zahlreichen Portalen zielgerichtet zu vernetzen.</p><p>Und natürlich können nicht nur Institutionen, sondern insbesondere auch Gruppen, Kollektive und Solokünstler:innen ihre Profile und Angebote über kulturdaten.berlin publizieren.</p>",
+			"how-to-subtitle": "Wie kann ich kulturdaten.berlin verwenden?",
+			"how-to-description": "<p>Die Dateneingabe-Webapp für Kulturakteur:innen ist aktuell im Umbau und wird voraussichtlich Anfang 2024 veröffentlicht.</p><p>Schreib uns gerne, wenn du vor der Veröffentlichung schon Zugang zu kulturdaten.berlin haben möchtest.</p>"
 		},
 		"data-users-section": {
 			"title": "Wir liefern die Daten, ihr die Ideen",
-			"subtitle": "kulturdaten.berlin – für Datennutzer:innen",
-			"description": "<p>kulturdaten.berlin wird die zentrale Datenplattform für alle, die Daten rund um Berlins Kulturangebot nutzen wollen. Über unsere Datenschnittstelle können z.B.  Veranstaltungsportale im Handumdrehen genau die Daten beziehen, die sie für ihren jeweiligen Spartenfokus benötigen.</p><p>kulturdaten.berlin verfolgt einen Open Data-Ansatz und basiert auf Open Source-Technologie. Ob eine App speziell für barrierefreie Kulturerlebnisse oder den Ausbau einer Kiez-Website mit Konzerttipps in der Nachbarschaft: Wir öffnen Berlins Kulturdaten zur Nachnutzung für alle mit frischen Ideen.</p>",
+			"subtitle": "Für Datennutzer:innen",
+			"description": "<p>Das Internet bietet einerseits zwar viele Möglichkeiten, sich über Berlins vielfältige Kulturszene zu informieren, andererseits fehlt es jedoch noch an einem zentralen Überblick über alle kulturellen Einrichtungen und Veranstaltungen der Stadt. Mit kulturdaten.berlin wollen wir die Grundlage dafür schaffen, die Vielfalt der Berliner Kultur einfacher entdecken zu können – von schönen, kleinen Veranstaltungen im Kiez bis zu großen Kulturproduktionen. Über unsere Datenschnittstelle können z.B. Veranstaltungsportale im Handumdrehen genau die Daten beziehen, die sie für ihren jeweiligen Spartenfokus benötigen.</p><p>kulturdaten.berlin verfolgt einen Open Data-Ansatz und basiert auf Open Source-Technologie. Ob eine App speziell für barrierefreie Kulturerlebnisse oder den Ausbau einer Kiez-Website mit Konzerttipps in der Nachbarschaft: Wir öffnen Berlins Kulturdaten zur Nachnutzung für alle mit frischen Ideen.</p>",
 			"use-case-calendar-title": "Use Case: Kulturkalender",
 			"use-case-calendar-description": "<p>Dein Kalender bietet den breiten Überblick, ist nur für Kinder, oder kuratiert die spannendsten Termine für Literaturfreunde?</p><p>Exportiere oder filtere die Daten z.B. nach Zielgruppe oder Kultursparte.</p>",
 			"use-case-calendar-image-alt": "Ein digitaler Kalender, auf welchem die Monatsansicht von April 2023 zu sehen ist.",
@@ -54,8 +51,8 @@
 			"use-case-analytics-title": "Use Case: Analysetool für die Verwaltung",
 			"use-case-analytics-description": "<p>Erstelle Dashboard-Anwendungen, z.B. für kulturelle Infrastrukturanalyse, -mangement und -planung.</p><p>Nutze dazu die einheitliche, verlässliche Datenbasis von kulturdaten.berlin.</p>",
 			"use-case-analytics-image-alt": "Eine Karte von Berlin, auf welcher die Anzahl der Kulturveranstaltungen in den einzelnen Bezirken mit roten Kreisen unterschiedlicher Größe dargestellt ist.",
-			"project-future-subtitle": "Wie geht es weiter?",
-			"project-future-description": "<p>kulturdaten.berlin ist aktuell noch im Aufbau – den Code und die vollständige API-Dokumentation werdet ihr bald auf unserer <a href=\"https://github.com/technologiestiftung/\" target=\"_blank\">GitHub-Seite</a> finden.</p><p>Schreibt uns gerne, damit wir euch informieren können, wenn die API zur Verfügung steht.</p>"
+			"how-to-subtitle": "Wie kann ich kulturdaten.berlin verwenden?",
+			"how-to-description": "<p>kulturdaten.berlin ist aktuell noch im Aufbau – den Code und die vollständige API-Dokumentation werdet ihr bald auf unserer <a href=\"https://github.com/technologiestiftung/\" target=\"_blank\">GitHub-Seite</a> finden.</p><p>Schreib uns gerne, damit wir dich informieren können, sobald die API zur Verfügung steht.</p>"
 		},
 		"footer": {
 			"address-title": "Adresse",

@@ -20,8 +20,8 @@ export default function DataUsersSection() {
 			<SectionDescription description={t.raw("description")} />
 			<Spacer size={64} />
 			<UseCases />
-			<SectionSubtitle label={t("project-future-subtitle")} textType="h4" textAs="h3" />
-			<SectionDescription description={t.raw("project-future-description")} />
+			<SectionSubtitle label={t("how-to-subtitle")} textType="h4" textAs="h3" />
+			<SectionDescription description={t.raw("how-to-description")} />
 		</>
 	);
 }

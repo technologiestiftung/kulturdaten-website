@@ -7,7 +7,7 @@ interface Props {
 	textAs?: keyof JSX.IntrinsicElements;
 }
 
-export default function SectionSubtitle({ label, textType = "h2", textAs = textType }: Props) {
+export default function SectionSubtitle({ label, textType = "h1", textAs = "h2" }: Props) {
 	return (
 		<>
 			<Spacer size={64} />

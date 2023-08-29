@@ -1,6 +1,6 @@
 import styled from "@emotion/styled";
-import { mediaQueries, colors, fontWeights, fontSizes, timings, spacings } from "../../common/styleVariables";
 import { useTranslations } from "next-intl";
+import { colors, fontSizes, fontWeights, mediaQueries, spacings, timings } from "../../common/styleVariables";
 import { AnchorLinks } from "../../common/types";
 
 const NavigationWrapper = styled.nav({
@@ -47,10 +47,6 @@ const navigationItems = [
 	{
 		id: AnchorLinks.ARTISTSECTION,
 		label: "link-artists" as const,
-	},
-	{
-		id: AnchorLinks.INTERESTEDSECTION,
-		label: "link-interested" as const,
 	},
 	{
 		id: AnchorLinks.DATASECTION,
