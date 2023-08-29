@@ -3,21 +3,8 @@ import { useTranslations } from "next-intl";
 import { mediaQueries, spacings } from "../../common/styleVariables";
 import { AnchorLinks } from "../../common/types";
 import AnchorLink from "./AnchorLink";
-import LanguageSwitch from "./LanguageSwitch";
 
-const NavigationWrapper = styled.nav({
-	position: "absolute",
-	inset: spacings.get(6),
-	display: "flex",
-	flexDirection: "column",
-	justifyContent: "space-between",
-	alignItems: "flex-end",
-	gap: spacings.get(5),
-	[mediaQueries.m]: {
-		position: "static",
-		flexDirection: "row",
-	},
-});
+const NavigationWrapper = styled.nav({});
 
 const AnchorLinkList = styled.ul({
 	display: "flex",
@@ -28,6 +15,7 @@ const AnchorLinkList = styled.ul({
 	listStyle: "none",
 	[mediaQueries.m]: {
 		flexDirection: "row",
+		gap: spacings.get(8),
 	},
 });
 
@@ -62,7 +50,6 @@ export default function Navigation({ activeAnchorLink, onLinkClick }: Props) {
 					</AnchorLinkItem>
 				))}
 			</AnchorLinkList>
-			<LanguageSwitch />
 		</NavigationWrapper>
 	);
 }
