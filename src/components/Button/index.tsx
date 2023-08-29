@@ -11,7 +11,7 @@ const StyledButton = styled.button({
 	appearance: "none",
 	display: "inline-block",
 	lineHeight: lineHeights.buttons,
-	padding: "13px 18px",
+	padding: "13px 20px",
 	color: colors.white,
 	background: colors.blueDark,
 	fontWeight: fontWeights.default,
