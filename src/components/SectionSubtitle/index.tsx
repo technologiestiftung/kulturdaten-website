@@ -1,23 +1,20 @@
-import styled from "@emotion/styled";
-import { colors, spacings } from "../../common/styleVariables";
-import Text from "../Text";
-
-const SubtitleWrapper = styled.div({
-	borderTop: `4px solid ${colors.blueDark}`,
-	marginTop: spacings.get(12),
-	padding: `${spacings.get(2)} 0 ${spacings.get(8)}`,
-});
+import Spacer from "../Spacer";
+import Text, { TextType } from "../Text";
 
 interface Props {
 	label: string;
+	textType?: TextType;
+	textAs?: keyof JSX.IntrinsicElements;
 }
 
-export default function SectionSubtitle({ label }: Props) {
+export default function SectionSubtitle({ label, textType = "h2", textAs = textType }: Props) {
 	return (
-		<SubtitleWrapper>
-			<Text type="h3" as="h2" color="blueDark">
+		<>
+			<Spacer size={64} />
+			<Text type={textType} as={textAs} color="blueDark">
 				{label}
 			</Text>
-		</SubtitleWrapper>
+			<Spacer size={24} />
+		</>
 	);
 }

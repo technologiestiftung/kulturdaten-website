@@ -1,6 +1,6 @@
 import { useTranslations } from "next-intl";
 import { colors } from "../../../common/styleVariables";
-import HTMLText from "../../HTMLText";
+import SectionDescription from "../../SectionDescription";
 import SectionSubtitle from "../../SectionSubtitle";
 import SectionTitle from "../../SectionTitle";
 import Spacer from "../../Spacer";
@@ -12,16 +12,16 @@ export default function DataUsersSection() {
 		<>
 			<SectionTitle
 				label={t("title")}
-				headingLevel="h1"
+				headingLevel="h2"
 				backgroundColor={colors.red}
 				headerImage="/images/data-users-header-image@2x.jpg"
 			/>
-			<SectionSubtitle label={t("subtitle")} />
-			<p>{t("description")}</p>
+			<SectionSubtitle label={t("subtitle")} textType="h2" textAs="h3" />
+			<SectionDescription description={t.raw("description")} />
 			<Spacer size={64} />
 			<UseCases />
-			<SectionSubtitle label={t("project-future-subtitle")} />
-			<HTMLText text={t.raw("project-future-description")} />
+			<SectionSubtitle label={t("project-future-subtitle")} textType="h4" textAs="h3" />
+			<SectionDescription description={t.raw("project-future-description")} />
 		</>
 	);
 }

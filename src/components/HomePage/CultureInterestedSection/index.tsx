@@ -1,5 +1,6 @@
 import { useTranslations } from "next-intl";
 import { colors } from "../../../common/styleVariables";
+import SectionDescription from "../../SectionDescription";
 import SectionSubtitle from "../../SectionSubtitle";
 import SectionTitle from "../../SectionTitle";
 
@@ -9,12 +10,12 @@ export default function CultureInterestedSection() {
 		<>
 			<SectionTitle
 				label={t("title")}
-				headingLevel="h1"
+				headingLevel="h2"
 				backgroundColor={colors.yellow}
 				headerImage="/images/interested-header-image@2x.jpg"
 			/>
-			<SectionSubtitle label={t("subtitle")} />
-			<p>{t("description")}</p>
+			<SectionSubtitle label={t("subtitle")} textType="h2" textAs="h3" />
+			<SectionDescription description={t.raw("description")} />
 		</>
 	);
 }

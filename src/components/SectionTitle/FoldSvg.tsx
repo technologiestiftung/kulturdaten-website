@@ -8,7 +8,7 @@ export default function FoldSvg() {
 			fillRule="evenodd"
 			strokeMiterlimit="9"
 		>
-			<path d="M38 1.797H1.702V49m.395-1.239L36.43 2.577" fill="none" stroke="#1e3791" strokeWidth="4" />
+			<path d="M38 1.797H1.702V49m.395-1.239L36.43 2.577" fill="none" stroke="#1e3791" strokeWidth="5" />
 		</svg>
 	);
 }

@@ -62,24 +62,21 @@ export default function HomePage() {
 			}}
 			header={<Header activeAnchorLink={activeAnchorLink} />}
 		>
-			<Spacer size={32} />
+			<Spacer size={64} />
 			<Section>
 				<IntroSection />
 				<RequestCreatorAndList />
 			</Section>
-			<NewsletterSection trackingPosition="first" />
 			<Section ref={artistSectionRef} id={AnchorLinks.ARTISTSECTION}>
 				<ArtistSection />
 			</Section>
-			<NewsletterSection trackingPosition="second" />
 			<Section ref={interestedSectionRef} id={AnchorLinks.INTERESTEDSECTION}>
 				<CultureInterestedSection />
 			</Section>
-			<NewsletterSection trackingPosition="third" />
 			<Section ref={dataSectionRef} id={AnchorLinks.DATASECTION}>
 				<DataUsersSection />
 			</Section>
-			<NewsletterSection trackingPosition="fourth" />
+			<NewsletterSection />
 		</Page>
 	);
 }

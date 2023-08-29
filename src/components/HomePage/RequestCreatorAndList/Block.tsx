@@ -8,7 +8,7 @@ interface Props {
 const Block = styled.div<Props>(({ padding = spacings.get(5) }) => ({
 	padding,
 	color: colors.blueDark,
-	backgroundColor: colors.turquoise,
+	backgroundColor: colors.white,
 	border: `${borderWidths.default} solid ${colors.blueDark}`,
 	borderRadius: borderRadiuses.medium,
 }));

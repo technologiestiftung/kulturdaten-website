@@ -27,7 +27,7 @@ export default function UseCases() {
 					imageSrc="/images/use-cases/calendar@2x.jpg"
 					imageAlt={t("use-case-calendar-image-alt")}
 					title={t("use-case-calendar-title")}
-					description={t("use-case-calendar-description")}
+					description={t.raw("use-case-calendar-description")}
 				/>
 			</Item>
 			<Item>
@@ -35,7 +35,7 @@ export default function UseCases() {
 					imageSrc="/images/use-cases/map@2x.jpg"
 					imageAlt={t("use-case-map-image-alt")}
 					title={t("use-case-map-title")}
-					description={t("use-case-map-description")}
+					description={t.raw("use-case-map-description")}
 				/>
 			</Item>
 			<Item>
@@ -43,7 +43,7 @@ export default function UseCases() {
 					imageSrc="/images/use-cases/analytics@2x.jpg"
 					imageAlt={t("use-case-analytics-image-alt")}
 					title={t("use-case-analytics-title")}
-					description={t("use-case-analytics-description")}
+					description={t.raw("use-case-analytics-description")}
 				/>
 			</Item>
 		</List>

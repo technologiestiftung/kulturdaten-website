@@ -2,7 +2,7 @@ import styled from "@emotion/styled";
 import { useTranslations } from "next-intl";
 import { borderWidths, colors, spacings } from "../../../common/styleVariables";
 import { trackEvent } from "../../../services/analytics";
-import ButtonWithIcon from "../../ButtonWithIcon";
+import Button from "../../Button";
 import Spacer from "../../Spacer";
 import Text from "../../Text";
 
@@ -22,14 +22,10 @@ const TextContainer = styled.div({
 	flex: "1 1 auto",
 });
 
-interface Props {
-	trackingPosition: string;
-}
-
-export default function NewsletterSection({ trackingPosition }: Props) {
+export default function NewsletterSection() {
 	const t = useTranslations("Home.newsletter-section");
 	const trackButtonClick = () => {
-		trackEvent("Homepage", "Click 'Contact us' button", trackingPosition);
+		trackEvent("Homepage", "Click 'Contact us' button");
 	};
 	return (
 		<Container>
@@ -42,9 +38,9 @@ export default function NewsletterSection({ trackingPosition }: Props) {
 					{t("title")}
 				</Text>
 				<Spacer size={16} />
-				<ButtonWithIcon as="a" icon="mail" href="mailto:kontakt@kulturdaten.berlin" onClick={trackButtonClick}>
+				<Button as="a" href="mailto:kontakt@kulturdaten.berlin" onClick={trackButtonClick}>
 					{t("button")}
-				</ButtonWithIcon>
+				</Button>
 			</TextContainer>
 		</Container>
 	);

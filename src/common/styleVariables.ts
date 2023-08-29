@@ -21,12 +21,14 @@ export const lineHeights = {
 	default: 1.6,
 	headline: 1.4,
 	buttons: 1.3,
+	heroHeadline: 1.25,
 	single: 1.0,
 };
 
 export const colors = {
 	black: "#3b3b3a",
 	blueDark: "#1e3791",
+	blueDarkHover: "#152666",
 	yellow: "#f5f4a4",
 	green: "#beffa9",
 	red: "#ffd1bA",
@@ -43,12 +45,12 @@ const getSpacing = (factor: number) => {
 export const spacings = {
 	get: (factor: number) => `${getSpacing(factor)}px`,
 	getNumber: (factor: number) => getSpacing(factor),
-	horizontalPagePadding: `clamp(${getSpacing(2)}px, 5vw, ${getSpacing(10)}px)`,
+	horizontalPagePadding: `clamp(${getSpacing(2)}px, 5vw, ${getSpacing(11)}px)`,
 };
 
 export const breakpoints = {
 	s: 580,
-	m: 900,
+	m: 800,
 	l: 1024,
 };
 
@@ -65,10 +67,12 @@ export const headerHeight = "4rem";
 
 export const borderWidths = {
 	default: "3px",
+	medium: "5px",
 };
 
 export const borderRadiuses = {
-	medium: "10px",
+	small: "2px",
+	medium: "4px",
 	round: "50%",
 };
 
