@@ -54,7 +54,7 @@
 			"use-case-analytics-description": "<p>Create dashboard applications for cultural infrastructure analysis, management, and planning.</p><p>Use the consistent, reliable dataset from kulturdaten.berlin.</p>",
 			"use-case-analytics-image-alt": "A map of Berlin showing the number of cultural events in each district with red circles of varying sizes.",
 			"how-to-subtitle": "How can I use kulturdaten.berlin?",
-			"how-to-description": "<p>kulturdaten.berlin is currently still under construction - you’ll soon find the code and full API documentation on our <a href=\"https://github.com/technologiestiftung/\" target=\"_blank\">GitHub page</a>.</p><p>Feel free to write us so we can let you know when the API is available.</p>"
+			"how-to-description": "<p>kulturdaten.berlin is currently still under construction - you’ll soon find the code and full API documentation on our <a href=\"https://github.com/technologiestiftung/\" target=\"_blank\" rel=\"noreferrer\">GitHub page</a>.</p><p>Feel free to write us so we can let you know when the API is available.</p>"
 		},
 		"footer": {
 			"address-title": "Address",

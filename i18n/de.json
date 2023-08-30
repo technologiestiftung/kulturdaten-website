@@ -54,7 +54,7 @@
 			"use-case-analytics-description": "<p>Erstelle Dashboard-Anwendungen, z.B. für kulturelle Infrastrukturanalyse, -mangement und -planung.</p><p>Nutze dazu die einheitliche, verlässliche Datenbasis von kulturdaten.berlin.</p>",
 			"use-case-analytics-image-alt": "Eine Karte von Berlin, auf welcher die Anzahl der Kulturveranstaltungen in den einzelnen Bezirken mit roten Kreisen unterschiedlicher Größe dargestellt ist.",
 			"how-to-subtitle": "Wie kann ich kulturdaten.berlin verwenden?",
-			"how-to-description": "<p>kulturdaten.berlin ist aktuell noch im Aufbau – den Code und die vollständige API-Dokumentation werdet ihr bald auf unserer <a href=\"https://github.com/technologiestiftung/\" target=\"_blank\">GitHub-Seite</a> finden.</p><p>Schreib uns gerne, damit wir dich informieren können, sobald die API zur Verfügung steht.</p>"
+			"how-to-description": "<p>kulturdaten.berlin ist aktuell noch im Aufbau – den Code und die vollständige API-Dokumentation werdet ihr bald auf unserer <a href=\"https://github.com/technologiestiftung/\" target=\"_blank\" rel=\"noreferrer\">GitHub-Seite</a> finden.</p><p>Schreib uns gerne, damit wir dich informieren können, sobald die API zur Verfügung steht.</p>"
 		},
 		"footer": {
 			"address-title": "Adresse",

@@ -5,7 +5,7 @@ const fontFaces: CSSObject[] = [
 		"@font-face": {
 			fontFamily: "Inter",
 			src: "url('/fonts/inter-v12-latin-light.woff2') format('woff2')",
-			fontStyle: "light",
+			fontStyle: "normal",
 			fontWeight: 300,
 			fontDisplay: "swap",
 		},
@@ -28,7 +28,6 @@ const fontFaces: CSSObject[] = [
 			fontDisplay: "swap",
 		},
 	},
-
 	{
 		"@font-face": {
 			fontFamily: "Inter",
