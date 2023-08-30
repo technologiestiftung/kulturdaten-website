@@ -22,10 +22,14 @@ const TextContainer = styled.div({
 	flex: "1 1 auto",
 });
 
-export default function NewsletterSection() {
+interface Props {
+	trackingLocation: string;
+}
+
+export default function NewsletterSection({ trackingLocation }: Props) {
 	const t = useTranslations("Home.newsletter-section");
 	const trackButtonClick = () => {
-		trackEvent("Homepage", "Click 'Contact us' button");
+		trackEvent("Homepage", "Click 'Contact us' button", trackingLocation);
 	};
 	return (
 		<Container>
