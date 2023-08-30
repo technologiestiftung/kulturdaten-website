@@ -1,5 +1,4 @@
 import { useTranslations } from "next-intl";
-import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import { useInView } from "react-intersection-observer";
 import { AnchorLinks } from "../../common/types";
@@ -24,7 +23,6 @@ const inViewOptions = {
 
 export default function HomePage() {
 	const t = useTranslations("Home");
-	const router = useRouter();
 	const [activeAnchorLink, setActiveAnchorLink] = useState<AnchorLinks | null>(null);
 	const getLatestInView = (inView: InView) => {
 		const orderedSections: Array<keyof InView> = ["artistSectionInView", "dataSectionInView"];
@@ -50,7 +48,7 @@ export default function HomePage() {
 			metadata={{
 				title: t("meta-title"),
 				description: t("meta-description"),
-				image: `/images/social-media-preview-${router.locale}.jpg`,
+				image: t("meta-image-url"),
 			}}
 			header={<Header activeAnchorLink={activeAnchorLink} />}
 		>
