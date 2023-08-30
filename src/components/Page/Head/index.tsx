@@ -7,14 +7,14 @@ interface Props {
 }
 
 export default function Head({ metadata }: Props) {
-	const { title, description } = metadata;
 	return (
 		<>
 			<NextHead>
-				<title>{title}</title>
+				<title>{metadata.title}</title>
 				<meta charSet="UTF-8" />
-				<meta name="description" content={description} />
+				<meta name="description" content={metadata.description} />
 				<meta name="viewport" content="width=device-width, initial-scale=1" />
+				<link rel="canonical" href={metadata.url} />
 				<link rel="icon" href="/favicon.ico" />
 				<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 				<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />

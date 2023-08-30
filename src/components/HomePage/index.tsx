@@ -49,6 +49,7 @@ export default function HomePage() {
 				title: t("meta-title"),
 				description: t("meta-description"),
 				image: t("meta-image-url"),
+				url: t("meta-url"),
 			}}
 			header={<Header activeAnchorLink={activeAnchorLink} />}
 		>
