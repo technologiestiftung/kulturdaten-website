@@ -1,9 +1,13 @@
 {
+	"Common": {
+		"site-name": "kulturdaten.berlin"
+	},
 	"Home": {
-		"meta-title": "kulturdaten.berlin website",
-		"meta-description": "Some description",
+		"meta-title": "Making Berlin’s cultural diversity visible | kulturdaten.berlin",
+		"meta-description": "Free, open, for all - the central data platform for cultural data in Berlin",
+		"meta-image-url": "https://kulturdaten-website-ba5v.onrender.com/images/social-media-preview-en.jpg",
+		"meta-url": "https://kulturdaten-website-ba5v.onrender.com/en",
 		"header": {
-			"link-interested": "For culture enthusiasts",
 			"link-artists": "For cultural actors",
 			"link-data": "For data users",
 			"burger-aria-label": "Open menu",

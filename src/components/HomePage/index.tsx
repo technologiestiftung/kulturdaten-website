@@ -45,10 +45,11 @@ export default function HomePage() {
 
 	return (
 		<Page
-			// TODO: Update/add more metadata before release.
 			metadata={{
 				title: t("meta-title"),
 				description: t("meta-description"),
+				image: t("meta-image-url"),
+				url: t("meta-url"),
 			}}
 			header={<Header activeAnchorLink={activeAnchorLink} />}
 		>
