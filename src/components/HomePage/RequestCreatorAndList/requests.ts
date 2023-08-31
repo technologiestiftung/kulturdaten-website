@@ -11,9 +11,11 @@ export const REQUESTS: Request[] = [
 		i18nKey: "request-1-text",
 		loadData: async () =>
 			await loadEventsWithAttractions({
-				"attractions.referenceLabel.de": {
-					$regex: "exkursion",
-					$options: "i",
+				searchFilter: {
+					"attractions.referenceLabel.de": {
+						$regex: "exkursion",
+						$options: "i",
+					},
 				},
 			}),
 	},
@@ -28,20 +30,15 @@ export const REQUESTS: Request[] = [
 				},
 			});
 			const locations = locationsResponse.data?.locations || [];
-			const attractionsResponse = await apiClient.discoverCulturalData.postAttractionsSearch(1, 500, {
+			return await loadEventsWithAttractions({
+				matchMode: "all",
 				searchFilter: {
-					tags: {
-						$in: ["attraction.category.Exhibitions"],
+					"locations.referenceId": {
+						$in: locations.map((location) => location.identifier),
 					},
 				},
-			});
-			const attractions = attractionsResponse.data?.attractions || [];
-			return await loadEventsWithAttractions({
-				"attractions.referenceId": {
-					$in: attractions.map((attraction) => attraction.identifier),
-				},
-				"locations.referenceId": {
-					$in: locations.map((location) => location.identifier),
+				byAttractionTags: {
+					tags: ["attraction.category.Exhibitions"],
 				},
 			});
 		},
@@ -58,12 +55,14 @@ export const REQUESTS: Request[] = [
 			});
 			const attractions = attractionsResponse.data?.attractions || [];
 			return await loadEventsWithAttractions({
-				"attractions.referenceId": {
-					$in: attractions.map((attraction) => attraction.identifier),
-				},
-				"attractions.referenceLabel.de": {
-					$regex: "robot",
-					$options: "i",
+				searchFilter: {
+					"attractions.referenceId": {
+						$in: attractions.map((attraction) => attraction.identifier),
+					},
+					"attractions.referenceLabel.de": {
+						$regex: "robot",
+						$options: "i",
+					},
 				},
 			});
 		},
@@ -72,13 +71,15 @@ export const REQUESTS: Request[] = [
 		i18nKey: "request-4-text",
 		loadData: async () =>
 			await loadEventsWithAttractions({
-				"attractions.referenceLabel.de": {
-					$regex: "konzert",
-					$options: "i",
-				},
-				"admission.ticketType": {
-					$regex: "ticketType.freeOfCharge",
-					$options: "i",
+				searchFilter: {
+					"attractions.referenceLabel.de": {
+						$regex: "konzert",
+						$options: "i",
+					},
+					"admission.ticketType": {
+						$regex: "ticketType.freeOfCharge",
+						$options: "i",
+					},
 				},
 			}),
 	},

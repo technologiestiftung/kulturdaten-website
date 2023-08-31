@@ -34,9 +34,9 @@ function getDifferentEvents(events: Event[], amount: number) {
  * Loads all events with their matching (first) attraction and returns a nested list, sorted by the event start time.
  */
 export async function loadEventsWithAttractions(
-	searchFilter: SearchEventsRequest["searchFilter"]
+	searchEventsRequest: SearchEventsRequest
 ): Promise<EventWithAttraction[]> {
-	const eventsResponse = await apiClient.discoverCulturalData.postEventsSearch(1, 500, { searchFilter });
+	const eventsResponse = await apiClient.discoverCulturalData.postEventsSearch(1, 500, searchEventsRequest);
 	const events = eventsResponse.data?.events || [];
 	const fiveDifferentEvents = getDifferentEvents(events, 5);
 	const attractionIds = fiveDifferentEvents.map(getAttractionId).filter(Boolean);
