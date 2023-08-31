@@ -29,10 +29,9 @@ export const colors = {
 	black: "#3b3b3a",
 	blueDark: "#1e3791",
 	blueDarkHover: "#152666",
-	yellow: "#f5f5a5",
-	green: "#daf5a5",
-	orange: "#f5cca3",
-	turquoise: "#a0faf2",
+	green: "#8fff8f",
+	magenta: "#ff8fff",
+	turquoise: "#8fffff",
 	grayLight: "#fafafa",
 	white: "#ffffff",
 };
