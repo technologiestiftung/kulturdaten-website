@@ -10,7 +10,7 @@ export default function DataUsersSection() {
 	const t = useTranslations("Home.data-users-section");
 	return (
 		<>
-			<SectionTitle label={t("title")} headingLevel="h2" backgroundColor={colors.yellow} />
+			<SectionTitle label={t("title")} headingLevel="h2" backgroundColor={colors.turquoise} />
 			<SectionSubtitle label={t("subtitle")} textType="h2" textAs="h3" />
 			<SectionDescription description={t.raw("description")} />
 			<Spacer size={64} />

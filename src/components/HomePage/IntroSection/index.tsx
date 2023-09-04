@@ -11,7 +11,7 @@ export default function IntroSection() {
 			<SectionTitle
 				label={t("hero-title")}
 				headingLevel="h1"
-				backgroundColor={colors.orange}
+				backgroundColor={colors.magenta}
 				headerImage="/images/intro-header-image@2x.jpg"
 			/>
 			<SectionSubtitle label={t("subtitle")} />
