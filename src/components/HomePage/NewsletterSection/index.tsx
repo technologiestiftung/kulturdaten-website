@@ -38,7 +38,7 @@ export default function NewsletterSection({ trackingLocation }: Props) {
 			</ImageContainer>
 			<Spacer size={24} />
 			<TextContainer>
-				<Text type="h3" as="h2" color="blueDark">
+				<Text type="h4" as="h3" color="blueDark">
 					{t("title")}
 				</Text>
 				<Spacer size={16} />
