@@ -9,11 +9,7 @@ const Container = styled.div({});
 
 const Link = AnchorLink.withComponent(NextLink);
 
-interface Props {
-	onLinkClick?(): void;
-}
-
-export default function LanguageSwitch({ onLinkClick }: Props) {
+export default function LanguageSwitch() {
 	const t = useTranslations("Home.header");
 	const locale = useLocale();
 	const router = useRouter();
@@ -25,7 +21,6 @@ export default function LanguageSwitch({ onLinkClick }: Props) {
 				aria-label={t("switch-language-de")}
 				href={router.pathname}
 				locale="de"
-				onClick={onLinkClick}
 			>
 				DE
 			</Link>{" "}
@@ -36,7 +31,6 @@ export default function LanguageSwitch({ onLinkClick }: Props) {
 				aria-label={t("switch-language-en")}
 				href={router.pathname}
 				locale="en"
-				onClick={onLinkClick}
 			>
 				EN
 			</Link>

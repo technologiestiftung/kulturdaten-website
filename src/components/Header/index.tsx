@@ -1,5 +1,6 @@
 import styled from "@emotion/styled";
-import { useState } from "react";
+import { useRouter } from "next/router";
+import { useEffect, useState } from "react";
 import {
 	borderWidths,
 	breakpoints,
@@ -70,6 +71,18 @@ export default function Header({ activeAnchorLink }: Props) {
 
 	const [navigationOpen, setNavigationOpen] = useState(false);
 	const toggleOpen = () => setNavigationOpen(!navigationOpen);
+
+	const router = useRouter();
+	// Close the navigation overlay when the language is changed.
+	useEffect(() => {
+		const handleRouteChangeComplete = () => {
+			setNavigationOpen(false);
+		};
+		router.events.on("routeChangeComplete", handleRouteChangeComplete);
+		return () => {
+			router.events.off("routeChangeComplete", handleRouteChangeComplete);
+		};
+	}, [router.events]);
 	return (
 		<HeaderContainer>
 			<ContentWrapper>
