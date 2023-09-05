@@ -36,7 +36,12 @@ function getDifferentEvents(events: Event[], amount: number) {
 export async function loadEventsWithAttractions(
 	searchEventsRequest: SearchEventsRequest
 ): Promise<EventWithAttraction[]> {
-	const eventsResponse = await apiClient.discoverCulturalData.postEventsSearch(1, 500, searchEventsRequest);
+	const request: SearchEventsRequest = {
+		inTheFuture: true,
+		matchMode: "all",
+		...searchEventsRequest,
+	};
+	const eventsResponse = await apiClient.discoverCulturalData.postEventsSearch(1, 500, request);
 	const events = eventsResponse.data?.events || [];
 	const fiveDifferentEvents = getDifferentEvents(events, 5);
 	const attractionIds = fiveDifferentEvents.map(getAttractionId).filter(Boolean);
