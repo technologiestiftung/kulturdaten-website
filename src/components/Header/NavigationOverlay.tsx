@@ -29,7 +29,7 @@ export default function NavigationOverlay({ onLinkClick, navId }: Props) {
 	return (
 		<Backdrop id={navId}>
 			<Navigation onLinkClick={onLinkClick} />
-			<LanguageSwitch />
+			<LanguageSwitch onLinkClick={onLinkClick} />
 		</Backdrop>
 	);
 }
