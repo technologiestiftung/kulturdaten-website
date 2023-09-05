@@ -21,6 +21,7 @@ export default function LanguageSwitch() {
 				aria-label={t("switch-language-de")}
 				href={router.pathname}
 				locale="de"
+				scroll={false}
 			>
 				DE
 			</Link>{" "}
@@ -31,6 +32,7 @@ export default function LanguageSwitch() {
 				aria-label={t("switch-language-en")}
 				href={router.pathname}
 				locale="en"
+				scroll={false}
 			>
 				EN
 			</Link>
