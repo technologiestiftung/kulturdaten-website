@@ -62,6 +62,7 @@ export default function HomePage() {
 				<ArtistSection />
 			</Section>
 			<NewsletterSection trackingLocation="artist-section" />
+			<Spacer size={50} />
 			<Section ref={dataSectionRef} id={AnchorLinks.DATASECTION}>
 				<DataUsersSection />
 			</Section>
