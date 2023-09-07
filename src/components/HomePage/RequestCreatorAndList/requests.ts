@@ -1,4 +1,3 @@
-import apiClient from "../../../api/client";
 import { EventWithAttraction, loadEventsWithAttractions } from "../../../services/apiRequests";
 
 export type Request = {
@@ -21,51 +20,30 @@ export const REQUESTS: Request[] = [
 	},
 	{
 		i18nKey: "request-2-text",
-		loadData: async () => {
-			const locationsResponse = await apiClient.discoverCulturalData.postLocationsSearch(1, 500, {
-				searchFilter: {
-					accessibility: {
-						$in: ["Rollstuhlgerecht"],
-					},
-				},
-			});
-			const locations = locationsResponse.data?.locations || [];
-			return await loadEventsWithAttractions({
-				matchMode: "all",
-				searchFilter: {
-					"locations.referenceId": {
-						$in: locations.map((location) => location.identifier),
-					},
-				},
+		loadData: async () =>
+			await loadEventsWithAttractions({
 				byAttractionTags: {
 					tags: ["attraction.category.Exhibitions"],
 				},
-			});
-		},
+				byLocationAccessibilityTags: {
+					tags: ["location.accessibility.WheelchairAccessible"],
+				},
+			}),
 	},
 	{
 		i18nKey: "request-3-text",
-		loadData: async () => {
-			const attractionsResponse = await apiClient.discoverCulturalData.postAttractionsSearch(1, 500, {
+		loadData: async () =>
+			await loadEventsWithAttractions({
 				searchFilter: {
-					tags: {
-						$in: ["attraction.category.Children"],
-					},
-				},
-			});
-			const attractions = attractionsResponse.data?.attractions || [];
-			return await loadEventsWithAttractions({
-				searchFilter: {
-					"attractions.referenceId": {
-						$in: attractions.map((attraction) => attraction.identifier),
-					},
 					"attractions.referenceLabel.de": {
 						$regex: "robot",
 						$options: "i",
 					},
 				},
-			});
-		},
+				byAttractionTags: {
+					tags: ["attraction.category.Children"],
+				},
+			}),
 	},
 	{
 		i18nKey: "request-4-text",
