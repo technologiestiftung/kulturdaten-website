@@ -1,5 +1,5 @@
 import { CSSObject, Global } from "@emotion/react";
-import { colors, fontFamilies, fontSizes, fontWeights, lineHeights } from "../../common/styleVariables";
+import { colors, fontFamilies, fontSizes, fontWeights, headerHeight, lineHeights } from "../../common/styleVariables";
 import FontFaces from "./FontFaces";
 
 const styles: CSSObject = {
@@ -32,6 +32,7 @@ const styles: CSSObject = {
 	},
 	html: {
 		scrollBehavior: "smooth",
+		scrollPaddingTop: headerHeight,
 		fontSize: fontSizes.default,
 		fontFamily: fontFamilies.default,
 		lineHeight: lineHeights.default,
