@@ -4,6 +4,7 @@ import { useInView } from "react-intersection-observer";
 import { AnchorLinks } from "../../common/types";
 import ArtistSection from "../ArtistSection";
 import Header from "../Header";
+import Hr from "../Hr";
 import Page from "../Page";
 import Spacer from "../Spacer";
 import DataUsersSection from "./DataUsersSection";
@@ -58,6 +59,9 @@ export default function HomePage() {
 				<IntroSection />
 				<RequestCreatorAndList />
 			</Section>
+			<Spacer size={24} />
+			<Hr />
+			<Spacer size={24} />
 			<Section ref={artistSectionRef} id={AnchorLinks.ARTISTSECTION}>
 				<ArtistSection />
 			</Section>
