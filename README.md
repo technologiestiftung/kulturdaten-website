@@ -1,10 +1,8 @@
-# Kulturdaten Website
+# kulturdaten.berlin Website
 
-Our kulturdaten showcase website, built using TypeScript, Next.js, Emotion, Jest and Storybook.
+[![](https://img.shields.io/badge/Built%20with%20%E2%9D%A4%EF%B8%8F-at%20Technologiestiftung%20Berlin-blue)](https://www.technologiestiftung-berlin.de/)
 
-## Todos
-
-- [ ] Optional: Set up [Chromatic](https://www.chromatic.com/docs/setup)
+Showcase website for kulturdaten.berlin, built using TypeScript, Next.js, Emotion, Jest and Storybook. It’s connected to the [kulturdaten-api](https://github.com/technologiestiftung/kulturdaten-api).
 
 ## Installation
 
@@ -73,3 +71,30 @@ Internationalization (i18n) is implemented via [next-intl](https://next-intl-doc
 - Messages are grouped with [namespaces](https://next-intl-docs.vercel.app/docs/usage/messages#structuring-messages) (ideally, we’ll end up with ~1 namespace per page).
 - TypeScript integration is implemented within `global.d.ts`, which only uses the German translations (`/i18n/de.json`) to build the types.
 - New pages should have a `getStaticProps` function that returns the `messages` prop (see [docs](https://next-intl-docs.vercel.app/docs/getting-started/pages-router)).
+
+## Contributing
+
+Before you create a pull request, please write an issue so we can discuss your changes.
+
+## Credits
+
+<table>
+    <tr>
+        <td>
+            Made by
+            <br />
+            <br />
+            <a href="https://www.technologiestiftung-berlin.de/">
+                <img width="150" src="https://logos.citylab-berlin.org/logo-tsb-outline.svg" />
+            </a>
+        </td>
+        <td>
+            Supported by:
+            <br />
+            <br />
+            <a src="https://www.berlin.de/sen/kultur/en/">
+                <img width="120" src="https://logos.citylab-berlin.org/logo-berlin-senkueu-en.svg" />
+            </a>
+        </td>
+    </tr>
+</table>
