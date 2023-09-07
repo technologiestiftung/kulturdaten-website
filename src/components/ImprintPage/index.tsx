@@ -1,6 +1,7 @@
 import { useTranslations } from "next-intl";
 import { headerHeight, spacings } from "../../common/styleVariables";
 import { HeaderSimple } from "../Header";
+import Hr from "../Hr";
 import { LinkInternal } from "../Link";
 import Page from "../Page";
 import Reader from "../Reader";
@@ -97,6 +98,7 @@ export default function ImprintPage() {
 				</p>
 				<Spacer size={50} />
 			</Reader>
+			<Hr />
 		</Page>
 	);
 }

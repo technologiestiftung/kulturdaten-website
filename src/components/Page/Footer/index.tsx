@@ -36,7 +36,7 @@ const PageLinks = styled.div({
 });
 
 const LogoTitle = styled.div({
-	marginBottom: spacings.get(2),
+	marginBottom: spacings.get(4),
 });
 
 export default function Footer() {
