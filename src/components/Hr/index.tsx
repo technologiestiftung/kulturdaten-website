@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import { colors } from "../../common/styleVariables";
+import { borderWidths, colors } from "../../common/styleVariables";
 
 const StyledHr = styled.hr({
 	border: `none`,
@@ -7,9 +7,9 @@ const StyledHr = styled.hr({
 });
 
 interface Props {
-	height?: number;
+	height?: string | number;
 }
 
-export default function Hr({ height = 2 }: Props) {
+export default function Hr({ height = borderWidths.default }: Props) {
 	return <StyledHr style={{ height }} />;
 }

@@ -1,6 +1,7 @@
 import { useTranslations } from "next-intl";
 import { headerHeight, spacings } from "../../common/styleVariables";
 import { HeaderSimple } from "../Header";
+import Hr from "../Hr";
 import Link, { LinkInternal } from "../Link";
 import Page from "../Page";
 import Reader from "../Reader";
@@ -63,6 +64,7 @@ export default function PrivacyPolicyPage() {
 				</p>
 				<Spacer size={50} />
 			</Reader>
+			<Hr />
 		</Page>
 	);
 }
