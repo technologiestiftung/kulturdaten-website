@@ -2,9 +2,6 @@
 
 Our kulturdaten showcase website, built using TypeScript, Next.js, Emotion, Jest and Storybook.
 
-## Todos
-
-- [ ] Optional: Set up [Chromatic](https://www.chromatic.com/docs/setup)
 
 ## Installation
 
