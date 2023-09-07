@@ -24,11 +24,9 @@ export const REQUESTS: Request[] = [
 			await loadEventsWithAttractions({
 				byAttractionTags: {
 					tags: ["attraction.category.Exhibitions"],
-					matchMode: "all",
 				},
 				byLocationAccessibilityTags: {
 					tags: ["location.accessibility.WheelchairAccessible"],
-					matchMode: "all",
 				},
 			}),
 	},
@@ -44,7 +42,6 @@ export const REQUESTS: Request[] = [
 				},
 				byAttractionTags: {
 					tags: ["attraction.category.Children"],
-					matchMode: "all",
 				},
 			}),
 	},
