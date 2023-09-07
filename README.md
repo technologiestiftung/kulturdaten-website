@@ -19,11 +19,16 @@ Showcase website for kulturdaten.berlin, built using TypeScript, Next.js, Emotio
 
 ## Local Development
 
+Start a local development server at <http://localhost:8080>:
+
 ```shell
 npm run dev
 ```
 
-This command starts a local development server at <http://localhost:8080>. Most changes are reflected live without having to restart the server.
+Most changes are reflected live without having to restart the server.
+
+> [!NOTE]
+> Make sure you have an instance of the [kulturdaten-api](https://github.com/technologiestiftung/kulturdaten-api) running locally. Alternatively, you can use a deployed API by adjusting `NEXT_PUBLIC_API_BASE_URL` in `.env`.
 
 ## (Production) Build
 
