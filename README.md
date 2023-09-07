@@ -73,3 +73,28 @@ Internationalization (i18n) is implemented via [next-intl](https://next-intl-doc
 - Messages are grouped with [namespaces](https://next-intl-docs.vercel.app/docs/usage/messages#structuring-messages) (ideally, we’ll end up with ~1 namespace per page).
 - TypeScript integration is implemented within `global.d.ts`, which only uses the German translations (`/i18n/de.json`) to build the types.
 - New pages should have a `getStaticProps` function that returns the `messages` prop (see [docs](https://next-intl-docs.vercel.app/docs/getting-started/pages-router)).
+
+## Contributors ✨
+
+Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
+
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
+<table>
+  <tbody>
+    <tr>
+      <td align="center" valign="top" width="14.28%"><a href="https://herrherrmann.net/"><img src="https://avatars.githubusercontent.com/u/6429568?v=4?s=100" width="100px;" alt="Sebastian Herrmann"/><br /><sub><b>Sebastian Herrmann</b></sub></a><br /><a href="https://github.com/Technologiestiftung Berlin/kulturdaten-website/commits?author=herrherrmann" title="Code">💻</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/ZenVega"><img src="https://avatars.githubusercontent.com/u/50147356?v=4?s=100" width="100px;" alt="Urs Schmidt"/><br /><sub><b>Urs Schmidt</b></sub></a><br /><a href="https://github.com/Technologiestiftung Berlin/kulturdaten-website/commits?author=ZenVega" title="Code">💻</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/ThorstenDiekhof"><img src="https://avatars.githubusercontent.com/u/121924163?v=4?s=100" width="100px;" alt="Thorsten Diekhof"/><br /><sub><b>Thorsten Diekhof</b></sub></a><br /><a href="#ideas-ThorstenDiekhof" title="Ideas, Planning, & Feedback">🤔</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/BugBoomBang"><img src="https://avatars.githubusercontent.com/u/30436389?v=4?s=100" width="100px;" alt="Simon Scholler"/><br /><sub><b>Simon Scholler</b></sub></a><br /><a href="#ideas-BugBoomBang" title="Ideas, Planning, & Feedback">🤔</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- markdownlint-restore -->
+<!-- prettier-ignore-end -->
+
+<!-- ALL-CONTRIBUTORS-LIST:END -->
+
+This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!

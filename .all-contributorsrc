@@ -1,0 +1,43 @@
+{
+	"projectName": "kulturdaten-website",
+	"projectOwner": "Technologiestiftung Berlin",
+	"repoType": "github",
+	"repoHost": "https://github.com",
+	"files": ["README.md"],
+	"imageSize": 100,
+	"commit": false,
+	"commitConvention": "angular",
+	"contributors": [
+		{
+			"login": "herrherrmann",
+			"name": "Sebastian Herrmann",
+			"avatar_url": "https://avatars.githubusercontent.com/u/6429568?v=4",
+			"profile": "https://herrherrmann.net/",
+			"contributions": ["code"]
+		},
+		{
+			"login": "ZenVega",
+			"name": "Urs Schmidt",
+			"avatar_url": "https://avatars.githubusercontent.com/u/50147356?v=4",
+			"profile": "https://github.com/ZenVega",
+			"contributions": ["code"]
+		},
+		{
+			"login": "ThorstenDiekhof",
+			"name": "Thorsten Diekhof",
+			"avatar_url": "https://avatars.githubusercontent.com/u/121924163?v=4",
+			"profile": "https://github.com/ThorstenDiekhof",
+			"contributions": ["ideas"]
+		},
+		{
+			"login": "BugBoomBang",
+			"name": "Simon Scholler",
+			"avatar_url": "https://avatars.githubusercontent.com/u/30436389?v=4",
+			"profile": "https://github.com/BugBoomBang",
+			"contributions": ["ideas"]
+		}
+	],
+	"contributorsPerLine": 7,
+	"linkToUsage": false
+}
+
