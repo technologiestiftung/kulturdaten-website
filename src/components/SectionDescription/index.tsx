@@ -4,6 +4,10 @@ const Description = styled.div({
 	"p + p": {
 		marginTop: "0.6em",
 	},
+	ul: {
+		padding: `0 0 0 1rem`,
+		marginTop: "0.4em",
+	},
 });
 
 interface Props {
