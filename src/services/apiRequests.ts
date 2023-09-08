@@ -2,7 +2,6 @@ import apiClient from "../api/client";
 import { Attraction } from "../api/client/models/Attraction";
 import { Event } from "../api/client/models/Event";
 import { SearchEventsRequest } from "../api/client/models/SearchEventsRequest";
-import { getStartDateAsISO } from "./events";
 
 const getAttractionId = (event: Event) => event.attractions?.[0].referenceId || null;
 
@@ -54,21 +53,15 @@ export async function loadEventsWithAttractions(
 		},
 	});
 	const attractions = attractionsResponse.data?.attractions || [];
-	const eventsWithAttractions = fiveDifferentEvents
-		.map((event) => {
-			const attractionId = getAttractionId(event);
-			const matchingAttraction = attractionId
-				? attractions.find((attraction) => attraction.identifier === attractionId) || null
-				: null;
-			return {
-				event,
-				attraction: matchingAttraction,
-			};
-		})
-		.sort((a, b) => {
-			const dateA = new Date(getStartDateAsISO(a.event));
-			const dateB = new Date(getStartDateAsISO(b.event));
-			return dateA.getTime() - dateB.getTime();
-		});
+	const eventsWithAttractions = fiveDifferentEvents.map((event) => {
+		const attractionId = getAttractionId(event);
+		const matchingAttraction = attractionId
+			? attractions.find((attraction) => attraction.identifier === attractionId) || null
+			: null;
+		return {
+			event,
+			attraction: matchingAttraction,
+		};
+	});
 	return eventsWithAttractions;
 }
