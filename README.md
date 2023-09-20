@@ -2,7 +2,7 @@
 
 [![](https://img.shields.io/badge/Built%20with%20%E2%9D%A4%EF%B8%8F-at%20Technologiestiftung%20Berlin-blue)](https://www.technologiestiftung-berlin.de/)
 
-Website for the kulturdaten.berlin project. Built using TypeScript, Next.js, Emotion, Jest and Storybook. It’s connected to the [kulturdaten.berlin API](https://github.com/technologiestiftung/kulturdaten-api).
+Website for the kulturdaten.berlin project. Built using TypeScript, Next.js, Emotion, Vitest and Storybook. It’s connected to the [kulturdaten.berlin API](https://github.com/technologiestiftung/kulturdaten-api).
 
 ## Installation
 
@@ -61,7 +61,7 @@ npm run lint
 # Run the TypeScript compiler to find any TypeScript errors
 npm run typecheck
 
-# Run all tests with Jest
+# Run all tests with Vitest (incl. hot reload when run locally)
 npm test
 
 # Run a local Storybook instance
