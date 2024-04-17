@@ -12,8 +12,8 @@ export default function ArtistSection() {
 			<SectionTitle label={t("title")} headingLevel="h2" backgroundColor={colors.green} />
 			<SectionSubtitle label={t("subtitle")} textType="h2" textAs="h3" />
 			<SectionDescription description={t.raw("description")} />
-			<SectionSubtitle label={t("how-to-subtitle")} textType="h4" textAs="h3" />
-			<SectionDescription description={t.raw("how-to-description")} />
+			{/* <SectionSubtitle label={t("how-to-subtitle")} textType="h4" textAs="h3" />
+			<SectionDescription description={t.raw("how-to-description")} /> */}
 		</>
 	);
 }
