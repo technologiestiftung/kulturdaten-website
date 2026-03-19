@@ -34,6 +34,7 @@ const Icon = () => {
 			strokeWidth="2"
 			strokeLinecap="round"
 			strokeLinejoin="round"
+			style={{ flexShrink: 0 }}
 		>
 			<circle cx="12" cy="12" r="10" />
 			<path d="M12 16v-4" />
@@ -51,6 +52,7 @@ const Title = styled.div(() => {
 		minHeight: "100px",
 		border: `${borderWidths.medium} solid ${colors.blueDark}`,
 		borderRadius: borderRadiuses.small,
+		padding: `${spacings.get(4)} ${spacings.get(8)}`,
 		color: colors.blueDark,
 		fontWeight: fontWeights.medium,
 		lineHeight: lineHeights.heroHeadline,
